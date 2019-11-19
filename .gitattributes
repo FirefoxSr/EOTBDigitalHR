@@ -1,2 +1,11 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+def setup():
+    global img
+    img = loadImage("background.jpeg")
+    size(1920, 1080)
+    background(0)
+
+def draw():
+    global img
+    image(img, width/2, height/2)
