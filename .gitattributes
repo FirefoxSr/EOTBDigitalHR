@@ -12,3 +12,4 @@ def draw():
     text("Eye of The Beholder\n\n", 50, 50)
     textFont(font, 32)
     text("Monster Database\nInventory\nEncounter rolls", 50, 150)
+    text("lmao", 50, 50)
