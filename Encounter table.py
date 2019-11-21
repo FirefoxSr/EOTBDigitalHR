@@ -5,7 +5,7 @@ print(encounter)
 square = input('What square did you land on? ')
 Area = input('What area are you in? ')
 num = input('enter your dice roll here: ')
-print('test')
+print('Hallo')
 
 
 print(num)
