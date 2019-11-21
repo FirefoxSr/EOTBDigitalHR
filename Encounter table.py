@@ -3,7 +3,7 @@ jsonfile = open('encountertable.json')
 encounter = json.load(jsonfile)
 print(encounter)
 square = input('What square did you land on? ')
-Area = input('What are are you in? ')
+Area = input('What area are you in? ')
 num = input('enter your dice roll here: ')
 
 
