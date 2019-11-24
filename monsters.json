@@ -29,7 +29,57 @@
             "using_cards" : "20",
             "charging" : "25",
             "special" : "4xE, +40attack, immune to piercing"
-
+        },
+        "Fairy" : {
+            "starting_energy" : "15",
+            "using_cards" : "10",
+            "charging" : "15",
+            "special" : ""
+        },
+        "Fire_Drake" : {
+            "starting_energy" : "20",
+            "using_cards" : "10",
+            "charging" : "15",
+            "special" : "Double effects on all cards"
+        },
+        "Ghost" : { 
+            "starting_energy" : "10",
+            "using_cards" : "5",
+            "charging" : "10",
+            "special" : "Only takes damage from magic cards"
+        },
+        "Golden_Scarab" : {
+            "starting_energy" : "20",
+            "using_cards" : "10",
+            "charging" : "15",
+            "special" : "Double damage on all cards"
+        },
+        "Grim_Reaper" : {
+            "starting_energy" : "20",
+            "using_cards" : "10",
+            "charging" : "15",
+            "special" : ""
+        },
+        "Haunter" : {
+            "starting_energy" : "20",
+            "using_cards" : "10",
+            "charging" : "15",
+            "special" : "Double damage on magic cards"
+        },
+        "Haunted_Tree" : {
+            "starting_energy" : "20",
+            "using_cards" : "10",
+            "charging" : "15",
+            "special" : ""
+        },
+        "Lava_Golem" : {
+            "starting_energy" : "30",
+            "using_cards" : "10",
+            "charging" : "15",
+            "special" : "Double effects on all cards"
+        },
+        "lava_Slime" : {
+            
         }
 
     }

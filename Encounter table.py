@@ -34,6 +34,7 @@ while (squareCheck != 22):
     #prints the encounter to the console
     print(encounter["EncounterTable"][square]["Dice" + num])
 
+    """
     #this gets the enemy stats out of the json file
     enemyStats = monsters["monsters"][enemy]
     startingEnergy = monsters["monsters"][enemy]["starting_energy"]
@@ -45,7 +46,8 @@ while (squareCheck != 22):
     special = monsters["monsters"][enemy]["special"]
     print(special)
 
-    print(enemyStats)
+    print(enemyStats) 
+    """
 
     if (squareCheck == 22):
         programStop = input('Do you want to quit? y/n: ')
