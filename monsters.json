@@ -175,7 +175,7 @@
             "charging" : "10",
             "special" : ""
         },
-        "zombie" : {
+        "Zombie" : {
             "hp" : "120",
             "starting_energy" : "15",
             "using_cards" : "10",
