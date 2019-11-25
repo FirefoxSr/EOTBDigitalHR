@@ -1,6 +1,8 @@
 {
     "monsters" : {
-        "Arcane_wolf" : {
+        "No_Encounter" : "No_Encounter",
+
+        "Arcane_Wolf" : {
             "hp" : "60",
             "starting_energy" : "5",
             "using_cards" : "5",
@@ -141,7 +143,7 @@
         "Treant" : {
             "hp" : "30",
             "starting_energy" : "5",
-            "using_energy" : "5",
+            "using_cards" : "5",
             "charging" : "10",
             "special" : ""
         },

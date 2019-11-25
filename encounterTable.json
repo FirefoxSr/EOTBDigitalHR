@@ -53,11 +53,11 @@
             "Dice3" : "Arcane_Wolf",
             "Dice4" : "Fairy",
             "Dice5" : "Mana_Golem",
-            "Dice6" : "Skeleton_Mage"
+            "Dice6" : "No_Encounter"
                                                                 
                               },
         "playerSquare7" : {
-            "Dice1" : "Skeleton_Mage",
+            "Dice1" : "No_Encounter",
             "Dice2" : "Mana_Golem",
             "Dice3" : "Mana_Golem",
             "Dice4" : "No_Encounter",
