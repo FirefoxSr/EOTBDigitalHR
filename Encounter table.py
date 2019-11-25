@@ -39,7 +39,7 @@ while (squareCheck != 22):
    
     enemyStats = monsters["monsters"][enemy]
     if (enemyStats == "No_Encounter"):
-        print('No_Encounter')
+        print('You didn\'t encounter any enemies')
     else:
         startingEnergy = monsters["monsters"][enemy]["starting_energy"]
         print(startingEnergy + ' starting energy')
@@ -50,7 +50,6 @@ while (squareCheck != 22):
         special = monsters["monsters"][enemy]["special"]
         print(special)
 
-    print(enemyStats) 
     
 
     if (squareCheck == 22):
