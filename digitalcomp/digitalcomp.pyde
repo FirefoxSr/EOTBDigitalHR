@@ -1,13 +1,14 @@
 import random
 from random import randint
-import Encounters
+#import Encounters
 import json
 import random
+import test
 
 #sets up window and variables
 
 def setup():
-    global font, diceRoll, d, flowChart1, Module, mainMenu
+    global font, diceRoll, d, flowChart1, Module, mainMenu, enemy, enemyStats
     import random
     from random import randint
     fullScreen()
@@ -22,6 +23,11 @@ def setup():
     flowChart1 = False
     Module = False
     mainMenu = True
+    
+def input(question):
+    from javax.swing import JOptionPane
+    return JOptionPane.showInputDialog(frame, question)
+    
     
 
 def draw():
@@ -226,49 +232,13 @@ def draw():
                 
         if flowChart1 == True:
             stroke(255)
-            text("Area1\nArea2\nArea3\nArea4\nArea5", 400, 150)
-            if (630 >= mouseX >= 380)and (160 >= mouseY >= 110):
-                stroke(255,0,0)
-                if mousePressed and (d == 0):
-                    stroke(0)
-                    d = d - 1
-                    text("1\n2\n3\n4\n", 655, 150)
-                    stroke(255)
-                    rect(650, 165, 250, 50)
-            rect(380, 110, 250, 50)
-            stroke(255)
-            #area 2 button
-            if (630 >= mouseX >= 380)and (215 >= mouseY >= 165):
-                stroke(255,0,0)
-                if mousePressed and (d == 0):
-                    stroke(0)
-                    d = d - 1
-            rect(380, 165, 250, 50)
-            stroke(255)  
-            #area 3 button      
-            if (630 >= mouseX >= 380)and (270 >= mouseY >= 220):
-                stroke(255,0,0)
-                if mousePressed and (d == 0):
-                    stroke(0)
-                    d = d - 1
-            rect(380, 220, 250, 50)
-            stroke(255)
-            #area 4 button
-            if (630 >= mouseX >= 380)and (325 >= mouseY >= 275):
-                stroke(255,0,0)
-                if mousePressed and (d == 0):
-                    stroke(0)
-                    d = d - 1
-            rect(380, 275, 250, 50)
-            stroke(255)
-            #area 5 button
-            if (630 >= mouseX >= 380)and (380 >= mouseY >= 330):
-                stroke(255,0,0)
-                if mousePressed and (d == 0):
-                    stroke(0)
-                    d = d - 1
-            rect(380, 330, 250, 50) 
-            stroke(255)    
+            text("What square did you land on?", 400, 150)
+            enc = input("What square did you land on?")
+            test.encounter(enc)
+            text("You encounter a " + test.enemy + "!", 500, 300)
+            text("The enemy's stat's are:" + test.enemyStats)
+
+
         rect(48, 110, 325, 50)
         stroke(255)
         if (373 >= mouseX >= 48) and (215 >= mouseY >= 165):
@@ -301,8 +271,6 @@ def draw():
                 flowChart1 = False
         rect(48, 275, 325, 50)
         stroke(255)
-    
-Encounters.enc(x)
 
 
 def mouseReleased():
