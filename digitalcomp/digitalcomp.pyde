@@ -1,14 +1,13 @@
 import random
 from random import randint
-#import Encounters
+import encounters
 import json
 import random
-import test
-
+from javax.swing import JOptionPane
 #sets up window and variables
 
 def setup():
-    global font, diceRoll, d, flowChart1, Module, mainMenu, enemy, enemyStats
+    global font, diceRoll, d, flowChart1, Module, mainMenu
     import random
     from random import randint
     fullScreen()
@@ -24,8 +23,10 @@ def setup():
     Module = False
     mainMenu = True
     
-def input(question):
+def userInput(question):
+    global mainMenu
     from javax.swing import JOptionPane
+
     return JOptionPane.showInputDialog(frame, question)
     
     
@@ -233,10 +234,18 @@ def draw():
         if flowChart1 == True:
             stroke(255)
             text("What square did you land on?", 400, 150)
-            enc = input("What square did you land on?")
-            test.encounter(enc)
-            text("You encounter a " + test.enemy + "!", 500, 300)
-            text("The enemy's stat's are:" + test.enemyStats)
+            enc = userInput("What square did you land on?")
+            encounters.encounter(enc)
+            JOptionPane.getRootFrame().dispose()
+            if (encounters.mainMenu == True):
+                draw()
+            text("You encounter a " + encounters.enemy + "!", 500, 300)
+            if (mousePressed and (d ==0)):
+                d = d - 1
+                clear()
+                stroke(0)
+                mainMenu == True
+            
 
 
         rect(48, 110, 325, 50)
