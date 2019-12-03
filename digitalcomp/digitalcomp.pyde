@@ -1,7 +1,8 @@
 import random
 from random import randint
-def encounters():
-    text("W.I.P.", 50, 50)
+import Encounters
+import json
+import random
 
 #sets up window and variables
 
@@ -24,7 +25,7 @@ def setup():
     
 
 def draw():
-    global randint, d, flowChart1, combat, Module, mainMenu
+    global randint, d, flowChart1, combat, Module, mainMenu, mousePressed
     
     #displays the text on screen
     text("Main Menu", 800, 800)
@@ -300,6 +301,9 @@ def draw():
                 flowChart1 = False
         rect(48, 275, 325, 50)
         stroke(255)
+    
+Encounters.enc(x)
+
 
 def mouseReleased():
     global d

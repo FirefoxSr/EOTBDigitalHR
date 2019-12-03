@@ -1,10 +1,9 @@
-def encounter(x):
+def encounters(x):
+    
     squareCheck = 0
     
-    while (squareCheck != 22):
-        import json
-        import random
-    
+    while(squareCheck != 22):
+        
         check = False
         #generate the random dice roll here
         num = str(random.randint(1, 6))
@@ -14,7 +13,29 @@ def encounter(x):
         encounter = json.load(jsonEcnounterTable)
         jsonMonsters= open('monsters.json')
         monsters = json.load(jsonMonsters)
+        
+        def draw():
+            background(255)
     
+       def switch(state):
+        case 0:
+            fill(0)
+            text ("what square did you land on? \n"+result, 133, 333); 
+            break
+        
+        case 1:
+            fill(255, 2, 2); 
+            text ("Thanks \n"+result, 133, 633); 
+            break
+    
+        def keyPressed:
+        
+            if (key==ENTER||key==RETURN):
+            
+                state = state + 1
+            else:
+            result = result + key
+        
         #asks the player to input the square they landed on and turns that integer into a string
         while (check == False):
             square = input('What square did you land on? ')
