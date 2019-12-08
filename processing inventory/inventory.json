@@ -1,0 +1,188 @@
+{
+    "MonsterDrop" :
+    {
+        "Slime" : {
+            "Dice1" : "Nothing",
+            "Dice2" : "Nothing",
+            "Dice3" : "Nothing",
+            "Dice4" : "Nothing",
+            "Dice5" : "Nothing",
+            "Dice6" : "Nothing"
+        },
+
+        "Bear" : {
+            "Dice1" : "Bear Skin",
+            "Dice2" : "Nothing",
+            "Dice3" : "Bear Skin x2",
+            "Dice4" : "Bear Skin x2",
+            "Dice5" : "Nothing",
+            "Dice6" : "Bear Skin x2"
+        },
+
+        "Wolf" : {
+            "Dice1" : "Wolf Skin",
+            "Dice2" : "Nothing",
+            "Dice3" : "Wolf Skin",
+            "Dice4" : "Wolf Skin",
+            "Dice5" : "Nothing",
+            "Dice6" : "Wolf Skin x2"
+        },
+
+        "Skeleton" : {
+            "Dice1" : "Iron Chunk",
+            "Dice2" : "Wooden Stick",
+            "Dice3" : "Wooden Stick",
+            "Dice4" : "Iron Chunk x2",
+            "Dice5" : "Soul of the Dead",
+            "Dice6" : "Iron Chunk"
+        },
+
+        "Treant" : {
+            "Dice1" : "Wooden Chunk",
+            "Dice2" : "Wooden Stick",
+            "Dice3" : "Wooden Chunk x3",
+            "Dice4" : "Wooden Chunk x3",
+            "Dice5" : "Wooden Chunk x3",
+            "Dice6" : "Wooden Chunk x3"
+        },
+
+        "Arcane Wolf" : {
+            "Dice1" : "Enchanted Wolf Skin",
+            "Dice2" : "Mana Essence",
+            "Dice3" : "Enchanted Wolf Skin",
+            "Dice4" : "Enchanted Wolf Skin",
+            "Dice5" : "Mana Essence",
+            "Dice6" : "Enchanted Wolf Skin x2"
+        },
+
+        "Fairy" : {
+            "Dice1" : "Mana Essence",
+            "Dice2" : "Mana Essence x2",
+            "Dice3" : "Mana Essence x2",
+            "Dice4" : "Mana Essence",
+            "Dice5" : "Mana Essence",
+            "Dice6" : "Mana Essence"
+        },
+
+        "Mana Golem" : {
+            "Dice1" : "Mana Essence x3",
+            "Dice2" : "Mana Essence x3",
+            "Dice3" : "Obsidian",
+            "Dice4" : "Obsidian",
+            "Dice5" : "Obsidian",
+            "Dice6" : "Obsidian"
+        },
+
+        "Skeleton Mage" : {
+            "Dice1" : "Mana Essence x2",
+            "Dice2" : "Mana Essence",
+            "Dice3" : "Soul of the Dead",
+            "Dice4" : "Soul of the Dead",
+            "Dice5" : "Soul of the Dead x2",
+            "Dice6" : "Soul of the Dead x2"
+        },
+
+        "Void Spawn" : {
+            "Dice1" : "Void Energy",
+            "Dice2" : "Void Energy x2",
+            "Dice3" : "Void Energy",
+            "Dice4" : "Void Energy x2",
+            "Dice5" : "Void Energy",
+            "Dice6" : "Void Energy"
+        },
+
+        "Ghost" : {
+            "Dice1" : "Soul of the Dead",
+            "Dice2" : "Soul of the Dead x3",
+            "Dice3" : "Soul of the Dead",
+            "Dice4" : "Soul of the Dead x3",
+            "Dice5" : "Soul of the Dead x2",
+            "Dice6" : "Soul of the Dead"
+        },
+
+        "Zombie" : {
+            "Dice1" : "Soul of the Dead x2",
+            "Dice2" : "Soul of the Dead x2",
+            "Dice3" : "Soul of the Dead x2",
+            "Dice4" : "Soul of the Dead x2",
+            "Dice5" : "Soul of the Dead x2",
+            "Dice6" : "Soul of the Dead x2"
+        },
+
+        "Haunter" : {
+            "Dice1" : "Soul of the Dead",
+            "Dice2" : "Haunted Spririt",
+            "Dice3" : "Soul of the Dead",
+            "Dice4" : "Haunted Spirit",
+            "Dice5" : "Haunted Spirit",
+            "Dice6" : "Soul of the Dead"
+        },
+
+        "Haunted Tree" : {
+            "Dice1" : "Haunted Spirit",
+            "Dice2" : "Cursed Wood",
+            "Dice3" : "Cursed Wood x2",
+            "Dice4" : "Cursed Wood",
+            "Dice5" : "Cursed Wood",
+            "Dice6" : "Haunted Spirit"
+        },
+
+        "Grim Reaper" : {
+            "Dice1" : "Nothing",
+            "Dice2" : "Nothing",
+            "Dice3" : "Nothing",
+            "Dice4" : "Nothing",
+            "Dice5" : "Nothing",
+            "Dice6" : "Nothing"
+        },
+
+        "Golden Scarab" : {
+            "Dice1" : "Gold Ingot",
+            "Dice2" : "Gold Ingot",
+            "Dice3" : "Gold Ingot x3",
+            "Dice4" : "Gold Ingot",
+            "Dice5" : "Gold Ingot x2",
+            "Dice6" : "Gold Ingot"
+        },
+
+        "Ancient Skeleton" : {
+            "Dice1" : "Gold INgot",
+            "Dice2" : "Soul of the Dead x5",
+            "Dice3" : "Gold Ingot",
+            "Dice4" : "Soul of the Dead x5",
+            "Dice5" : "Gold Ingot",
+            "Dice6" : "Gold Ingot"
+        },
+
+        "Giant Scorpion" : {
+            "Dice1" : "Scorption Poison",
+            "Dice2" : "Scorption Poison",
+            "Dice3" : "Scorption Poison",
+            "Dice4" : "Scorption Poison",
+            "Dice5" : "Scorption Poison",
+            "Dice6" : "Scorption Poison"
+        },
+
+        "Basilisk" : {
+            "Dice1" : "Nothing",
+            "Dice2" : "Nothing",
+            "Dice3" : "Nothing",
+            "Dice4" : "Nothing",
+            "Dice5" : "Nothig",
+            "Dice6" : "Nothing"
+        }
+
+
+
+
+    
+
+
+
+    }
+
+    
+
+
+
+}
