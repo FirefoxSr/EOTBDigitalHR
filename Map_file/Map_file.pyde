@@ -1,85 +1,166 @@
 import Encounters
+import json
 def setup():
-    global mapImage
+    global mapImage, enemy, currentPlayer, p1Image, p2Image
     fullScreen()
     size(1920, 1080)
     mapImage = loadImage("map.png")
+    p1Image = loadImage("p1.png")
+    p2Image = loadImage("p2.png")
     imageMode(CENTER)
     font = loadFont("font.vlw")
     textSize(40)
     ellipseMode(CENTER)
-
+    enemy = ''
+    currentPlayer = p1Image
 def draw():
-    global mapImage
+    global mapImage, enemy, playerImage
     background(0)
     image(mapImage, 400, height // 2)
     message = 'Please click on the square you landed.'
     text(message, 800, 200)
+    text(str(enemy),800,700)
+    currentPlayer = 'p1'
+    if currentPlayer == 'p1':
+        currentPlayerImage = p1Image
+    else:
+        currentPlayerImage = p2Image
+    def playerImage(x,y):
+        global p1Image, p2Image, currentPlayer
+        x = x + 16
+        y = y + 16
+        image(currentPlayerImage,x,y)
+        
+    """
+    #1
+    ellipse()
+    ellipse()
+    ellipse()
+    ellipse()
+    ellipse()
+    #2
+    ellipse()
+    ellipse()
+    ellipse()
+    ellipse()
+    ellipse()
+    ellipse()
+    ellipse()
+    #3
+    ellipse()
+    ellipse()
+    ellipse()
+    #4
+    ellipse()
+    ellipse()
+    #5
+    ellipse()
+    ellipse()
+    ellipse()
+    #6
+    ellipse()
+    ellipse()
+    ellipse()
+    ellipse()
+    #7
+    ellipse()
+    ellipse()
+    ellipse()
+    ellipse()
+    ellipse()
+    ellipse()
+    #8
+    ellipse()
+    ellipse()
+    ellipse()
+    #9
+    ellipse()
+    ellipse()
+    ellipse()
+    ellipse()
+    ellipse()
+    #10
+    ellipse()
+    ellipse()
+    ellipse()
+    ellipse()
+    ellipse()
+    ellipse()
+    #11
+    ellipse()
+    ellipse()
+    ellipse()
+    ellipse()
+    ellipse()
+    #12
+    ellipse()
+    #13
+    ellipse()
+    ellipse()
+    ellipse()
+    ellipse()
+    ellipse()
+    ellipse()
+    #14
+    ellipse()
+    ellipse()
+    ellipse()
+    ellipse()
+    ellipse()
+    ellipse()
+    ellipse()
+    ellipse()
+    #15
+    ellipse()
+    #16
+    ellipse()
+    ellipse()
+    #17
+    ellipse()
+    ellipse()
+    ellipse()
+    ellipse()
+    ellipse()
+    #18
+    ellipse()
+    ellipse()
+    ellipse()
+    ellipse()
+    ellipse()
+    ellipse()
+    ellipse()
+    ellipse()
+    ellipse()
+    ellipse()
+    ellipse()
+    ellipse()
+    #19
+    ellipse()
+    #20
+    ellipse()
+    ellipse()
+    ellipse()
+    ellipse()
+    #21
+    ellipse()
+    ellipse()
+    ellipse()
+    ellipse()
+    ellipse()
+    ellipse()
+    #22
+    ellipse()
+    """
 
-def a1():
+ 
+def isMouseWithinSpace(x,y,w,h):
+    if (x < mouseX < x + w and y < mouseY < y + h):
+        return True
+    else:
+        return False
 
-    return 1
-def a2():
-    
-    return 2
-def a3():
-    
-    return 3
-def a4():
-    
-    return 4
-def a5():
-    
-    return 5
-def a6():
-    
-    return 6
-def a7():
-    
-    return 7
-def a8():
-    
-    return 8
-def a9():
-    
-    return 9
-def a10():
-    
-    return 10
-def a11():
-    
-    return 11
-def a12():
-    
-    return 12
-def a13():
-    
-    return 13
-def a14():
-    
-    return 14
-def a15():
-    
-    return 15
-def a16():
-
-    return 16
-def a17():
-    
-    return 17
-def a19():
-
-    return 19
-def a20():
-    
-    return 20
-def a21():
-    
-    return 21
-def a22():
-    
-    return 22
-
-
-
-    
+def mouseClicked():
+    global enemy, currentPlayer, p1Image, p2Image, playerImage
+    if isMouseWithinSpace(96,941,32,32):
+        playerImage(96,941)
+        enemy = Encounters.encounters(1)

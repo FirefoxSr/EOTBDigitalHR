@@ -60,5 +60,5 @@ def encounters(x):
                 squareCheck = 22
             else:
                 squareCheck = 0
-        return enemy, enemyStats
+        return enemy
         
