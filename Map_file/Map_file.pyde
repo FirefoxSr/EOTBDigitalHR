@@ -121,34 +121,34 @@ def mouseClicked():
         enemy = Encounters.encounter(9)
     if isMouseWithinSpace(204,774,31,29):
         enemy = Encounters.encounter(9)
-        """
     #area 10
-        enemy = Encounters.encounter()
-    if isMouseWithinSpace():
-        enemy = Encounters.encounter()
-    if isMouseWithinSpace():
-        enemy = Encounters.encounter()
-    if isMouseWithinSpace():
-        enemy = Encounters.encounter()
-    if isMouseWithinSpace():
-        enemy = Encounters.encounter()
-    if isMouseWithinSpace():
-        enemy = Encounters.encounter()
-    if isMouseWithinSpace():
-        enemy = Encounters.encounter()
-    if isMouseWithinSpace():
-        enemy = Encounters.encounter()
-    if isMouseWithinSpace():
-        enemy = Encounters.encounter()
-    if isMouseWithinSpace():
-        enemy = Encounters.encounter()
-    if isMouseWithinSpace():
-        enemy = Encounters.encounter()
-    if isMouseWithinSpace():
-        enemy = Encounters.encounter()
-    if isMouseWithinSpace():
-        enemy = Encounters.encounter()
-        """
+    if isMouseWithinSpace(377,750,31,29):
+        enemy = Encounters.encounter(10)
+    if isMouseWithinSpace(322,698,31,29):
+        enemy = Encounters.encounter(10)
+    if isMouseWithinSpace(266,680,31,29):
+        enemy = Encounters.encounter(10)
+    if isMouseWithinSpace(243,733,31,29):
+        enemy = Encounters.encounter(10)
+    if isMouseWithinSpace(205,699,31,29):
+        enemy = Encounters.encounter(10)
+    if isMouseWithinSpace(170,737,31,29):
+        enemy = Encounters.encounter(10)
+    #area 11
+    if isMouseWithinSpace(380,653,31,29):
+        enemy = Encounters.encounter(11)
+    if isMouseWithinSpace(293,621,31,29):
+        enemy = Encounters.encounter(11)
+    if isMouseWithinSpace(157,650,31,29):
+        enemy = Encounters.encounter(11)
+    if isMouseWithinSpace(99,746,31,29):
+        enemy = Encounters.encounter(11)
+    if isMouseWithinSpace(93,679,31,29):
+        enemy = Encounters.encounter(11)
+    #area 12
+    if isMouseWithinSpace(362,600,31,29):
+        enemy = Encounters.encounter(12)
+    #area 13
 
 
 
