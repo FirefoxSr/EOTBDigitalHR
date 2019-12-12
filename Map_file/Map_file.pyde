@@ -31,134 +31,14 @@ def draw():
         y = y + 16
         image(currentPlayerImage,x,y)
         
-    """
-    #1
-    ellipse()
-    ellipse()
-    ellipse()
-    ellipse()
-    ellipse()
-    #2
-    ellipse()
-    ellipse()
-    ellipse()
-    ellipse()
-    ellipse()
-    ellipse()
-    ellipse()
-    #3
-    ellipse()
-    ellipse()
-    ellipse()
-    #4
-    ellipse()
-    ellipse()
-    #5
-    ellipse()
-    ellipse()
-    ellipse()
-    #6
-    ellipse()
-    ellipse()
-    ellipse()
-    ellipse()
-    #7
-    ellipse()
-    ellipse()
-    ellipse()
-    ellipse()
-    ellipse()
-    ellipse()
-    #8
-    ellipse()
-    ellipse()
-    ellipse()
-    #9
-    ellipse()
-    ellipse()
-    ellipse()
-    ellipse()
-    ellipse()
-    #10
-    ellipse()
-    ellipse()
-    ellipse()
-    ellipse()
-    ellipse()
-    ellipse()
-    #11
-    ellipse()
-    ellipse()
-    ellipse()
-    ellipse()
-    ellipse()
-    #12
-    ellipse()
-    #13
-    ellipse()
-    ellipse()
-    ellipse()
-    ellipse()
-    ellipse()
-    ellipse()
-    #14
-    ellipse()
-    ellipse()
-    ellipse()
-    ellipse()
-    ellipse()
-    ellipse()
-    ellipse()
-    ellipse()
-    #15
-    ellipse()
-    #16
-    ellipse()
-    ellipse()
-    #17
-    ellipse()
-    ellipse()
-    ellipse()
-    ellipse()
-    ellipse()
-    #18
-    ellipse()
-    ellipse()
-    ellipse()
-    ellipse()
-    ellipse()
-    ellipse()
-    ellipse()
-    ellipse()
-    ellipse()
-    ellipse()
-    ellipse()
-    ellipse()
-    #19
-    ellipse()
-    #20
-    ellipse()
-    ellipse()
-    ellipse()
-    ellipse()
-    #21
-    ellipse()
-    ellipse()
-    ellipse()
-    ellipse()
-    ellipse()
-    ellipse()
-    #22
-    ellipse()
-    """
-
- 
+   
+#this function makes it easy to see wether or not you clicked on a certain area of the screen 
 def isMouseWithinSpace(x,y,w,h):
     if (x < mouseX < x + w and y < mouseY < y + h):
         return True
     else:
         return False
-
+#here we execute a function if the user clicks on squares on the map
 def mouseClicked():
     global enemy, currentPlayer, p1Image, p2Image, playerImage
     if isMouseWithinSpace(96,941,32,32):
