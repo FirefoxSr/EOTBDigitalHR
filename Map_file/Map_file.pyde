@@ -81,16 +81,18 @@ def mouseClicked():
         enemy = Encounters.encounter(5)
     if isMouseWithinSpace(574,723,31,29):
         enemy = Encounters.encounter(5)
-    """
+
     #area 6
-    if isMouseWithinSpace():
-        enemy = Encounters.encounter()
-    if isMouseWithinSpace():
-        enemy = Encounters.encounter()
-    if isMouseWithinSpace():
-        enemy = Encounters.encounter()
-    if isMouseWithinSpace():
-        enemy = Encounters.encounter()
+    if isMouseWithinSpace(675,681,31,29):
+        enemy = Encounters.encounter(6)
+    if isMouseWithinSpace(655,636,31,29):
+        enemy = Encounters.encounter(6)
+    if isMouseWithinSpace(591,646,31,29):
+        enemy = Encounters.encounter(6)
+    if isMouseWithinSpace(550,748,31,29):
+        enemy = Encounters.encounter(6)
+        """
+    #area 7
     if isMouseWithinSpace():
         enemy = Encounters.encounter()
     if isMouseWithinSpace():
@@ -100,5 +102,6 @@ def mouseClicked():
     if isMouseWithinSpace():
         enemy = Encounters.encounter()
         """
+
 
     
