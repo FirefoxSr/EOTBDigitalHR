@@ -212,6 +212,47 @@ def draw():
         else:
             textAlign(CENTER)
             text("Wooden Stick", width /2, height - 200)
+            
+  if monster == 7:
+        if dice == 1 or dice == 3 or dice == 4:
+            textAlign(CENTER)
+            text("Enchanted Wolf Skin", width /2, height - 200)
+        elif dice == 2 or dice == 5:
+            textAlign(CENTER)
+            text("Mana Essence", width /2, height - 200)
+        else:
+            textAlign(CENTER)
+            text("Enchanted Wolf Skin x2", width /2, height - 200)
+            
+  if monster == 8:
+        if dice == 3 or dice == 4:
+            textAlign(CENTER)
+            text("Soulf od the Dead", width /2, height - 200)
+        elif dice == 2:
+            textAlign(CENTER)
+            text("Mana Essence", width /2, height - 200)
+        elif dice == 5 or dice == 6:
+            textAlign(CENTER)
+            text("Soul of the Dead x2", width /2, height - 200)
+        else:
+            textAlign(CENTER)
+            text("Mana Essence x2", width /2, height - 200)
+            
+  if monster == 9:
+        if dice == 1 or dice == 2:
+            textAlign(CENTER)
+            text("Mana Essence x2", width /2, height - 200)
+        else:
+            textAlign(CENTER)
+            text("Obsidian", width /2, height - 200)
+            
+  if monster == 10:
+        if dice == 2 or dice == 4:
+            textAlign(CENTER)
+            text("Void Energy x2", width /2, height - 200)
+        else:
+            textAlign(CENTER)
+            text("Void Energy", width /2, height - 200)
 
 #function to enable mouse clicking in specific locations.        
 def isMouseWithinSpace(x,y,w,h):
