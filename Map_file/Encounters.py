@@ -1,4 +1,4 @@
-def encounters(x):
+def encounter(x):
     
     squareCheck = 0
     

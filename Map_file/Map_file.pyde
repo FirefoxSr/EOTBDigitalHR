@@ -20,16 +20,7 @@ def draw():
     message = 'Please click on the square you landed.'
     text(message, 800, 200)
     text(str(enemy),800,700)
-    currentPlayer = 'p1'
-    if currentPlayer == 'p1':
-        currentPlayerImage = p1Image
-    else:
-        currentPlayerImage = p2Image
-    def playerImage(x,y):
-        global p1Image, p2Image, currentPlayer
-        x = x + 16
-        y = y + 16
-        image(currentPlayerImage,x,y)
+    rect(234,896,31,29)
         
    
 #this function makes it easy to see wether or not you clicked on a certain area of the screen 
@@ -38,9 +29,69 @@ def isMouseWithinSpace(x,y,w,h):
         return True
     else:
         return False
-#here we execute a function if the user clicks on squares on the map
+#here we execute a function if the user clicks on squares on the map, this is gona be a long one. Just bear with me ^^
 def mouseClicked():
     global enemy, currentPlayer, p1Image, p2Image, playerImage
-    if isMouseWithinSpace(96,941,32,32):
-        playerImage(96,941)
+    if isMouseWithinSpace(132,933,32,228):
         enemy = Encounters.encounters(1)
+
+    if isMouseWithinSpace(167,951,31,28):
+            enemy = Encounters.encounter(1)
+    if isMouseWithinSpace(184,912,31,30):
+        enemy = Encounters.encounter(1)
+    if isMouseWithinSpace(138,894,32,29):
+        enemy = Encounters.encounter(1)
+    if isMouseWithinSpace(286,883,31,29):
+        enemy = Encounters.encounter(1)
+    if isMouseWithinSpace(234,896,31,29):
+        enemy = Encounters.encounter()
+    if isMouseWithinSpace():
+        enemy = Encounters.encounter()
+    if isMouseWithinSpace():
+        enemy = Encounters.encounter()
+    if isMouseWithinSpace():
+        enemy = Encounters.encounter()
+    if isMouseWithinSpace():
+        enemy = Encounters.encounter()
+    if isMouseWithinSpace():
+        enemy = Encounters.encounter()
+    if isMouseWithinSpace():
+        enemy = Encounters.encounter()
+    if isMouseWithinSpace():
+        enemy = Encounters.encounter()
+    if isMouseWithinSpace():
+        enemy = Encounters.encounter()
+    if isMouseWithinSpace():
+        enemy = Encounters.encounter()
+    if isMouseWithinSpace():
+        enemy = Encounters.encounter()
+    if isMouseWithinSpace():
+        enemy = Encounters.encounter()
+    if isMouseWithinSpace():
+        enemy = Encounters.encounter()
+    if isMouseWithinSpace():
+        enemy = Encounters.encounter()
+    if isMouseWithinSpace():
+        enemy = Encounters.encounter()
+    if isMouseWithinSpace():
+        enemy = Encounters.encounter()
+    if isMouseWithinSpace():
+        enemy = Encounters.encounter()
+    if isMouseWithinSpace():
+        enemy = Encounters.encounter()
+    if isMouseWithinSpace():
+        enemy = Encounters.encounter()
+    if isMouseWithinSpace():
+        enemy = Encounters.encounter()
+    if isMouseWithinSpace():
+        enemy = Encounters.encounter()
+    if isMouseWithinSpace():
+        enemy = Encounters.encounter()
+    if isMouseWithinSpace():
+        enemy = Encounters.encounter()
+    if isMouseWithinSpace():
+        enemy = Encounters.encounter()
+    if isMouseWithinSpace():
+        enemy = Encounters.encounter()
+
+    
