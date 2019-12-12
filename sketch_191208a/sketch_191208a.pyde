@@ -163,7 +163,7 @@ def keyPressed():
         tekst = tekst + key
 
 
-        
+
 
 
     
