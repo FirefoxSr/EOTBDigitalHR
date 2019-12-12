@@ -20,7 +20,7 @@ def draw():
     message = 'Please click on the square you landed.'
     text(message, 800, 200)
     text(str(enemy),800,700)
-    rect(659,918,31,29)
+    rect(630,810,31,29)
         
    
 #this function makes it easy to see wether or not you clicked on a certain area of the screen 
@@ -67,6 +67,15 @@ def mouseClicked():
         enemy = Encounters.encounter(3)
     if isMouseWithinSpace(659,918,31,29):
         enemy = Encounters.encounter(3)
+    #area 4
+    if isMouseWithinSpace(583,926,31,29):
+        enemy = Encounters.encounter(4)
+    if isMouseWithinSpace(601,857,31,29):
+        enemy = Encounters.encounter(4)
+    if isMouseWithinSpace(630,810,31,29):
+        enemy = Encounters.encounter(4)
+    """
+    #area 5
     if isMouseWithinSpace():
         enemy = Encounters.encounter()
     if isMouseWithinSpace():
@@ -89,11 +98,6 @@ def mouseClicked():
         enemy = Encounters.encounter()
     if isMouseWithinSpace():
         enemy = Encounters.encounter()
-    if isMouseWithinSpace():
-        enemy = Encounters.encounter()
-    if isMouseWithinSpace():
-        enemy = Encounters.encounter()
-    if isMouseWithinSpace():
-        enemy = Encounters.encounter()
+        """
 
     
