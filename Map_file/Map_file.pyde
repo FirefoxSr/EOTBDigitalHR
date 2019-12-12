@@ -20,7 +20,7 @@ def draw():
     message = 'Please click on the square you landed.'
     text(message, 800, 200)
     text(str(enemy),800,700)
-    #rect)
+    #rect(204,774,31,29)
         
    
 #this function makes it easy to see wether or not you clicked on a certain area of the screen 
@@ -103,7 +103,52 @@ def mouseClicked():
         enemy = Encounters.encounter(7)
     if isMouseWithinSpace(601,588,31,29):
         enemy = Encounters.encounter(7)
-
+    #area 8
+    if isMouseWithinSpace(452,759,31,29):
+        enemy = Encounters.encounter(8)
+    if isMouseWithinSpace(475,691,31,29):
+        enemy = Encounters.encounter(8)
+    if isMouseWithinSpace(501,638,31,29):
+        enemy = Encounters.encounter(8)
+    #area 9
+    if isMouseWithinSpace(441,624,31,29):
+        enemy = Encounters.encounter(9)
+    if isMouseWithinSpace(413,682,31,29):
+        enemy = Encounters.encounter(9)
+    if isMouseWithinSpace(321,743,31,29):
+        enemy = Encounters.encounter(9)
+    if isMouseWithinSpace(267,765,31,29):
+        enemy = Encounters.encounter(9)
+    if isMouseWithinSpace(204,774,31,29):
+        enemy = Encounters.encounter(9)
+        """
+    #area 10
+        enemy = Encounters.encounter()
+    if isMouseWithinSpace():
+        enemy = Encounters.encounter()
+    if isMouseWithinSpace():
+        enemy = Encounters.encounter()
+    if isMouseWithinSpace():
+        enemy = Encounters.encounter()
+    if isMouseWithinSpace():
+        enemy = Encounters.encounter()
+    if isMouseWithinSpace():
+        enemy = Encounters.encounter()
+    if isMouseWithinSpace():
+        enemy = Encounters.encounter()
+    if isMouseWithinSpace():
+        enemy = Encounters.encounter()
+    if isMouseWithinSpace():
+        enemy = Encounters.encounter()
+    if isMouseWithinSpace():
+        enemy = Encounters.encounter()
+    if isMouseWithinSpace():
+        enemy = Encounters.encounter()
+    if isMouseWithinSpace():
+        enemy = Encounters.encounter()
+    if isMouseWithinSpace():
+        enemy = Encounters.encounter()
+        """
 
 
 
