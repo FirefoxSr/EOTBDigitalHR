@@ -33,7 +33,7 @@ def setup():
     enemy = ''
     currentPlayer = 1
 def draw():
-    global mapImage, enemy, playerImage, endTurn, currentPlayer
+    global mapImage, enemy, playerImage, endTurn, currentPlayer, p1Image, p2Image
     background(0)
     image(mapImage, 400, height // 2)
     message = 'Please click on the square you landed.'
@@ -43,7 +43,7 @@ def draw():
     text("Current Player: " + str(currentPlayer),805,240)
     debug()
     
-    
+#Displays the mouse coordinats on screen for help with figuring out locations
 def debug():
     global debugImg
     if key == ENTER:
@@ -61,6 +61,7 @@ def debug():
 
 def mouseClicked():
     global enemy, currentPlayer, p1Image, p2Image, playerImage, endTurn
+    #this calls the function to move on to the next player
     if isMouseWithinSpace(1488,931,186,58):
         endTurn = True
         currentPlayer = playerTurn(currentPlayer)
