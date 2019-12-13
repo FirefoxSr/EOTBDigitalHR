@@ -181,6 +181,13 @@
             "using_cards" : "10",
             "charging" : "15",
             "special" : ""
+        },
+        "Voidling" : {
+            "hp" : "450",
+            "starting_energy" : "20",
+            "using_cards" : "0",
+            "charging" : "15",
+            "special" : "Tripple effects on all cards"
         }
     }
 }

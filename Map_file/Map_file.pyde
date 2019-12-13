@@ -20,7 +20,6 @@ def draw():
     message = 'Please click on the square you landed.'
     text(message, 800, 200)
     text(str(enemy),800,700)
-    #rect()
         
    
 #this function makes it easy to see wether or not you clicked on a certain area of the screen 
@@ -226,34 +225,29 @@ def mouseClicked():
     if isMouseWithinSpace(364,473,31,29):
         enemy = Encounters.encounter(19)
     #area 20
-    """
-    if isMouseWithinSpace():
-        enemy = Encounters.encounter()
-    if isMouseWithinSpace():
-        enemy = Encounters.encounter()
-    if isMouseWithinSpace():
-        enemy = Encounters.encounter()
-    if isMouseWithinSpace():
-        enemy = Encounters.encounter()
-    if isMouseWithinSpace():
-        enemy = Encounters.encounter()
-    if isMouseWithinSpace():
-        enemy = Encounters.encounter()
-    if isMouseWithinSpace():
-        enemy = Encounters.encounter()
-    if isMouseWithinSpace():
-        enemy = Encounters.encounter()
-    if isMouseWithinSpace():
-        enemy = Encounters.encounter()
-    if isMouseWithinSpace():
-        enemy = Encounters.encounter()
-    if isMouseWithinSpace():
-        enemy = Encounters.encounter()
-    if isMouseWithinSpace():
-        enemy = Encounters.encounter()
-    if isMouseWithinSpace():
-        enemy = Encounters.encounter()
-    if isMouseWithinSpace():
-        enemy = Encounters.encounter()
-    if isMouseWithinSpace():
-        enemy = Encounters.encounter()
+    if isMouseWithinSpace(101,156,31,29):
+        enemy = Encounters.encounter(20)
+    if isMouseWithinSpace(154,108,31,29):
+        enemy = Encounters.encounter(20)
+    if isMouseWithinSpace(166,154,31,29):
+        enemy = Encounters.encounter(20)
+    if isMouseWithinSpace(300,153,31,29):
+        enemy = Encounters.encounter(20)
+    if isMouseWithinSpace(371,108,31,29):
+        enemy = Encounters.encounter(20)
+    #area 21
+    if isMouseWithinSpace(227,128,31,29):
+        enemy = Encounters.encounter(21)
+    if isMouseWithinSpace(295,104,31,29):
+        enemy = Encounters.encounter(21)
+    if isMouseWithinSpace(380,158,31,29):
+        enemy = Encounters.encounter(21)
+    if isMouseWithinSpace(455,139,31,29):
+        enemy = Encounters.encounter(21)
+    if isMouseWithinSpace(516,148,46,43):
+        enemy = Encounters.encounter(20)
+    if isMouseWithinSpace(527,102,31,29):
+        enemy = Encounters.encounter(20)
+    #area 22 (final boss)
+    if isMouseWithinSpace(597,107,77,65):
+        enemy = Encounters.encounter(22)
