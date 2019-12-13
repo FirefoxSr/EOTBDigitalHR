@@ -30,3 +30,9 @@ def draw():
     rect( 1300, 700, 400, 200)
     fill(240)
     text("Spear", 1500, 810)
+    
+def isMouseWithinSpace(x,y,w,h):
+    if (x < mouseX < x + w and y < mouseY < y + h):
+        return True
+    else:
+        return False
