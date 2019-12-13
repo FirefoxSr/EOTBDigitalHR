@@ -198,6 +198,34 @@ def mouseClicked():
     if isMouseWithinSpace(259,418,31,29):
         enemy = Encounters.encounter(17)
     #area 18
+    if isMouseWithinSpace(161,533,31,29):
+        enemy = Encounters.encounter(18)
+    if isMouseWithinSpace(163,475,31,29):
+        enemy = Encounters.encounter(18)
+    if isMouseWithinSpace(231,387,31,29):
+        enemy = Encounters.encounter(18)
+    if isMouseWithinSpace(589,419,31,29):
+        enemy = Encounters.encounter(18)
+    if isMouseWithinSpace(230,461,31,29):
+        enemy = Encounters.encounter(18)
+    if isMouseWithinSpace(203,502,31,29):
+        enemy = Encounters.encounter(18)
+    if isMouseWithinSpace(269,525,31,29):
+        enemy = Encounters.encounter(18)
+    if isMouseWithinSpace(380,521,31,29):
+        enemy = Encounters.encounter(18)
+    if isMouseWithinSpace(436,538,31,29):
+        enemy = Encounters.encounter(18)
+    if isMouseWithinSpace(487,531,31,29):
+        enemy = Encounters.encounter(18)
+    if isMouseWithinSpace(474,481,31,29):
+        enemy = Encounters.encounter(18)
+    if isMouseWithinSpace(411,490,31,29):
+        enemy = Encounters.encounter(18)
+    #area 19
+    if isMouseWithinSpace(364,473,31,29):
+        enemy = Encounters.encounter(19)
+    #area 20
     """
     if isMouseWithinSpace():
         enemy = Encounters.encounter()
@@ -213,4 +241,19 @@ def mouseClicked():
         enemy = Encounters.encounter()
     if isMouseWithinSpace():
         enemy = Encounters.encounter()
- """
+    if isMouseWithinSpace():
+        enemy = Encounters.encounter()
+    if isMouseWithinSpace():
+        enemy = Encounters.encounter()
+    if isMouseWithinSpace():
+        enemy = Encounters.encounter()
+    if isMouseWithinSpace():
+        enemy = Encounters.encounter()
+    if isMouseWithinSpace():
+        enemy = Encounters.encounter()
+    if isMouseWithinSpace():
+        enemy = Encounters.encounter()
+    if isMouseWithinSpace():
+        enemy = Encounters.encounter()
+    if isMouseWithinSpace():
+        enemy = Encounters.encounter()
