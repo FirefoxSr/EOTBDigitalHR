@@ -149,7 +149,67 @@ def mouseClicked():
     if isMouseWithinSpace(362,600,31,29):
         enemy = Encounters.encounter(12)
     #area 13
-
+    if isMouseWithinSpace(125,600,31,29):
+        enemy = Encounters.encounter(13)
+    if isMouseWithinSpace(112,499,31,29):
+        enemy = Encounters.encounter(13)
+    if isMouseWithinSpace(97,412,31,29):
+        enemy = Encounters.encounter(13)
+    if isMouseWithinSpace(134,388,31,29):
+        enemy = Encounters.encounter(13)
+    if isMouseWithinSpace(131,296,31,29):
+        enemy = Encounters.encounter(13)
+    if isMouseWithinSpace(218,305,31,29):
+        enemy = Encounters.encounter(13)
+    """
+    #area 14
+    if isMouseWithinSpace():
+        enemy = Encounters.encounter()
+    if isMouseWithinSpace():
+        enemy = Encounters.encounter()
+    if isMouseWithinSpace():
+        enemy = Encounters.encounter()
+    if isMouseWithinSpace():
+        enemy = Encounters.encounter()
+    if isMouseWithinSpace():
+        enemy = Encounters.encounter()
+    if isMouseWithinSpace():
+        enemy = Encounters.encounter()
+    if isMouseWithinSpace():
+        enemy = Encounters.encounter()
+    if isMouseWithinSpace():
+        enemy = Encounters.encounter()
+    if isMouseWithinSpace():
+        enemy = Encounters.encounter()
+    if isMouseWithinSpace():
+        enemy = Encounters.encounter()
+    if isMouseWithinSpace():
+        enemy = Encounters.encounter()
+    if isMouseWithinSpace():
+        enemy = Encounters.encounter()
+    if isMouseWithinSpace():
+        enemy = Encounters.encounter()
+    if isMouseWithinSpace():
+        enemy = Encounters.encounter()
+    if isMouseWithinSpace():
+        enemy = Encounters.encounter()
+    if isMouseWithinSpace():
+        enemy = Encounters.encounter()
+    if isMouseWithinSpace():
+        enemy = Encounters.encounter()
+    if isMouseWithinSpace():
+        enemy = Encounters.encounter()
+    if isMouseWithinSpace():
+        enemy = Encounters.encounter()
+    if isMouseWithinSpace():
+        enemy = Encounters.encounter()
+    if isMouseWithinSpace():
+        enemy = Encounters.encounter()
+    if isMouseWithinSpace():
+        enemy = Encounters.encounter()
+    if isMouseWithinSpace():
+        enemy = Encounters.encounter()
+ """
 
 
     
