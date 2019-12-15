@@ -1,7 +1,7 @@
 screen = 0
 def setup():
     fullScreen()
-    global basic_Spear, comet_Spear, doom_Spear, halberd, leather, chain, black_armour, molten_armour, platinum_armour
+    global basic_Spear, comet_Spear, doom_Spear, halberd, leather, chain, black_armour, molten_armour, platinum_armour, basic_sword, arcade_sword,obsidian_sword, dead_sword, phoenix_sword, heaven
     basic_Spear = loadImage("basicSpear1.png")
     comet_Spear = loadImage("comet.png")
     doom_Spear = loadImage("doom.png")
@@ -11,10 +11,16 @@ def setup():
     black_armour = loadImage("blackAmour.png")
     molten_armour = loadImage("molten.png")
     platinum_armour = loadImage("platinum.png")
+    basic_sword = loadImage("basicSword.png")
+    arcade_sword = loadImage("arcadeSword.png")
+    obsidian_sword = loadImage("obsidianSword.png")
+    dead_sword = loadImage("deadSword.png")
+    phoenix_sword = loadImage("phoenixSword.png")
+    heaven = loadImage("heaven.png")
 
         
 def draw():
-    global basic_Spear, comet_Spear, doom_Spear, halberd, leather, chain, black_armour, molten_armour, platinum_armour
+    global basic_Spear, comet_Spear, doom_Spear, halberd, leather, chain, black_armour, molten_armour, platinum_armour, basic_sword, arcade_sword,obsidian_sword, dead_sword, phoenix_sword, heaven
     if screen == 0:
         background(0,0,0)
         textSize(52)
@@ -77,6 +83,13 @@ def draw():
         textAlign(CENTER)
         fill(240)
         text("Back", 225, 140)
+        
+        image(basic_sword, 100, 250)
+        image(arcade_sword, 400, 250)
+        image(obsidian_sword, 700, 250)
+        image(dead_sword, 1000, 250)
+        image(phoenix_sword, 1300, 250)
+        image(heaven, 1600, 250)
 
     if screen == 2:
         background(0,0,0)
