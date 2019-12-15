@@ -1,7 +1,7 @@
 screen = 0
 def setup():
     fullScreen()
-    global basic_Spear, comet_Spear, doom_Spear, halberd, leather, chain, black_armour, molten_armour, platinum_armour, basic_sword, arcade_sword,obsidian_sword, dead_sword, phoenix_sword, heaven
+    global basic_Spear, comet_Spear, doom_Spear, halberd, leather, chain, black_armour, molten_armour, platinum_armour, basic_sword, arcade_sword,obsidian_sword, dead_sword, phoenix_sword, heaven, wooden_shield, iron_shield, null_shield, gold_shield, war_god, basic_dagger, enchanted_dagger, daggerA
     basic_Spear = loadImage("basicSpear1.png")
     comet_Spear = loadImage("comet.png")
     doom_Spear = loadImage("doom.png")
@@ -17,10 +17,19 @@ def setup():
     dead_sword = loadImage("deadSword.png")
     phoenix_sword = loadImage("phoenixSword.png")
     heaven = loadImage("heaven.png")
+    wooden_shield = loadImage("woodenShield.png")
+    iron_shield = loadImage("ironShield.png")
+    null_shield = loadImage("nullShield.png")
+    gold_shield = loadImage("goldShield.png")
+    war_god = loadImage("wargod.png")
+    basic_dagger = loadImage("basicDagger.png")
+    enchanted_dagger = loadImage("enchantedDagger.png")
+    daggerA = loadImage("daggerA.png")
+                            
 
         
 def draw():
-    global basic_Spear, comet_Spear, doom_Spear, halberd, leather, chain, black_armour, molten_armour, platinum_armour, basic_sword, arcade_sword,obsidian_sword, dead_sword, phoenix_sword, heaven
+    global basic_Spear, comet_Spear, doom_Spear, halberd, leather, chain, black_armour, molten_armour, platinum_armour, basic_sword, arcade_sword,obsidian_sword, dead_sword, phoenix_sword, heaven, wooden_shield, iron_shield, null_shield, gold_shield, war_god, basic_dagger, enchanted_dagger, daggerA
     if screen == 0:
         background(0,0,0)
         textSize(52)
@@ -83,6 +92,12 @@ def draw():
         textAlign(CENTER)
         fill(240)
         text("Back", 225, 140)
+        fill(0)
+        rect(1600, 100, 150, 60)
+        textSize(30)
+        textAlign(CENTER)
+        fill(240)
+        text("Dagger", 1675, 140)
         
         image(basic_sword, 100, 250)
         image(arcade_sword, 400, 250)
@@ -126,6 +141,31 @@ def draw():
         textAlign(CENTER)
         fill(240)
         text("Back", 225, 140)
+        
+        image(wooden_shield, 100, 250)
+        image(iron_shield, 400, 250)
+        image(null_shield, 700, 250)
+        image(gold_shield, 1000, 250)
+        image(war_god, 1300, 250)
+        
+    if screen == 5:
+        background(0,0,0)
+        textSize(52)
+        textAlign(CENTER)
+        fill(240)
+        text("Dagger", width /2, height /8)
+        stroke(240)
+        line(0, 210, 2000, 210)
+        fill(0)
+        rect(150, 100, 150, 60)
+        textSize(30)
+        textAlign(CENTER)
+        fill(240)
+        text("Back", 225, 140)
+        
+        image(basic_dagger, 100, 250)
+        image(enchanted_dagger, 400, 250)
+        image(daggerA, 700, 250)
     
 def isMouseWithinSpace(x,y,w,h):
     if (x < mouseX < x + w and y < mouseY < y + h):
@@ -151,9 +191,14 @@ def mousePressed():
     if screen == 1:
         if isMouseWithinSpace(150, 100, 150, 60):
             screen = 0
+        elif isMouseWithinSpace(1600, 100, 150, 60):
+            screen = 5
     if screen == 2:
         if isMouseWithinSpace(150, 100, 150, 60):
             screen = 0
     if screen == 3:
         if isMouseWithinSpace(150, 100, 150, 60):
             screen = 0
+    if screen == 5:
+        if isMouseWithinSpace(150, 100, 150, 60):
+            screen = 1
