@@ -392,8 +392,6 @@ def mousePressed():
     if screen == 5:
         if isMouseWithinSpace(150, 100, 150, 60):
             screen = 1
-        if isMouseWithinSpace(150, 100, 150, 60):
-            screen = 0
         if isMouseWithinSpace(90, 240, 280, 380):
             tekst = "Craft"
             dagger_item = 1
