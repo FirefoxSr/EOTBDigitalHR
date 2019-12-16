@@ -1,4 +1,7 @@
 screen = 0
+tekst = ""
+crafted_item = ""
+spear_item = ""
 def setup():
     fullScreen()
     global basic_Spear, comet_Spear, doom_Spear, halberd, leather, chain, black_armour, molten_armour, platinum_armour, basic_sword, arcade_sword,obsidian_sword, dead_sword, phoenix_sword, heaven, wooden_shield, iron_shield, null_shield, gold_shield, war_god, basic_dagger, enchanted_dagger, daggerA
@@ -29,7 +32,7 @@ def setup():
 
         
 def draw():
-    global basic_Spear, comet_Spear, doom_Spear, halberd, leather, chain, black_armour, molten_armour, platinum_armour, basic_sword, arcade_sword,obsidian_sword, dead_sword, phoenix_sword, heaven, wooden_shield, iron_shield, null_shield, gold_shield, war_god, basic_dagger, enchanted_dagger, daggerA
+    global basic_Spear, comet_Spear, doom_Spear, halberd, leather, chain, black_armour, molten_armour, platinum_armour, basic_sword, arcade_sword,obsidian_sword, dead_sword, phoenix_sword, heaven, wooden_shield, iron_shield, null_shield, gold_shield, war_god, basic_dagger, enchanted_dagger, daggerA, tekst, crafted_item
     if screen == 0:
         background(0,0,0)
         textSize(52)
@@ -72,10 +75,23 @@ def draw():
         textAlign(CENTER)
         fill(240)
         text("Back", 225, 140)
+        #rect(150, 850, 150, 60)
+        fill(240)
+        textSize(52)
+        text(tekst, 225, 900)
+        fill(240)
+        textAlign(LEFT)
+        text(crafted_item, 800, 900)
+
         
+        
+        #(90, 240, 280, 380)
         image(basic_Spear, 100, 250)
+        #(390, 240, 280, 380)
         image(comet_Spear, 400, 250)
+        #(690, 240, 280, 380)
         image(doom_Spear, 700, 250)
+        #(990, 240, 280, 380)
         image(halberd, 1000, 250)
         
     if screen == 1:
@@ -174,7 +190,7 @@ def isMouseWithinSpace(x,y,w,h):
         return False
 
 def mousePressed():
-    global screen
+    global screen, tekst, crafted_item, spear_item
     if screen == 0:
         if isMouseWithinSpace(1300, 700, 400, 200):
             screen = 4
@@ -188,6 +204,45 @@ def mousePressed():
     if screen == 4:
         if isMouseWithinSpace(150, 100, 150, 60):
             screen = 0
+        if isMouseWithinSpace(90, 240, 280, 380):
+            tekst = "Craft"
+            spear_item = 1
+            #if isMouseWithinSpace(150, 850, 150, 60):
+                #crafted_item = "You have crafted a basic spear"
+        elif isMouseWithinSpace(390, 240, 280, 380):
+            tekst = "Craft"
+            spear_item = 2
+        elif isMouseWithinSpace(690, 240, 280, 380):
+            tekst = "Craft"
+            spear_item = 3
+        elif isMouseWithinSpace(990, 240, 280, 380):
+            tekst = "Craft"
+            spear_item = 4
+    
+    if spear_item == 1:    
+        if tekst == "Craft":
+            if isMouseWithinSpace(150, 850, 150, 60):
+                tekst = "Craft"
+                crafted_item = "You have crafted basic spear"
+                
+    if spear_item == 2:    
+        if tekst == "Craft":
+            if isMouseWithinSpace(150, 850, 150, 60):
+                tekst = "Craft"
+                crafted_item = "You have crafted comet spear"
+                
+    if spear_item == 3:    
+        if tekst == "Craft":
+            if isMouseWithinSpace(150, 850, 150, 60):
+                tekst = "Craft"
+                crafted_item = "You have crafted necrotic spear of doom"
+                
+    if spear_item == 4:    
+        if tekst == "Craft":
+            if isMouseWithinSpace(150, 850, 150, 60):
+                tekst = "Craft"
+                crafted_item = "You have crafted halberd of the fire god"
+                
     if screen == 1:
         if isMouseWithinSpace(150, 100, 150, 60):
             screen = 0
