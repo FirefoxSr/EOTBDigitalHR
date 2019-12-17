@@ -19,13 +19,14 @@ def playerTurn(n):
 endTurn = False
 
 def setup():
-    global mapImage, enemy, currentPlayer, p1Image, p2Image, debugImg, endTurn, currentPlayer
+    global mapImage, enemy, currentPlayer, p1Image, p2Image, debugImg, endTurn, currentPlayer, img
     fullScreen()
     size(1920, 1080)
     mapImage = loadImage("map.png")
     p1Image = loadImage("p1.png")
     p2Image = loadImage("p2.png")
     debugImg = loadImage("debug.png")
+    img = loadImage("Empty.png")
     imageMode(CENTER)
     font = loadFont("font.vlw")
     textSize(40)
@@ -43,24 +44,31 @@ def draw():
     text("Current Player: " + str(currentPlayer),805,240)
     debug()
     
-#Displays the mouse coordinats on screen for help with figuring out locations
+#Displays the mouse coordinates on screen for help with figuring out locations
 def debug():
     global debugImg
     if key == ENTER:
         text("Mouse X " + str(mouseX),1500,900)
         text("Mouse Y " + str(mouseY),1500,950)
         if mousePressed:
-            image(debugImg,width // 2, height // 2)
+            image(debugImg,132,933)
             text("TRANS RIGHTS!", 800, 700)
-            
-    
+                    
+def playerImage(n):
+    global p1Image, p2Image, img
+    if (n == 1):
+        img = p1Image
+    elif (n == 2):
+        img = p1Image
+    return img
+
     
         
    
 
 
 def mouseClicked():
-    global enemy, currentPlayer, p1Image, p2Image, playerImage, endTurn
+    global enemy, currentPlayer, p1Image, p2Image, playerImage, endTurn, currentPlayer
     #this calls the function to move on to the next player
     if isMouseWithinSpace(1488,931,186,58):
         endTurn = True
@@ -69,7 +77,8 @@ def mouseClicked():
     #here we execute a function if the user clicks on squares on the map, this is gona be a long one. Just bear with me ^^
     #area 1
     if isMouseWithinSpace(132,933,32,228):
-        enemy = Encounters.encounters(1)
+        enemy = Encounters.encounter(1)
+        playerImage(currentPlayer)
     if isMouseWithinSpace(167,951,31,28):
         enemy = Encounters.encounter(1)
     if isMouseWithinSpace(184,912,31,30):
