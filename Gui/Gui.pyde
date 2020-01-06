@@ -1,53 +1,74 @@
 import Combat
-import mainmenu
+import Map
 import Encounters
-import playerscreen
-import inventory
-import playerturn
-import startscreen
+import json
 import test
-import mapenc
-import random
-from random import randint
+import AmountOfPlayers
+import ScreenTitle
+import Crafting
 
 def setup():
+    global screen, x, y, w, h
     fullScreen()
-    font = createFont("Curse of the Zombie.otf", 65)
-
-state = 0
-Mainmenu = 1
-combat = 2
-Inventory = 3
-Playerscreen = 4
-encounters = 5
-Mapenc = 6
-Startscreen = 7
-state = Startscreen
-
-if state == combat:
+    screen = "titleScreen"
     Combat.setup()
-    Combat.draw()
+    Map.setup()
+    AmountOfPlayers.setup()
+    ScreenTitle.setup()
+    Crafting.setup()
 
-elif state == Mainmenu:
-    mainmenu.setup()
-    mainmenu.draw()
-
-elif state == Inventory:
-    inventory.setup()
-    inventory.draw()
-
-elif state == Playerscreen:
-    playerscreen.setup()
-    playerscreen.draw()
+def draw():
+    global screen
+    if (screen == "titleScreen"):
+        background(0)
+        ScreenTitle.draw()
+    if (screen == "playerScreen"):
+        background(0)
+        AmountOfPlayers.draw()
+    if (screen == "combat"):
+        background(0)
+        Combat.draw()
+    if (screen == "Map"):
+        background(0)
+        Map.draw()
+        textAlign(LEFT)
+        
+        noTint()
+    if (screen == "Crafting"):
+        background(0)
+        Crafting.draw()
+    print(screen)
+    rect(250,100,155,60)
+        
+def isMouseWithinSpace(x,y,w,h):
+        if (x < mouseX < x + w and y < mouseY < y + h):
+            return True
+        else:
+            return False
+def mousePressed():
+    global screen, x, y, w, h
+    if (screen == "titleScreen"):
+        if isMouseWithinSpace(1000, 660, 608, 150):
+            screen = "playerScreen"
+            
+    if (screen == "playerScreen"):
+        if isMouseWithinSpace(1550,844,315,200):
+            screen = "Map"
+    if (screen == "combat"):
+        Combat.isMouseWithinSpace
+        Combat.mousePressed()
+    if (screen == "Map"):
+        Map.isMouseWithinSpace
+        Map.mouseClicked()
+        if isMouseWithinSpace(1488,931,186,58):
+            screen = "combat"
+        if (screen == "Map"):
+            if isMouseWithinSpace(800,925,366,78):
+                screen = "Crafting"
+        if (screen == "Crafting"):
+            if isMouseWithinSpace(250,100,155,60):
+                screen = "Map"
+                
     
-elif state == encounters:
-    Encounters.setup()
-    Encounters.draw()
-    
-elif state == Mapenc:
-    mapenc.setup()
-    mapenc.draw()
-    
-elif state == Startscreen:
-    startscreen.setup()
-    startscreen.draw()
+        
+        
