@@ -20,8 +20,6 @@ def setup():
     mapImage = loadImage("map.png")
     p1Image = loadImage("p1.png")
     p2Image = loadImage("p2.png")
-    debugImg = loadImage("debug.png")
-    img = loadImage("Empty.png")
     imageMode(CENTER)
     textSize(40)
     ellipseMode(CENTER)
