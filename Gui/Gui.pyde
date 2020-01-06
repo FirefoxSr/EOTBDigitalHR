@@ -38,7 +38,6 @@ def draw():
         background(0)
         Crafting.draw()
     print(screen)
-    rect(250,100,155,60)
         
 def isMouseWithinSpace(x,y,w,h):
         if (x < mouseX < x + w and y < mouseY < y + h):
