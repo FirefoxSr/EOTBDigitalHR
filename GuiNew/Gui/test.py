@@ -1,3 +1,8 @@
+button1X = 50
+button2X = 170
+button3X = 330
+
+
 def setup():
   global img, x, y, font, screen, img1, img2, currentNumber
   img1 = loadImage('plus.png')
@@ -11,6 +16,7 @@ def draw():
     global screen, img1, img2
     
     ## Deze geeft de tekst aan van de Amount Players
+    fill(255)
     strokeWeight(3)
     stroke(0)
     text('NUMBER OF PLAYERS', 350, 200)

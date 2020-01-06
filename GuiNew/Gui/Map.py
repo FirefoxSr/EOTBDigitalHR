@@ -1,6 +1,5 @@
 import Encounters
 import json
-#this function makes it easy to see wether or not you clicked on a certain area of the screen 
 
 def playerTurn(n):
     global endTurn
@@ -36,6 +35,7 @@ def draw():
     text(message, 800, 200)
     text(str(enemy),800,700)
     text("Go to combat",1500, 976)
+    text("Open Crafting",800, 976)
     text("Current Player: " + str(currentPlayer),805,240)
 
     

@@ -1,15 +1,13 @@
 
 def setup():
-  global img, x, y, font, screen
-  img = loadImage("backGround.png")
+  global img, x, y, screen
+  #img = loadImage("backGround.png")
   x = 0
   y = 540
 
 def draw():
-    global screen
-    frameRate(100)
-    global img, x, y
-    image(img, x, y)
+    global screen, img, x, y
+    #image(img, x, y)
     tint(175, 255)
     x = x - 1
     if x == -2560:
@@ -28,7 +26,7 @@ def draw():
     fill(255)
     strokeWeight(0)
     stroke(0)
-    text('        START....... IF YOU DARE', 1000, 683)
+    text('        START....... IF YOU DARE', 1000, 750)
     
 def mouseWithinSpace(x, y, w, h):
     if (x < mouseX < x + w and y < mouseY < y + h):
