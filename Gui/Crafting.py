@@ -160,13 +160,13 @@ def draw():
         text(crafted_item, 800, 900)
 
         #(90, 240, 280, 380)
-        image(basic_Spear, 200, 425)
+        image(basic_Spear, 100, 250)
         #(390, 240, 280, 380)
-        image(comet_Spear, 500, 425)
+        image(comet_Spear, 400, 250)
         #(690, 240, 280, 380)
-        image(doom_Spear, 800, 425)
+        image(doom_Spear, 700, 250)
         #(990, 240, 280, 380)
-        image(halberd, 1100, 425)
+        image(halberd, 1000, 250)
         
     if screen == 1:
         background(0,0,0)
