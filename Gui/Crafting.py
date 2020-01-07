@@ -277,9 +277,9 @@ def draw():
         textAlign(LEFT)
         text(crafted_item5, 800, 900)
         
-        image(basic_dagger, 200, 425)
-        image(enchanted_dagger, 500, 425)
-        image(daggerA, 800, 425)
+        image(basic_dagger, 100, 250)
+        image(enchanted_dagger, 400, 250)
+        image(daggerA, 700, 250)
         
     if screen == "inventory":
         background(0,0,0)
