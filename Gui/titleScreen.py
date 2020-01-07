@@ -1,4 +1,3 @@
-
 def setup():
   global img, x, y, screen
   #img = loadImage("backGround.png")

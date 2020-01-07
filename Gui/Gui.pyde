@@ -27,15 +27,19 @@ def draw():
         AmountOfPlayers.draw()
     if (screen == "combat"):
         background(0)
+        textAlign(CENTER)
+        imageMode(CORNER)
         Combat.draw()
         Combat.endOfCombat
     if (screen == "Map"):
         background(0)
+        imageMode(CENTER)
         Map.draw()
         textAlign(LEFT)
         noTint()
     if (screen == "Crafting"):
         background(0)
+        imageMode(CORNER)
         Crafting.draw()
     print(screen)
         
@@ -68,10 +72,11 @@ def mousePressed():
             if isMouseWithinSpace(800,925,366,78):
                 screen = "Crafting"
     if (screen == "Crafting"):
-        Crafting.isMouseWithinSpace
-        Crafting.mousePressed()
         if isMouseWithinSpace(250,100,155,60):
             screen = "Map"
+        Crafting.isMouseWithinSpace
+        Crafting.mousePressed()
+        
             
     
         
