@@ -1017,5 +1017,10 @@ def mousePressed():
                 M_gain = 20
                 M_name = "DeathGazer"
                 
+def endOfCombat():
+    if (M_health == 0):
+        screen = "Map"
+        return screen
+                
             
             
