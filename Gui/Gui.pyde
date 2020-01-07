@@ -74,7 +74,7 @@ def mousePressed():
                 Crafting.draw()
                 Crafting.screen = 0
     if (screen == "Crafting"):
-        if isMouseWithinSpace(250,100,155,60):
+        if isMouseWithinSpace(150, 100, 150, 60):
             screen = "Map"
         Crafting.isMouseWithinSpace
         Crafting.mousePressed()

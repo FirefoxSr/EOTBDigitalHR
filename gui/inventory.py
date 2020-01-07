@@ -50,7 +50,12 @@ def setup():
     
 def draw():
     global Bear_Skin, Wolf_Skin, Soul_Dead, Wooden_Stick, Wooden_Chunk, Iron_Chunk, Enchanted_Wolf, Mana_Essence, Obsidian, Void_Energy, Haunted_Spirit, Cursed_Wood, Gold_Ingot, Scorpion_Poison, Fire_Essense
-    
+    fill(0)
+    rect(150, 100, 150, 60)
+    textSize(30)
+    textAlign(CENTER)
+    fill(240)
+    text("Back", 225, 140)
     Bear_Skin = 0
     Wolf_Skin = 0
     Soul_Dead = 0
