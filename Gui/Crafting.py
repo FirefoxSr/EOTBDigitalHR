@@ -341,6 +341,8 @@ def mousePressed():
                     crafted_item = "you don't have enough materials" 
                 else:
                     crafted_item = "You have crafted basic spear"
+                    inventory.Iron_Chunk = inventory.Iron_Chunk - 2
+                    inventory.Wooden_Stick = inventory.Wooden_Stick - 5
             else:
                 crafted_item = ""  
     if spear_item == 2:    
@@ -350,6 +352,8 @@ def mousePressed():
                     crafted_item = "you don't have enough materials"
                 else:
                     crafted_item = "You have crafted comet spear"
+                    inventory.Basic_Spear = inventory.Basic_Spear - 1
+                    inventory.Mana_Essence = inventory.Mana_Essence - 10
             else:
                 crafted_item = ""   
     if spear_item == 3:    
@@ -358,7 +362,10 @@ def mousePressed():
                 if inventory.Comet_Spear < 1 and inventory.Soul_Dead < 3 and inventory.Wooden_Stick < 3:
                     crafted_item = "you don't have enough materials"
                 else: 
-                    crafted_item = "You have crafted necrotic spear of doom"  
+                    crafted_item = "You have crafted necrotic spear of doom" 
+                    inventory.Comet_Spear = inventory.Comet_Spear - 1
+                    inventory.Soul_Dead = inventory.Soul_Dead - 3
+                    inventory.Wooden_Stick = inventory.Wooden_Stick - 3 
             else:
                 crafted_item = ""      
     if spear_item == 4:    
@@ -368,6 +375,8 @@ def mousePressed():
                     crafted_item = "you don't have enough materials"
                 else:
                     crafted_item = "You have crafted halberd of the fire god"
+                    inventory.Spear_Doom = inventory.Spear_Doom - 1
+                    inventory.Fire_Essence = inventory.Fire_Essence
             else:
                 crafted_item = ""
                 
@@ -401,6 +410,8 @@ def mousePressed():
                     crafted_item4 = "you don't have enough materials"
                 else:
                     crafted_item4 = "You have crafted basic sword"   
+                    inventory.Iron_Chunk = inventory.Iron_Chunk - 2
+                    inventory.Wooden_Stick = inventory.Wooden_Stick - 1
             else:
                 crafted_item4 = ""
     if sword_item == 2:    
@@ -409,7 +420,9 @@ def mousePressed():
                 if inventory.Basic_Sword < 1 and inventory.Mana_Essence < 10:
                     crafted_item4 = "you don't have enough materials"
                 else:
-                    crafted_item4 = "You have crafted arcane sword"     
+                    crafted_item4 = "You have crafted arcane sword"
+                    inventory.Basic_Sword = inventory.Basic_Sword - 1
+                    inventory.Mana_Essence = inventory.Mana_Essence - 10     
             else:
                 crafted_item4 = ""   
     if sword_item == 3:    
@@ -419,6 +432,8 @@ def mousePressed():
                     crafted_item4 = "you don't have enough materials"
                 else:
                     crafted_item4 = "You have crafted obsidian sword"
+                    inventory.Basic_Sword = inventory.Basic_Sword - 1
+                    inventory.Obsidian = inventory.Obsidian - 2
             else:
                 crafted_item4 = ""       
     if sword_item == 4:    
@@ -428,6 +443,8 @@ def mousePressed():
                     crafted_item4 = "you don't have enough materials"
                 else:
                     crafted_item4 = "You have crafted sword of the dead"
+                    inventory.Arcane_Sword = inventory.Arcane_Sword - 1
+                    inventory.Soul_Dead = inventory.Soul_Dead - 5
             else:
                 crafted_item4 = ""
     if sword_item == 5:
@@ -437,6 +454,8 @@ def mousePressed():
                     crafted_item4 = "you don't have enough materials"
                 else:
                     crafted_item4 = "You have crafted sword of phoenix"
+                    inventory.Lost_Blade = inventory.Lost_Blade -1
+                    inventory.Fire_Essence = inventory.Fire_Essence - 5
             else:
                 crafted_item4 = ""
     if sword_item == 6:
@@ -446,6 +465,8 @@ def mousePressed():
                     crafted_item4 = "you don't have enough materials"
                 else:
                     crafted_item4 = "You have crafted heaven's wrath'"
+                    inventory.Sword_Phoenix = inventory.Sword_Phoenix - 1
+                    inventory.Void_Essence = inventory.Void_Essence - 5
             else:
                 crafted_item4 = ""
             
@@ -475,6 +496,8 @@ def mousePressed():
                     crafted_item3 = "you don't have enough materials"
                 else:
                     crafted_item3 = "You have crafted leather armour"
+                    inventory.Wolf_Skin = inventory.Wolf_Skin - 5
+                    inventory.Bear_Skin = inventory.Bear_Skin - 5
             else:
                 crafted_item3 = ""         
     if armour_item == 2:    
@@ -483,7 +506,8 @@ def mousePressed():
                 if inventory.Iron_Chunk < 10:
                     crafted_item3 = "you don't have enough materials"
                 else:
-                    crafted_item3 = "You have crafted chain armour"   
+                    crafted_item3 = "You have crafted chain armour"
+                    inventory.Iron_Chunk = inventory.Iron_Chunk - 10   
             else:
                 crafted_item3 = ""     
     if armour_item == 3:    
@@ -493,6 +517,9 @@ def mousePressed():
                     crafted_item3 = "you don't have enough materials"
                 else:
                     crafted_item3 = "You have crafted black armour"  
+                    inventory.Chain_Armour = inventory.Chain_Armour - 1
+                    inventory.Soul_Dead = inventory.Soul_Dead - 5
+                    inventory.Obsidian = inventory.Obsidian - 2
             else:
                 crafted_item3 = ""     
     if armour_item == 4:    
@@ -502,6 +529,8 @@ def mousePressed():
                     crafted_item3 = "you don't have enough materials"
                 else:
                     crafted_item3 = "You have crafted molten armour"
+                    inventory.Black_Armour = inventory.Black_Armour - 1
+                    inventory.Fire_Essence = inventory.Fire_Essence - 5
             else:
                 crafted_item3 = ""
     if armour_item == 5:
@@ -511,6 +540,8 @@ def mousePressed():
                     crafted_item3 = "you don't have enough materials"
                 else:
                     crafted_item3 = "You have crafted amadantium plate"
+                    inventory.Molten_Armour = inventory.Molten_Armour - 1
+                    inventory.Mana_Essence = inventory.Mana_Essence - 10
             else:
                 crafted_item3 = ""
             
@@ -538,7 +569,9 @@ def mousePressed():
                 if inventory.Wooden_Chunk < 5 and inventory.Wooden_Stick < 2:
                     crafted_item2 = "you don't have enough materials"
                 else:
-                    crafted_item2 = "You have crafted wooden shield"    
+                    crafted_item2 = "You have crafted wooden shield"
+                    inventory.Wooden_Chunk = inventory.Wooden_Chunk - 5
+                    inventory.Wooden_Stick = inventory.Wooden_Stick - 2    
             else:
                 crafted_item2 = ""        
     if shield_item == 2:    
@@ -548,6 +581,8 @@ def mousePressed():
                     crafted_item2 = "you don't have enough materials"
                 else:
                     crafted_item2 = "You have crafted iron shield" 
+                    inventory.Wooden_Shield = inventory.Wooden_Shield - 1
+                    inventory.Iron_Chunk = inventory.IronChunk - 5
             else:
                 crafted_item2 = ""       
     if shield_item == 3:    
@@ -557,6 +592,8 @@ def mousePressed():
                     crafted_item2= "you don't have enough materials"
                 else:
                     crafted_item2 = "You have crafted null shield" 
+                    inventory.Iron_Shield = inventory.Iron_Shield - 1
+                    inventory.Mana_Essence = inventory.Mana_Essence - 10
             else:
                 crafted_item2 = ""        
     if shield_item == 4:    
@@ -566,6 +603,9 @@ def mousePressed():
                     crafted_item2 = "you don't have enough materials"
                 else:
                     crafted_item2 = "You have crafted gold shield"
+                    inventory.Iron_Shield = inventory.Iron_Shield - 1
+                    inventory.Null_Shield = inventory.Null_Shield - 1
+                    inventory.Gold_Ingot = inventory.Gold_Ingot - 3
             else:
                 crafted_item2 = ""
     if shield_item == 5:
@@ -575,6 +615,8 @@ def mousePressed():
                     crafted_item2 = "you don't have enough materials"
                 else:
                     crafted_item2 = "You have crafted war god's aegis"
+                    inventory.Gold_Shield = inventory.Gold_Shield - 1
+                    inventory.Void_Essence = inventory.Void_Essence - 10
             else:
                 crafted_item2 = ""
         
@@ -596,7 +638,9 @@ def mousePressed():
                 if inventory.Iron_Chunk < 1 and inventory.Wooden_Stick < 1:
                     crafted_item5 = "you don't have enough materials"
                 else:
-                    crafted_item5 = "You have crafted basic dagger"   
+                    crafted_item5 = "You have crafted basic dagger"
+                    inventory.Iron_Chunk = inventory.Iron_Chunk - 1
+                    inventory.Wooden_Stick = inventory.Wooden_Stick  - 1  
             else:
                 crafted_item5 = ""         
     if dagger_item == 2:    
@@ -605,7 +649,9 @@ def mousePressed():
                 if inventory.Basic_Dagger < 1 and inventory.Mana_Essence < 3:
                     crafted_item5 = "you don't have enough materials"
                 else:
-                    crafted_item5 = "You have crafted enchanted dagger"    
+                    crafted_item5 = "You have crafted enchanted dagger"
+                    inventory.Basic_Dagger = inventory.Basic_Dagger - 1
+                    inventory.Mana_Essence = inventory.Mana_Essence - 3    
             else:
                 crafted_item5 = ""    
     if dagger_item == 3:    
@@ -615,5 +661,7 @@ def mousePressed():
                     crafted_item5 = "you don't have enough materials"
                 else:
                     crafted_item5 = "You have crafted dagger of affliction"
+                    inventory.Enchanted_Dagger = inventory.Enchanted_Dagger - 1
+                    inventory.Scorpion_Poison = inventory.Scorpion_Poison - 3
             else:
                 crafted_item5 = ""

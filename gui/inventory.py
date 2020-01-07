@@ -56,21 +56,7 @@ def draw():
     textAlign(CENTER)
     fill(240)
     text("Back", 225, 140)
-    Bear_Skin = 0
-    Wolf_Skin = 0
-    Soul_Dead = 0
-    Wooden_Stick = 0
-    Wooden_Chunk = 0
-    Iron_Chunk = 0
-    Enchanted_Wolf = 0
-    Mana_Essence = 0
-    Obsidian = 0
-    Void_Energy = 0
-    Haunted_Spirit = 0
-    Cursed_Wood = 0
-    Gold_Ingot = 0
-    Scorpion_Poison = 0
-    Fire_Essence = 0
+
     
     textSize(52)
     textAlign(LEFT)

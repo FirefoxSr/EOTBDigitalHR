@@ -63,6 +63,8 @@ def mousePressed():
     if (screen == "combat"):
         Combat.isMouseWithinSpace
         Combat.mousePressed()
+        if isMouseWithinSpace(0,0,20,30):
+            screen = "Map"
     if (screen == "Map"):
         Map.isMouseWithinSpace
         Map.mouseClicked()

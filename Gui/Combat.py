@@ -1,3 +1,4 @@
+import inventory
 def setup():
     fullScreen()
     global font, Scene, turn, dice, P_turn, M_turn, P_energy, P_health, P_block, M_energy, M_health, M_block, M_corruption, M_poison, M_fire, M_name, P_poison, P_corruption, P_fire, monster, energy, charging, P_gain, M_gain, M_charge, P_charge, damage, block, piercing, corruption, poison, fire, cleanse, heal, img_DeathGazer, img_VoidTentacle, img_VoidElemental, img_Voidling, img_CrimsonDragon, img_FireDrake, img_LavaGolem, img_LavaSlime, img_ghost, img_zombie, img_GoldenScarab, img_mummy, img_AncientSkeleton, img_GiantScorpion, img_basilisk, img_haunter, img_HauntedTree, img_GrimReaper, img_VoidSpawn, img_ManaGolem, img_SkeletonMage, img_ArcaneWolf, img_fairy, img_treant, img_skeleton, img_bear, img_wolf, img_slime, img_attack_5, img_attack_8, img_block_5, img_block_10, img_piercing, img_cleanse, img_corruption, img_fireball, img_heal, img_magic_missile, img_poison
@@ -90,6 +91,8 @@ def draw():
     if turn == 0:
         P_turn = 0
         M_turn = 0
+        
+    rect(0,0,20,30)
 
     #texts for all the stats in the game.
     text('Player ' + str(P_turn), 1650, 100)
@@ -166,18 +169,6 @@ def draw():
         image(img_HauntedTree, 650, 650)
         image(img_GrimReaper, 850, 650)
         
-    if Scene == 2: #drop select page.
-        background(0,0,0)
-        textFont(font)
-        fill(256,256,256)
-        textSize(50)
-        textAlign(CENTER)
-        
-        text('Drop page test', 600, 100)
-        text('Back', 550, 1000)
-        
-        text('Drop page test', 600, 100)
-        
     if Scene == 3: #second page of monster select
         background(0,0,0)
         textFont(font)
@@ -203,233 +194,244 @@ def draw():
         image(img_VoidTentacle, 450, 650)
         image(img_DeathGazer, 650, 650)
         
-    
+    if Scene == 2: #drop select page.
+        background(0,0,0)
+        textFont(font)
+        fill(256,256,256)
+        textSize(50)
+        textAlign(CENTER)
+        
+        text('Drop page test', 600, 100)
+        text('Back', 550, 1000)
+        
+        text('Drop page test', 600, 100)    
 
-    if monster == 6:
-        if dice == 1 or dice == 5 or dice == 4 or dice == 6:
-            textAlign(CENTER)
-            text("Mana Essence", width /2, height - 200)
-            inventory.Mana_Essence = inventory.Mana_Essence + 1
-        else:
-            textAlign(CENTER)
-            text("Mana Essence x2", width /2, height - 200)
-            inventory.Mana_Essence = inventory.Mana_Essence + 2
-    if monster == 1:
-            if dice in range(1, 7):
-                textAlign(CENTER)
-                text("Nothing", width /2, height -200)
-    
-    if monster == 2:
-            if dice == 1 or dice == 3 or dice == 4:
-                textAlign(CENTER)
-                text("Wolf Skin", width /2, height - 200)
-                inventory.Wolf_Skin = inventory.Wolf_Skin + 1
-            elif dice == 2 or dice == 5:
-                textAlign(CENTER)
-                text("Nothing", width /2, height - 200)
-            else:
-                textAlign(CENTER)
-                text("Wolf Skin x2", width /2, height - 200)
-                inventory.Wolf_Skin = inventory.Wolf_Skin + 2
+        if monster == 6:
+                if dice == 1 or dice == 5 or dice == 4 or dice == 6:
+                    textAlign(CENTER)
+                    text("Mana Essence", width /2, height - 200)
+        #             inventory.Mana_Essence = inventory.Mana_Essence + 1
+                else:
+                    textAlign(CENTER)
+                    text("Mana Essence x2", width /2, height - 200)
+        #             inventory.Mana_Essence = inventory.Mana_Essence + 2
+        if monster == 1:
+                if dice in range(1, 7):
+                    textAlign(CENTER)
+                    text("Nothing", width /2, height -200)
+        
+        if monster == 2:
+                if dice == 1 or dice == 3 or dice == 4:
+                    textAlign(CENTER)
+                    text("Wolf Skin", width /2, height - 200)
+        #             inventory.Wolf_Skin = inventory.Wolf_Skin + 1
+                elif dice == 2 or dice == 5:
+                    textAlign(CENTER)
+                    text("Nothing", width /2, height - 200)
+                else:
+                    textAlign(CENTER)
+                    text("Wolf Skin x2", width /2, height - 200)
+        #             inventory.Wolf_Skin = inventory.Wolf_Skin + 2
+                    
+        if monster == 3:
+                if dice == 1:
+                    textAlign(CENTER)
+                    text("Bear Skin", width /2, height - 200)
+        #             inventory.Bear_Skin = inventory.Bear_Skin + 1
+                elif dice == 2 or dice == 5:
+                    textAlign(CENTER)
+                    text("Nothing", width /2, height - 200)
+                else:
+                    textAlign(CENTER)
+                    text("Bear Skin x2", width /2, height - 200)
+        #             inventory.Bear_Skin = inventory.Bear_Skin + 2
+                    
+        if monster == 4:
+                if dice == 1 or dice == 6:
+                    textAlign(CENTER)
+                    text("Iron Chunk", width /2, height - 200)
+        #             inventory.Iron_Chunk = inventory.Iron_Chunk + 1
+                elif dice == 2 or dice == 3:
+                    textAlign(CENTER)
+                    text("Wooden Stick", width /2, height - 200)
+        #             inventory.Wooden_Stick = inventory.Wooden.Stick + 1
+                elif dice == 4:
+                    textAlign(CENTER)
+                    text("Iron Chunk x2", width /2, height - 200)
+        #             inventory.Iron_Chunk = inventory.Iron_Chunk + 2
+                else:
+                    textAlign(CENTER)
+                    text("Soul of the Dead", width /2, height - 200)
+        #             inventory.Soul_Dead = inventory.Soul_Dead + 1
+                    
+        if monster == 5:
+                if dice == 3 or dice == 5:
+                    textAlign(CENTER)
+                    text("Wooden Chunk x3", width /2, height - 200)
+        #             inventory.Wooden_Chunk = inventory.Wooden_Chunk + 3
+                elif dice == 4 or dice == 6:
+                    textAlign(CENTER)
+                    text("Wooden Stick x3", width /2, height - 200)
+        #             inventory.Wooden_Stick = inventory.Wooden_Stick + 3
+                else:
+                    textAlign(CENTER)
+                    text("Wooden Stick", width /2, height - 200)
+        #             inventory.Wooden_Stick = inventory.Wooden_Stick + 1
+                    
+        if monster == 7:
+                if dice == 1 or dice == 3 or dice == 4:
+                    textAlign(CENTER)
+                    text("Enchanted Wolf Skin", width /2, height - 200)
+        #             inventory.Enchanted_Wolf = inventory.Enchanted_Wolf + 1
+                elif dice == 2 or dice == 5:
+                    textAlign(CENTER)
+                    text("Mana Essence", width /2, height - 200)
+        #             inventory.Mana_Essence = inventory.Mana_Essence + 1
+                else:
+                    textAlign(CENTER)
+                    text("Enchanted Wolf Skin x2", width /2, height - 200)
+        #             inventory.Enchanted_Wolf = inventory.Enchanted_Wolf + 2
+                    
+        if monster == 8:
+                if dice == 3 or dice == 4:
+                    textAlign(CENTER)
+                    text("Soulf od the Dead", width /2, height - 200)
+        #             inventory.Soul_Dead = inventory.Soul_Dead + 1
+                elif dice == 2:
+                    textAlign(CENTER)
+                    text("Mana Essence", width /2, height - 200)
+        #             inventory.Mana_Essence = inventory.Mana_Essence + 1
+                elif dice == 5 or dice == 6:
+                    textAlign(CENTER)
+                    text("Soul of the Dead x2", width /2, height - 200)
+        #             inventory.Soul_Dead = inventory.Soul_Dead + 2
+                else:
+                    textAlign(CENTER)
+                    text("Mana Essence x2", width /2, height - 200)
+        #             inventory.Mana_Essence = inventory.Mana_Essence + 2
+                    
+        if monster == 9:
+                if dice == 1 or dice == 2:
+                    textAlign(CENTER)
+                    text("Mana Essence x2", width /2, height - 200)
+        #             inventory.Mana_Essence = inventory.Mana_Essence + 2
+                else:
+                    textAlign(CENTER)
+                    text("Obsidian", width /2, height - 200)
+        #             inventory.Obsidian = inventory.Obsidian + 1
+        if monster == 10:
+                if dice == 2 or dice == 4:
+                    textAlign(CENTER)
+                    text("Void Energy x2", width /2, height - 200)
+        #             inventory.Void_Essence = inventory.Void_Essence + 2
+                else:
+                    textAlign(CENTER)
+                    text("Void Energy", width /2, height - 200)
+        #             inventory.Void_Essence = inventory.Void_Essence + 1
+                    
+        if monster == 11:
+                if dice == 1 or dice == 3 or dice == 6:
+                    textAlign(CENTER)
+                    text("Soul of the Dead", width /2, height - 200)
+        #             inventory.Soul_Dead = inventory.Soul_Dead + 1
+                elif dice == 2 or dice == 4:
+                    textAlign(CENTER)
+                    text("Soul of the Dead x3", width /2, height - 200)
+        #             inventory.Soul_Dead = inventory.Soul_Dead + 3
+                else:
+                    textAlign(CENTER)
+                    text("Wolf Skin x2", width /2, height - 200)
+        #             inventory.Wolf_Skin = inventory.Wolf_Skin + 2
+                    
+        if monster == 12:
+                if dice in range(1,6 +1):
+                    textAlign(CENTER)
+                    text("Soul of the Dead x2", width /2, height - 200)
+        #             inventory.Soul_Dead = inventory.Soul_Dead + 2
+                    
+        if monster == 13:
+                if dice == 3 or dice == 6 or dice == 1:
+                    textAlign(CENTER)
+                    text("Soul of the Dead", width /2, height - 200)
+        #             inventory.Soul_Dead = inventory.Soul_Dead + 1
+                else:
+                    textAlign(CENTER)
+                    text("Haunted Spirit", width /2, height - 200)
+        #             inventory.Haunted_Spirit = inventory.Haunted_Spirit + 1
+        if monster == 14:
+                if dice == 1 or dice == 6:
+                    textAlign(CENTER)
+                    text("Haunted Spirit", width /2, height - 200)
+        #             inventory.Haunted_Spirit = inventory.Haunted_Spirit + 1
+                elif dice == 3:
+                    textAlign(CENTER)
+                    text("Cursed Wood x2", width /2, height - 200)
+        #             inventory.Cursed_Wood = inventory.Cursed_Wood + 2
+                else:
+                    textAlign(CENTER)
+                    text("Cursed Wood", width /2, height - 200)
+        #             inventory.Cursed_Wood = inventory.Cursed_Wood + 1
+                    
+        if monster == 16:
+                if dice == 3 or dice == 5:
+                    textAlign(CENTER)
+                    text("Gold Ingot x2", width /2, height - 200)
+        #             inventory.Gold_Ingot = inventory.Gold_Ingot + 2
+                else:
+                    textAlign(CENTER)
+                    text("Gold Ingot", width /2, height - 200)
+        #             inventory.Gold_Ingot = inventory.Gold_Ingot + 1
+                    
+        if monster == 18:
+                if dice == 2 or dice == 4:
+                    textAlign(CENTER)
+                    text("Soul of the Dead x5", width /2, height - 200)
+        #             inventory.Soul_Dead = inventory.Soul_Dead + 5
+                else:
+                    textAlign(CENTER)
+                    text("Gold Ingot", width /2, height - 200)
+        #             inventory.Gold_Ingot = inventory.Gold_Ingot + 1
+                    
+        if monster == 19:
+                if dice in range(1, 6+1):
+                    textAlign(CENTER)
+                    text("Scorpion Poison", width /2, height - 200)
+        #             inventory.Scorpion_Poison = inventory.Scorpion_Poison + 1
+                    
+        if monster == 17:
+                if dice in range(1,6 +1):
+                    textAlign(CENTER)
+                    text("Soul of the Dead x2", width /2, height - 200)
+        #             inventory.Soul_Dead = inventory.Soul_Dead + 2
+                    
+        if monster == 21 or monster == 22 or monster == 23:
+                if dice == 1 or dice == 3 or dice == 5:
+                    textAlign(CENTER)
+                    text("Fire Essence", width /2, height - 200)
+        #             inventory.Fire_Essence = inventory.Fire_Essence + 1
+                elif dice == 2 or dice == 4:
+                    textAlign(CENTER)
+                    text("Fire Essence x2", width /2, height - 200) 
+        #             inventory.Fire_Essence = inventory.Fire_Essence + 2
+                else:
+                    textAlign(CENTER)
+                    text("Fire Essence x3", width /2, height - 200)
+        #             inventory.Fire_Essence = inventory.Fire_Essence + 3
                 
-    if monster == 3:
-            if dice == 1:
-                textAlign(CENTER)
-                text("Bear Skin", width /2, height - 200)
-                inventory.Bear_Skin = inventory.Bear_Skin + 1
-            elif dice == 2 or dice == 5:
-                textAlign(CENTER)
-                text("Nothing", width /2, height - 200)
-            else:
-                textAlign(CENTER)
-                text("Bear Skin x2", width /2, height - 200)
-                inventory.Bear_Skin = inventory.Bear_Skin + 2
-                
-    if monster == 4:
-            if dice == 1 or dice == 6:
-                textAlign(CENTER)
-                text("Iron Chunk", width /2, height - 200)
-                inventory.Iron_Chunk = inventory.Iron_Chunk + 1
-            elif dice == 2 or dice == 3:
-                textAlign(CENTER)
-                text("Wooden Stick", width /2, height - 200)
-                inventory.Wooden_Stick = inventory.Wooden.Stick + 1
-            elif dice == 4:
-                textAlign(CENTER)
-                text("Iron Chunk x2", width /2, height - 200)
-                inventory.Iron_Chunk = inventory.Iron_Chunk + 2
-            else:
-                textAlign(CENTER)
-                text("Soul of the Dead", width /2, height - 200)
-                inventory.Soul_Dead = inventory.Soul_Dead + 1
-                
-    if monster == 5:
-            if dice == 3 or dice == 5:
-                textAlign(CENTER)
-                text("Wooden Chunk x3", width /2, height - 200)
-                inventory.Wooden_Chunk = inventory.Wooden_Chunk + 3
-            elif dice == 4 or dice == 6:
-                textAlign(CENTER)
-                text("Wooden Stick x3", width /2, height - 200)
-                inventory.Wooden_Stick = inventory.Wooden_Stick + 3
-            else:
-                textAlign(CENTER)
-                text("Wooden Stick", width /2, height - 200)
-                inventory.Wooden_Stick = inventory.Wooden_Stick + 1
-                
-    if monster == 7:
-            if dice == 1 or dice == 3 or dice == 4:
-                textAlign(CENTER)
-                text("Enchanted Wolf Skin", width /2, height - 200)
-                inventory.Enchanted_Wolf = inventory.Enchanted_Wolf + 1
-            elif dice == 2 or dice == 5:
-                textAlign(CENTER)
-                text("Mana Essence", width /2, height - 200)
-                inventory.Mana_Essence = inventory.Mana_Essence + 1
-            else:
-                textAlign(CENTER)
-                text("Enchanted Wolf Skin x2", width /2, height - 200)
-                inventory.Enchanted_Wolf = inventory.Enchanted_Wolf + 2
-                
-    if monster == 8:
-            if dice == 3 or dice == 4:
-                textAlign(CENTER)
-                text("Soulf od the Dead", width /2, height - 200)
-                inventory.Soul_Dead = inventory.Sould_Dead + 1
-            elif dice == 2:
-                textAlign(CENTER)
-                text("Mana Essence", width /2, height - 200)
-                inventory.Mana_Essence = inventory.Mana_Essence + 1
-            elif dice == 5 or dice == 6:
-                textAlign(CENTER)
-                text("Soul of the Dead x2", width /2, height - 200)
-                inventory.Soul_Dead = inventory.Soul_Dead + 2
-            else:
-                textAlign(CENTER)
-                text("Mana Essence x2", width /2, height - 200)
-                inventory.Mana_Essence = inventory.Mana_Essence + 2
-                
-    if monster == 9:
-            if dice == 1 or dice == 2:
-                textAlign(CENTER)
-                text("Mana Essence x2", width /2, height - 200)
-                inventory.Mana_Essence = inventory.Mana_Essence + 2
-            else:
-                textAlign(CENTER)
-                text("Obsidian", width /2, height - 200)
-                inventory.Obsidian = inventory.Obsidian + 1
-    if monster == 10:
-            if dice == 2 or dice == 4:
-                textAlign(CENTER)
-                text("Void Energy x2", width /2, height - 200)
-                inventory.Void_Essence = inventory.Void_Essence + 2
-            else:
-                textAlign(CENTER)
-                text("Void Energy", width /2, height - 200)
-                inventory.Void_Essence = inventory.Void_Essence + 1
-                
-    if monster == 11:
-            if dice == 1 or dice == 3 or dice == 6:
-                textAlign(CENTER)
-                text("Soul of the Dead", width /2, height - 200)
-                inventory.Soul_Dead = inventory.Soul_Dead + 1
-            elif dice == 2 or dice == 4:
-                textAlign(CENTER)
-                text("Soul of the Dead x3", width /2, height - 200)
-                inventory.Soul_Dead = inventory.Soul_Dead + 3
-            else:
-                textAlign(CENTER)
-                text("Wolf Skin x2", width /2, height - 200)
-                inventory.Wolf_Skin = inventory.Wolf_Skin + 2
-                
-    if monster == 12:
-            if dice in range(1,6 +1):
-                textAlign(CENTER)
-                text("Soul of the Dead x2", width /2, height - 200)
-                inventory.Soul_Dead = inventory.Soul_Dead + 2
-                
-    if monster == 13:
-            if dice == 3 or dice == 6 or dice == 1:
-                textAlign(CENTER)
-                text("Soul of the Dead", width /2, height - 200)
-                inventory.Soul_Dead = inventory.Soul_Dead + 1
-            else:
-                textAlign(CENTER)
-                text("Haunted Spirit", width /2, height - 200)
-                inventory.Haunted_Spirit = inventory.Haunted_Spirit + 1
-    if monster == 14:
-            if dice == 1 or dice == 6:
-                textAlign(CENTER)
-                text("Haunted Spirit", width /2, height - 200)
-                inventory.Haunted_Spirit = inventory.Haunted_Spirit + 1
-            elif dice == 3:
-                textAlign(CENTER)
-                text("Cursed Wood x2", width /2, height - 200)
-                inventory.Cursed_Wood = inventory.Cursed_Wood + 2
-            else:
-                textAlign(CENTER)
-                text("Cursed Wood", width /2, height - 200)
-                inventory.Cursed_Wood = inventory.Cursed_Wood + 1
-                
-    if monster == 16:
-            if dice == 3 or dice == 5:
-                textAlign(CENTER)
-                text("Gold Ingot x2", width /2, height - 200)
-                inventory.Gold_Ingot = inventory.Gold_Ingot + 2
-            else:
-                textAlign(CENTER)
-                text("Gold Ingot", width /2, height - 200)
-                inventory.Gold_Ingot = inventory.Gold_Ingot + 1
-                
-    if monster == 18:
-            if dice == 2 or dice == 4:
-                textAlign(CENTER)
-                text("Soul of the Dead x5", width /2, height - 200)
-                inventory.Soul_Dead = inventory.Soul_Dead + 5
-            else:
-                textAlign(CENTER)
-                text("Gold Ingot", width /2, height - 200)
-                inventory.Gold_Ingot = inventory.Gold_Ingot + 1
-                
-    if monster == 19:
-            if dice in range(1, 6+1):
-                textAlign(CENTER)
-                text("Scorpion Poison", width /2, height - 200)
-                inventory.Scorpion_Poison = inventory.Scorpion_Poison + 1
-                
-    if monster == 17:
-            if dice in range(1,6 +1):
-                textAlign(CENTER)
-                text("Soul of the Dead x2", width /2, height - 200)
-                inventory.Soul_Dead = inventory.Soul_Dead + 2
-                
-    if monster == 21 or monster == 22 or monster == 23:
-            if dice == 1 or dice == 3 or dice == 5:
-                textAlign(CENTER)
-                text("Fire Essence", width /2, height - 200)
-                inventory.Fire_Essence = inventory.Fire_Essence + 1
-            elif dice == 2 or dice == 4:
-                textAlign(CENTER)
-                text("Fire Essence x2", width /2, height - 200) 
-                inventory.Fire_Essence = inventory.Fire_Essence + 2
-            else:
-                textAlign(CENTER)
-                text("Fire Essence x3", width /2, height - 200)
-                inventory.Fire_Essence = inventory.Fire_Essence + 3
-            
-    if monster == 25 or monster == 26 or monster == 27:
-            if dice == 1 or dice == 3 or dice == 5:
-                textAlign(CENTER)
-                text("Void Essence", width /2, height - 200)
-                inventory.Void_Essence = inventory.Void_Essence + 1
-            elif dice == 2 or dice == 4:
-                textAlign(CENTER)
-                text("Void Essence x2", width /2, height - 200)
-                inventory.Void_Essence = inventory.Void_Essence + 2
-            else:
-                textAlign(CENTER)
-                text("Void Essence x3", width /2, height - 200)
-                inventory.Void_Essence = inventory.Void_Essence + 3
+        if monster == 25 or monster == 26 or monster == 27:
+                if dice == 1 or dice == 3 or dice == 5:
+                    textAlign(CENTER)
+                    text("Void Essence", width /2, height - 200)
+        #             inventory.Void_Essence = inventory.Void_Essence + 1
+                elif dice == 2 or dice == 4:
+                    textAlign(CENTER)
+                    text("Void Essence x2", width /2, height - 200)
+        #             inventory.Void_Essence = inventory.Void_Essence + 2
+                else:
+                    textAlign(CENTER)
+                    text("Void Essence x3", width /2, height - 200)
+        #             inventory.Void_Essence = inventory.Void_Essence + 3
+        
 
 #function to enable mouse clicking in specific locations.        
 def isMouseWithinSpace(x,y,w,h):
@@ -472,228 +474,228 @@ def mousePressed():
         if isMouseWithinSpace(1100, 950, 200, 50) and charging == 0:
             charging = 1
     
-    if turn == 1:
-        if isMouseWithinSpace(50, 300, 172, 238):
-            damage = damage + 5
-            energy = energy + 5
-        if isMouseWithinSpace(250, 300, 172, 238):
-            damage = damage + 10
-            energy = energy + 8
-        if isMouseWithinSpace(450, 300, 172, 238):
-            block = block + 5
-            energy = energy + 10
-        if isMouseWithinSpace(650, 300, 172, 238):
-            block = block + 10
-            energy = energy + 15
-        if isMouseWithinSpace(850, 300, 172, 238):
-            piercing = piercing + 5
-            energy = energy + 7
-        if isMouseWithinSpace(50, 600, 172, 238):
-            corruption = corruption + 1
-            energy = energy + 10
-        if isMouseWithinSpace(850, 600, 172, 238):
-            poison = poison + 1
-            energy = energy + 5
-        if isMouseWithinSpace(250, 600, 172, 238):
-            damage = damage + 5
-            fire = fire + 1
-            energy = energy + 6
-        if isMouseWithinSpace(450, 600, 172, 238):
-            heal = heal + 1
-            energy = energy + 15
-        if isMouseWithinSpace(650, 600, 172, 238):
-            damage = damage + 5
-            energy = energy + 5
-        if isMouseWithinSpace(1050, 300, 172, 238):
-            cleanse = cleanse + 1 
-            energy = energy + 5
-        
-    
-    if turn == 2: 
-        if isMouseWithinSpace(50, 300, 172, 238): #5 attack card
-            if monster == 16:
-                damage = damage + 10
-            elif monster == 18:
-                damage = damage + 10
-            elif monster == 21:
-                damage = damage + 10
-            elif monster == 22:
-                damage = damage + 10
-            elif monster == 23:
-                damage = damage + 10
-            elif monster == 24:
-                damage = damage + 15
-            elif monster == 25:
-                damage = damage + 15
-            elif monster == 27:
-                damage = damage + 45
-            elif monster == 26:
-                damage = damage + 20
-            elif monster == 28:
-                damage = damage + 60
-            else:
+        if turn == 1:
+            if isMouseWithinSpace(50, 300, 172, 238):
                 damage = damage + 5
                 energy = energy + 5
-        if isMouseWithinSpace(250, 300, 172, 238): #10 attack card
-            if monster == 16:
-                damage = damage + 20
-            elif monster == 18:
-                damage = damage + 20
-            elif monster == 21:
-                damage = damage + 20
-            elif monster == 22:
-                damage = damage + 20
-            elif monster == 23:
-                damage = damage + 20
-            elif monster == 24:
-                damage = damage + 30
-            elif monster == 25:
-                damage = damage + 30
-            elif monster == 27:
-                damage = damage + 50
-            elif monster == 26:
-                damage = damage + 40
-            elif monster == 28:
-                damage = damage + 80
-            else:
+            if isMouseWithinSpace(250, 300, 172, 238):
                 damage = damage + 10
                 energy = energy + 8
-        if isMouseWithinSpace(450, 300, 172, 238): #5 block card
-            if monster == 17:
-                block = block + 10
-            elif monster == 21:
-                block = block + 10
-            elif monster == 22:
-                block = block + 10
-            elif monster == 23:
-                block = block + 10
-            elif monster == 24:
-                block = block + 15
-            elif monster == 25:
-                block = block + 15
-            elif monster == 26:
-                block = block + 20
-            elif monster == 28:
-                block = block + 20
-            else:
+            if isMouseWithinSpace(450, 300, 172, 238):
                 block = block + 5
                 energy = energy + 10
-        if isMouseWithinSpace(650, 300, 172, 238): #10 block card
-            if monster == 17:
-                block = block + 20
-            elif monster == 21:
-                block = block + 20
-            elif monster == 22:
-                block = block + 20
-            elif monster == 23:
-                block = block + 20
-            elif monster == 24:
-                block = block + 30
-            elif monster == 25:
-                block = block + 30
-            elif monster == 26:
-                block = block + 40
-            elif monster == 28:
-                block = block + 40
-            else:
+            if isMouseWithinSpace(650, 300, 172, 238):
                 block = block + 10
                 energy = energy + 15
-        if isMouseWithinSpace(850, 300, 172, 238): # piercing card
-            if monster == 16:
-                piercing = piercing + 10
-            elif monster == 18:
-                piercing = piercing + 10
-            elif monster == 21:
-                piercing = piercing + 10
-            elif monster == 22:
-                piercing = piercing + 10
-            elif monster == 23:
-                piercing = piercing + 10
-            elif monster == 24:
-                piercing = piercing + 15
-            elif monster == 25:
-                piercing = piercing + 15
-            elif monster == 26:
-                piercing = piercing + 20
-            elif monster == 28:
-                piercing = piercing + 20
-            else:
+            if isMouseWithinSpace(850, 300, 172, 238):
                 piercing = piercing + 5
                 energy = energy + 7
-        if isMouseWithinSpace(50, 600, 172, 238): #corruption card
-            corruption = corruption + 1
-            energy = energy + 10
-        if isMouseWithinSpace(850, 600, 172, 238): #poison card
-            poison = poison + 1
-            energy = energy + 5
-        if isMouseWithinSpace(250, 600, 172, 238): #fireball card
-            if monster == 16:
-                damage = damage + 10
-            elif monster == 18:
-                damage = damage + 10
-            elif monster == 21:
-                damage = damage + 10
-            elif monster == 22:
-                damage = damage + 10
-            elif monster == 23:
-                damage = damage + 10
-            elif monster == 24:
-                damage = damage + 15
-            elif monster == 25:
-                damage = damage + 15
-            elif monster == 26:
-                damage = damage + 20
-            elif monster == 28:
-                damage = damage + 20
-            else:
+            if isMouseWithinSpace(50, 600, 172, 238):
+                corruption = corruption + 1
+                energy = energy + 10
+            if isMouseWithinSpace(850, 600, 172, 238):
+                poison = poison + 1
+                energy = energy + 5
+            if isMouseWithinSpace(250, 600, 172, 238):
                 damage = damage + 5
                 fire = fire + 1
                 energy = energy + 6
-        if isMouseWithinSpace(450, 600, 172, 238): #heal card
-            if monster == 21:
-                heal = heal + 2
-            elif monster == 22:
-                heal = heal + 2
-            elif monster == 23:
-                heal = heal + 2
-            elif monster == 24:
-                heal = heal + 3
-            elif monster == 25:
-                heal = heal + 3
-            elif monster == 26:
-                heal = heal + 4
-            elif monster == 28:
-                heal = heal + 4
-            else:
+            if isMouseWithinSpace(450, 600, 172, 238):
                 heal = heal + 1
                 energy = energy + 15
-        if isMouseWithinSpace(650, 600, 172, 238): #magic missile card
-            if monster == 13:
-                damage = damage + 10
-            elif monster == 16:
-                damage = damage + 10
-            elif monster == 18:
-                damage = damage + 10
-            elif monster == 21:
-                damage = damage + 10
-            elif monster == 22:
-                damage = damage + 10
-            elif monster == 23:
-                damage = damage + 10
-            elif monster == 24:
-                damage = damage + 15
-            elif monster == 25:
-                damage = damage + 15
-            elif monster == 26:
-                damage = damage + 20
-            elif monster == 28:
-                damage = damage + 20
-            else:
+            if isMouseWithinSpace(650, 600, 172, 238):
                 damage = damage + 5
                 energy = energy + 5
-        if isMouseWithinSpace(1050, 300, 172, 238): #cleanse card
-            cleanse = cleanse + 1 
-            energy = energy + 5
+            if isMouseWithinSpace(1050, 300, 172, 238):
+                cleanse = cleanse + 1 
+                energy = energy + 5
+        
+    
+        if turn == 2: 
+            if isMouseWithinSpace(50, 300, 172, 238):
+                if monster == 16:
+                    damage = damage + 10
+                elif monster == 18:
+                    damage = damage + 10
+                elif monster == 21:
+                    damage = damage + 10
+                elif monster == 22:
+                    damage = damage + 10
+                elif monster == 23:
+                    damage = damage + 10
+                elif monster == 24:
+                    damage = damage + 15
+                elif monster == 25:
+                    damage = damage + 15
+                elif monster == 27:
+                    damage = damage + 45
+                elif monster == 26:
+                    damage = damage + 20
+                elif monster == 28:
+                    damage = damage + 60
+                else:
+                    damage = damage + 5
+                energy = energy + 5
+            if isMouseWithinSpace(250, 300, 172, 238):
+                if monster == 16:
+                    damage = damage + 20
+                elif monster == 18:
+                    damage = damage + 20
+                elif monster == 21:
+                    damage = damage + 20
+                elif monster == 22:
+                    damage = damage + 20
+                elif monster == 23:
+                    damage = damage + 20
+                elif monster == 24:
+                    damage = damage + 30
+                elif monster == 25:
+                    damage = damage + 30
+                elif monster == 27:
+                    damage = damage + 50
+                elif monster == 26:
+                    damage = damage + 40
+                elif monster == 28:
+                    damage = damage + 80
+                else:
+                    damage = damage + 10
+                energy = energy + 8
+            if isMouseWithinSpace(450, 300, 172, 238):
+                if monster == 17:
+                    block = block + 10
+                elif monster == 21:
+                    block = block + 10
+                elif monster == 22:
+                    block = block + 10
+                elif monster == 23:
+                    block = block + 10
+                elif monster == 24:
+                    block = block + 15
+                elif monster == 25:
+                    block = block + 15
+                elif monster == 26:
+                    block = block + 20
+                elif monster == 28:
+                    block = block + 20
+                else:
+                    block = block + 5
+                energy = energy + 10
+            if isMouseWithinSpace(650, 300, 172, 238):
+                if monster == 17:
+                    block = block + 20
+                elif monster == 21:
+                    block = block + 20
+                elif monster == 22:
+                    block = block + 20
+                elif monster == 23:
+                    block = block + 20
+                elif monster == 24:
+                    block = block + 30
+                elif monster == 25:
+                    block = block + 30
+                elif monster == 26:
+                    block = block + 40
+                elif monster == 28:
+                    block = block + 40
+                else:
+                    block = block + 10
+                energy = energy + 15
+            if isMouseWithinSpace(850, 300, 172, 238):
+                if monster == 16:
+                    piercing = piercing + 10
+                elif monster == 18:
+                    piercing = piercing + 10
+                elif monster == 21:
+                    piercing = piercing + 10
+                elif monster == 22:
+                    piercing = piercing + 10
+                elif monster == 23:
+                    piercing = piercing + 10
+                elif monster == 24:
+                    piercing = piercing + 15
+                elif monster == 25:
+                    piercing = piercing + 15
+                elif monster == 26:
+                    piercing = piercing + 20
+                elif monster == 28:
+                    piercing = piercing + 20
+                else:
+                    piercing = piercing + 5
+                energy = energy + 7
+            if isMouseWithinSpace(50, 600, 172, 238):
+                corruption = corruption + 1
+                energy = energy + 10
+            if isMouseWithinSpace(850, 600, 172, 238):
+                poison = poison + 1
+                energy = energy + 5
+            if isMouseWithinSpace(250, 600, 172, 238):
+                if monster == 16:
+                    damage = damage + 10
+                elif monster == 18:
+                    damage = damage + 10
+                elif monster == 21:
+                    damage = damage + 10
+                elif monster == 22:
+                    damage = damage + 10
+                elif monster == 23:
+                    damage = damage + 10
+                elif monster == 24:
+                    damage = damage + 15
+                elif monster == 25:
+                    damage = damage + 15
+                elif monster == 26:
+                    damage = damage + 20
+                elif monster == 28:
+                    damage = damage + 20
+                else:
+                    damage = damage + 5
+                    fire = fire + 1
+                energy = energy + 6
+            if isMouseWithinSpace(450, 600, 172, 238):
+                if monster == 21:
+                    heal = heal + 2
+                elif monster == 22:
+                    heal = heal + 2
+                elif monster == 23:
+                    heal = heal + 2
+                elif monster == 24:
+                    heal = heal + 3
+                elif monster == 25:
+                    heal = heal + 3
+                elif monster == 26:
+                    heal = heal + 4
+                elif monster == 28:
+                    heal = heal + 4
+                else:
+                    heal = heal + 1
+                energy = energy + 15
+            if isMouseWithinSpace(650, 600, 172, 238):
+                if monster == 13:
+                    damage = damage + 10
+                elif monster == 16:
+                    damage = damage + 10
+                elif monster == 18:
+                    damage = damage + 10
+                elif monster == 21:
+                    damage = damage + 10
+                elif monster == 22:
+                    damage = damage + 10
+                elif monster == 23:
+                    damage = damage + 10
+                elif monster == 24:
+                    damage = damage + 15
+                elif monster == 25:
+                    damage = damage + 15
+                elif monster == 26:
+                    damage = damage + 20
+                elif monster == 28:
+                    damage = damage + 20
+                else:
+                    damage = damage + 5
+                energy = energy + 5
+            if isMouseWithinSpace(1050, 300, 172, 238):
+                cleanse = cleanse + 1 
+                energy = energy + 5
             
         #Dit is voor de End Turn
         if isMouseWithinSpace(1550, 1000, 200, 50):
@@ -702,156 +704,42 @@ def mousePressed():
             if P_block < 0:
                 P_block = 0
     
-    if turn == 1:
-        if charging == 1:
-            P_energy = P_energy + P_charge
-        if charging == 0:
-            P_energy = P_energy + P_gain
-        if cleanse > 0:
-            P_poison = 0
-            P_corruption = 0
-            P_fire = 0
-        if M_poison > 0:
-            damage = damage + 2
-            M_poison = M_poison - 1
-        if M_poison < 0:
-            M_poison = 0
-        if M_corruption > 0:
-            damage = damage + 5
-            M_corruption = M_corruption - 1
-        if M_corruption < 0:
-            M_corruption = 0
-        if M_fire > 0:
-            damage = damage + 1
-            M_fire = M_fire - 1
-        if M_fire < 0:
-            M_fire = 0
-            P_energy = P_energy - energy
-            P_block = P_block + block
-            P_health = P_health + heal * 15
-            M_block = M_block - damage
-        if monster != 28:
-            M_health = M_health - piercing
-            M_corruption = M_corruption + (corruption * 4)
-            M_poison = M_poison + (poison * 5)
-            M_fire = M_fire + (fire * 3)
-        if M_block < 0:
-            M_health = M_health + M_block
-            M_block = 0 
-            damage = 0
-            block = 0
-            piercing = 0
-            corruption = 0
-            poison = 0
-            fire = 0
-            heal = 0
-            cleanse = 0
-            turn = 0
-            energy = 0
-            charging = 0
-    
-    if  turn == 2:
-        if charging == 1:
-            M_energy = M_energy + M_charge
-        if charging == 0:
-            M_energy = M_energy + M_gain
-        if cleanse > 0:
-            M_poison = 0
-            M_corruption = 0
-            M_fire = 0
-        if P_poison > 0: #poison
-            if monster == 19:
-                damage = damage + 4
-            elif monster == 16:
-                damage = damage + 4
-            elif monster == 18:
-                damage = damage + 4
-            elif monster == 20:
-                damage = damage + 4
-            elif monster == 21:
-                damage = damage + 4
-            elif monster == 22:
-                damage = damage + 4
-            elif monster == 23:
-                damage = damage + 4
-            elif monster == 24:
-                damage = damage + 6
-            elif monster == 25:
-                damage = damage + 6
-            elif monster == 26:
-                damage = damage + 8
-            elif monster == 28:
-                damage = damage + 8
-            else:
-                damage = damage + 2
-                P_poison = P_poison - 1
-        if P_poison < 0:
-            P_poison = 0
-        if P_corruption > 0: #corruption
-            if monster == 16:
-                damage = damage + 10
-            elif monster == 18:
-                damage = damage + 10
-            elif monster == 19:
-                damage = damage + 10
-            elif monster == 20:
-                damage = damage + 10
-            elif monster == 21:
-                damage = damage + 10
-            elif monster == 22:
-                damage = damage + 10
-            elif monster == 23:
-                damage = damage + 10
-            elif monster == 24:
-                damage = damage + 15
-            elif monster == 25:
-                damage = damage + 15
-            elif monster == 26:
-                damage = damage + 20
-            elif monster == 28:
-                damage = damage + 20
-            else:
-                damage = damage + 5
-                P_corruption = P_corruption - 1
-            if P_corruption < 0:
-                P_corruption = 0
-            if P_fire > 0: #fire
-                if monster == 16:
+            if turn == 1:
+                if charging == 1:
+                    P_energy = P_energy + P_charge
+                if charging == 0:
+                    P_energy = P_energy + P_gain
+                if cleanse > 0:
+                    P_poison = 0
+                    P_corruption = 0
+                    P_fire = 0
+                if M_poison > 0:
                     damage = damage + 2
-                elif monster == 18:
-                    damage = damage + 2
-                elif monster == 20:
-                    damage = damage + 2
-                elif monster == 21:
-                    damage = damage + 2
-                elif monster == 22:
-                    damage = damage + 2
-                elif monster == 23:
-                    damage = damage + 2
-                elif monster == 24:
-                    damage = damage + 3
-                elif monster == 25:
-                    damage = damage + 3
-                elif monster == 26:
-                    damage = damage + 4
-                elif monster == 26:
-                    damage = damage + 4
-            else:
-                damage = damage + 1
-                P_fire = P_fire - 1
-            if P_fire < 0:
-                P_fire = 0
-                M_energy = M_energy - energy
-                M_block = M_block + block
-                M_health = M_health + heal * 15
-                P_block = P_block - damage
-                P_health = P_health - piercing
-                P_corruption = P_corruption + (corruption * 4)
-                P_poison = P_poison + (poison * 5)
-                P_fire = P_fire + (fire * 3)
-            if P_block < 0:
-                P_health = P_health + P_block
-                P_block = 0
+                    M_poison = M_poison - 1
+                    if M_poison < 0:
+                        M_poison = 0
+                if M_corruption > 0:
+                    damage = damage + 5
+                    M_corruption = M_corruption - 1
+                    if M_corruption < 0:
+                        M_corruption = 0
+                if M_fire > 0:
+                    damage = damage + 1
+                    M_fire = M_fire - 1
+                    if M_fire < 0:
+                        M_fire = 0
+                P_energy = P_energy - energy
+                P_block = P_block + block
+                P_health = P_health + heal * 15
+                M_block = M_block - damage
+                if monster != 28:
+                    M_health = M_health - piercing
+                M_corruption = M_corruption + (corruption * 4)
+                M_poison = M_poison + (poison * 5)
+                M_fire = M_fire + (fire * 3)
+                if M_block < 0:
+                    M_health = M_health + M_block
+                    M_block = 0 
                 damage = 0
                 block = 0
                 piercing = 0
@@ -863,44 +751,312 @@ def mousePressed():
                 turn = 0
                 energy = 0
                 charging = 0
+    
+            if  turn == 2:
+                if charging == 1:
+                    M_energy = M_energy + M_charge
+                if charging == 0:
+                    M_energy = M_energy + M_gain
+                if cleanse > 0:
+                    M_poison = 0
+                    M_corruption = 0
+                    M_fire = 0
+                if P_poison > 0:
+                    if monster == 19:
+                        damage = damage + 4
+                    elif monster == 16:
+                        damage = damage + 4
+                    elif monster == 18:
+                        damage = damage + 4
+                    elif monster == 20:
+                        damage = damage + 4
+                    elif monster == 21:
+                        damage = damage + 4
+                    elif monster == 22:
+                        damage = damage + 4
+                    elif monster == 23:
+                        damage = damage + 4
+                    elif monster == 24:
+                        damage = damage + 6
+                    elif monster == 25:
+                        damage = damage + 6
+                    elif monster == 26:
+                        damage = damage + 8
+                    elif monster == 28:
+                        damage = damage + 8
+                    else:
+                        damage = damage + 2
+                    P_poison = P_poison - 1
+                    if P_poison < 0:
+                        P_poison = 0
+                if P_corruption > 0:
+                    if monster == 16:
+                        damage = damage + 10
+                    elif monster == 18:
+                        damage = damage + 10
+                    elif monster == 19:
+                        damage = damage + 10
+                    elif monster == 20:
+                        damage = damage + 10
+                    elif monster == 21:
+                        damage = damage + 10
+                    elif monster == 22:
+                        damage = damage + 10
+                    elif monster == 23:
+                        damage = damage + 10
+                    elif monster == 24:
+                        damage = damage + 15
+                    elif monster == 25:
+                        damage = damage + 15
+                    elif monster == 26:
+                        damage = damage + 20
+                    elif monster == 28:
+                        damage = damage + 20
+                    else:
+                        damage = damage + 5
+                    P_corruption = P_corruption - 1
+                    if P_corruption < 0:
+                        P_corruption = 0
+                if P_fire > 0:
+                    if monster == 16:
+                        damage = damage + 2
+                    elif monster == 18:
+                        damage = damage + 2
+                    elif monster == 20:
+                        damage = damage + 2
+                    elif monster == 21:
+                        damage = damage + 2
+                    elif monster == 22:
+                        damage = damage + 2
+                    elif monster == 23:
+                        damage = damage + 2
+                    elif monster == 24:
+                        damage = damage + 3
+                    elif monster == 25:
+                        damage = damage + 3
+                    elif monster == 26:
+                        damage = damage + 4
+                    elif monster == 26:
+                        damage = damage + 4
+                    else:
+                        damage = damage + 1
+                    P_fire = P_fire - 1
+                    if P_fire < 0:
+                        P_fire = 0
+                M_energy = M_energy - energy
+                M_block = M_block + block
+                M_health = M_health + heal * 15
+                P_block = P_block - damage
+                P_health = P_health - piercing
+                P_corruption = P_corruption + (corruption * 4)
+                P_poison = P_poison + (poison * 5)
+                P_fire = P_fire + (fire * 3)
+                if P_block < 0:
+                    P_health = P_health + P_block
+                    P_block = 0
+            damage = 0
+            block = 0
+            piercing = 0
+            corruption = 0
+            poison = 0
+            fire = 0
+            heal = 0
+            cleanse = 0
+            turn = 0
+            energy = 0
+            charging = 0
 
     #Code for clicking monster cards.      
-        if Scene == 1:
-            if isMouseWithinSpace(150, 950, 200, 50):
-                Scene = 0
-            if isMouseWithinSpace(1500, 650, 200, 50):
-                Scene = 3 
+    if Scene == 1:
+        if isMouseWithinSpace(150, 950, 200, 50):
+            Scene = 0
+        if isMouseWithinSpace(1500, 650, 200, 50):
+            Scene = 3 
             
-            if isMouseWithinSpace(50, 50, 172, 238):
-                monster = 1
-            if isMouseWithinSpace(250, 50, 172, 238):
-                monster = 2
-            if isMouseWithinSpace(450, 50, 172, 238):
-                monster = 3
-            if isMouseWithinSpace(650, 50, 172, 238):
-                monster = 4
-            if isMouseWithinSpace(850, 50, 172, 238):
-                monster = 5
-            if isMouseWithinSpace(50, 350, 172, 238):
-                monster = 6
-            if isMouseWithinSpace(250, 350, 172, 238):
-                monster = 7
-            if isMouseWithinSpace(450, 350, 172, 238):
-                monster = 8
-            if isMouseWithinSpace(650, 350, 172, 238):
-                monster = 9
-            if isMouseWithinSpace(850, 350, 172, 238):
-                monster = 10
-            if isMouseWithinSpace(50, 650, 172, 238):
-                monster = 11
-            if isMouseWithinSpace(250, 650, 172, 238):
-                monster = 12
-            if isMouseWithinSpace(450, 650, 172, 238):
-                monster = 13
-            if isMouseWithinSpace(650, 650, 172, 238):
-                monster = 14
-            if isMouseWithinSpace(850, 650, 172, 238):
-                monster = 15
+        if isMouseWithinSpace(50, 50, 172, 238):
+            monster = 1
+        if isMouseWithinSpace(250, 50, 172, 238):
+            monster = 2
+            if monster == 2:
+                if dice == 1 or dice == 3 or dice == 4:
+    #             textAlign(CENTER)
+    #             text("Wolf Skin", width /2, height - 200)
+                    inventory.Wolf_Skin = inventory.Wolf_Skin + 1
+                elif dice == 2 or dice == 5:
+    #             textAlign(CENTER)
+    #             text("Nothing", width /2, height - 200)
+                    inventory.Wolf_Skin = inventory.Wolf_Skin + 0
+
+                else:
+    #             textAlign(CENTER)
+    #             text("Wolf Skin x2", width /2, height - 200)
+                    inventory.Wolf_Skin = inventory.Wolf_Skin + 2
+        if isMouseWithinSpace(450, 50, 172, 238):
+            monster = 3
+            if monster == 3:
+                if dice == 1:
+    #             textAlign(CENTER)
+    #             text("Bear Skin", width /2, height - 200)
+                    inventory.Bear_Skin = inventory.Bear_Skin + 1
+                elif dice == 2 or dice == 5:
+    #             textAlign(CENTER)
+    #             text("Nothing", width /2, height - 200)
+                    inventory.Bear_Skin = inventory.Bear_Skin + 0
+                else:
+    #             textAlign(CENTER)
+    #             text("Bear Skin x2", width /2, height - 200)
+                    inventory.Bear_Skin = inventory.Bear_Skin + 2
+        if isMouseWithinSpace(650, 50, 172, 238):
+            monster = 4
+            if monster == 4:
+                if dice == 1 or dice == 6:
+    #             textAlign(CENTER)
+    #             text("Iron Chunk", width /2, height - 200)
+                    inventory.Iron_Chunk = inventory.Iron_Chunk + 1
+                elif dice == 2 or dice == 3:
+    #             textAlign(CENTER)
+    #             text("Wooden Stick", width /2, height - 200)
+                    inventory.Wooden_Stick = inventory.Wooden.Stick + 1
+                elif dice == 4:
+    #             textAlign(CENTER)
+    #             text("Iron Chunk x2", width /2, height - 200)
+                    inventory.Iron_Chunk = inventory.Iron_Chunk + 2
+                else:
+    #             textAlign(CENTER)
+    #             text("Soul of the Dead", width /2, height - 200)
+                    inventory.Soul_Dead = inventory.Soul_Dead + 1
+        if isMouseWithinSpace(850, 50, 172, 238):
+            monster = 5
+            if monster == 5:
+                if dice == 3 or dice == 5:
+    #             textAlign(CENTER)
+    #             text("Wooden Chunk x3", width /2, height - 200)
+                    inventory.Wooden_Chunk = inventory.Wooden_Chunk + 3
+                elif dice == 4 or dice == 6:
+    #             textAlign(CENTER)
+    #             text("Wooden Stick x3", width /2, height - 200)
+                    inventory.Wooden_Stick = inventory.Wooden_Stick + 3
+                else:
+    #             textAlign(CENTER)
+    #             text("Wooden Stick", width /2, height - 200)
+                    inventory.Wooden_Stick = inventory.Wooden_Stick + 1
+        if isMouseWithinSpace(50, 350, 172, 238):
+            monster = 6
+            if monster == 6:
+                if dice == 1 or dice == 5 or dice == 4 or dice == 6:
+                   # textAlign(CENTER)
+                   # text("Mana Essence", width /2, height - 200)
+                    inventory.Mana_Essence = inventory.Mana_Essence + 1
+                else:
+                    #textAlign(CENTER)
+                    #text("Mana Essence x2", width /2, height - 200)
+                    inventory.Mana_Essence = inventory.Mana_Essence + 2
+        if isMouseWithinSpace(250, 350, 172, 238):
+            monster = 7
+            if monster == 7:
+                if dice == 1 or dice == 3 or dice == 4:
+    #             textAlign(CENTER)
+    #             text("Enchanted Wolf Skin", width /2, height - 200)
+                    inventory.Enchanted_Wolf = inventory.Enchanted_Wolf + 1
+                elif dice == 2 or dice == 5:
+    #             textAlign(CENTER)
+    #             text("Mana Essence", width /2, height - 200)
+                    inventory.Mana_Essence = inventory.Mana_Essence + 1
+                else:
+    #             textAlign(CENTER)
+    #             text("Enchanted Wolf Skin x2", width /2, height - 200)
+                    inventory.Enchanted_Wolf = inventory.Enchanted_Wolf + 2
+        if isMouseWithinSpace(450, 350, 172, 238):
+            monster = 8
+            if monster == 8:
+                if dice == 3 or dice == 4:
+    #             textAlign(CENTER)
+    #             text("Soulf od the Dead", width /2, height - 200)
+                    inventory.Soul_Dead = inventory.Soul_Dead + 1
+                elif dice == 2:
+    #             textAlign(CENTER)
+    #             text("Mana Essence", width /2, height - 200)
+                    inventory.Mana_Essence = inventory.Mana_Essence + 1
+                elif dice == 5 or dice == 6:
+    #             textAlign(CENTER)
+    #             text("Soul of the Dead x2", width /2, height - 200)
+                    inventory.Soul_Dead = inventory.Soul_Dead + 2
+                else:
+    #             textAlign(CENTER)
+    #             text("Mana Essence x2", width /2, height - 200)
+                    inventory.Mana_Essence = inventory.Mana_Essence + 2
+        if isMouseWithinSpace(650, 350, 172, 238):
+            monster = 9
+            if monster == 9:
+                if dice == 1 or dice == 2:
+    #             textAlign(CENTER)
+    #             text("Mana Essence x2", width /2, height - 200)
+                    inventory.Mana_Essence = inventory.Mana_Essence + 2
+                else:
+    #             textAlign(CENTER)
+    #             text("Obsidian", width /2, height - 200)
+                    inventory.Obsidian = inventory.Obsidian + 1
+        if isMouseWithinSpace(850, 350, 172, 238):
+            monster = 10
+            if monster == 10:
+                if dice == 2 or dice == 4:
+    #             textAlign(CENTER)
+    #             text("Void Energy x2", width /2, height - 200)
+                    inventory.Void_Essence = inventory.Void_Essence + 2
+                else:
+    #             textAlign(CENTER)
+    #             text("Void Energy", width /2, height - 200)
+                    inventory.Void_Essence = inventory.Void_Essence + 1
+        if isMouseWithinSpace(50, 650, 172, 238):
+            monster = 11
+            if monster == 11:
+                if dice == 1 or dice == 3 or dice == 6:
+    #             textAlign(CENTER)
+    #             text("Soul of the Dead", width /2, height - 200)
+                    inventory.Soul_Dead = inventory.Soul_Dead + 1
+                elif dice == 2 or dice == 4:
+    #             textAlign(CENTER)
+    #             text("Soul of the Dead x3", width /2, height - 200)
+                    inventory.Soul_Dead = inventory.Soul_Dead + 3
+                else:
+    #             textAlign(CENTER)
+    #             text("Wolf Skin x2", width /2, height - 200)
+                    inventory.Wolf_Skin = inventory.Wolf_Skin + 2
+        if isMouseWithinSpace(250, 650, 172, 238):
+            monster = 12
+            if monster == 12:
+                if dice in range(1,6 +1):
+        #             textAlign(CENTER)
+    #             text("Soul of the Dead x2", width /2, height - 200)
+                    inventory.Soul_Dead = inventory.Soul_Dead + 2
+        if isMouseWithinSpace(450, 650, 172, 238):
+            monster = 13
+            if monster == 13:
+                if dice == 3 or dice == 6 or dice == 1:
+    #             textAlign(CENTER)
+    #             text("Soul of the Dead", width /2, height - 200)
+                    inventory.Soul_Dead = inventory.Soul_Dead + 1
+                else:
+    #             textAlign(CENTER)
+    #             text("Haunted Spirit", width /2, height - 200)
+                    inventory.Haunted_Spirit = inventory.Haunted_Spirit + 1
+        if isMouseWithinSpace(650, 650, 172, 238):
+            monster = 14
+            if monster == 14:
+                if dice == 1 or dice == 6:
+    #             textAlign(CENTER)
+    #             text("Haunted Spirit", width /2, height - 200)
+                    inventory.Haunted_Spirit = inventory.Haunted_Spirit + 1
+                elif dice == 3:
+    #             textAlign(CENTER)
+    #             text("Cursed Wood x2", width /2, height - 200)
+                    inventory.Cursed_Wood = inventory.Cursed_Wood + 2
+                else:
+    #             textAlign(CENTER)
+    #             text("Cursed Wood", width /2, height - 200)
+                    inventory.Cursed_Wood = inventory.Cursed_Wood + 1
+        if isMouseWithinSpace(850, 650, 172, 238):
+            monster = 15
             
         
 
@@ -1014,42 +1170,148 @@ def mousePressed():
         
         
         
-        if Scene == 2:
-            if isMouseWithinSpace(450, 950, 200, 50):
-                Scene = 0
+    if Scene == 2:
+        if isMouseWithinSpace(450, 950, 200, 50):
+            Scene = 0
             
-            if Scene == 3:
-                if isMouseWithinSpace(1500, 550, 200, 50):
-                    Scene = 1
-                if isMouseWithinSpace(150, 950, 200, 50):
-                    Scene = 0
+    if Scene == 3:
+            if isMouseWithinSpace(1500, 550, 200, 50):
+                Scene = 1
+            if isMouseWithinSpace(150, 950, 200, 50):
+                Scene = 0
                 
-                if isMouseWithinSpace(50, 50, 172, 238):
-                    monster = 16
-                if isMouseWithinSpace(250, 50, 172, 238):
-                    monster = 17
-                if isMouseWithinSpace(450, 50, 172, 238):
-                    monster = 18
-                if isMouseWithinSpace(650, 50, 172, 238):
-                    monster = 19
-                if isMouseWithinSpace(850, 50, 172, 238):
-                    monster = 20
-                if isMouseWithinSpace(50, 350, 172, 238):
-                    monster = 21
-                if isMouseWithinSpace(250, 350, 172, 238):
-                    monster = 22
-                if isMouseWithinSpace(450, 350, 172, 238):
-                    monster = 23
-                if isMouseWithinSpace(650, 350, 172, 238):
-                    monster = 24
-                if isMouseWithinSpace(50, 650, 172, 238):
-                    monster = 25
-                if isMouseWithinSpace(250, 650, 172, 238):
-                    monster = 26
-                if isMouseWithinSpace(450, 650, 172, 238):
-                    monster = 27
-                if isMouseWithinSpace(650, 650, 172, 238):
-                    monster = 28
+            if isMouseWithinSpace(50, 50, 172, 238):
+                monster = 16
+                if monster == 16:
+                    if dice == 3 or dice == 5:
+    #             textAlign(CENTER)
+    #             text("Gold Ingot x2", width /2, height - 200)
+                        inventory.Gold_Ingot = inventory.Gold_Ingot + 2
+                    else:
+    #             textAlign(CENTER)
+    #             text("Gold Ingot", width /2, height - 200)
+                        inventory.Gold_Ingot = inventory.Gold_Ingot + 1
+            if isMouseWithinSpace(250, 50, 172, 238):
+                monster = 17
+                if monster == 17:
+                    if dice in range(1,6 +1):
+    #             textAlign(CENTER)
+    #             text("Soul of the Dead x2", width /2, height - 200)
+                        inventory.Soul_Dead = inventory.Soul_Dead + 2
+            if isMouseWithinSpace(450, 50, 172, 238):
+                monster = 18
+                if monster == 18:
+                    if dice == 2 or dice == 4:
+    #             textAlign(CENTER)
+    #             text("Soul of the Dead x5", width /2, height - 200)
+                        inventory.Soul_Dead = inventory.Soul_Dead + 5
+                    else:
+    #             textAlign(CENTER)
+    #             text("Gold Ingot", width /2, height - 200)
+                        inventory.Gold_Ingot = inventory.Gold_Ingot + 1
+            if isMouseWithinSpace(650, 50, 172, 238):
+                monster = 19
+                if monster == 19:
+                    if dice in range(1, 6+1):
+    #             textAlign(CENTER)
+    #             text("Scorpion Poison", width /2, height - 200)
+                        inventory.Scorpion_Poison = inventory.Scorpion_Poison + 1
+            if isMouseWithinSpace(850, 50, 172, 238):
+                monster = 20
+            if isMouseWithinSpace(50, 350, 172, 238):
+                monster = 21
+                if monster == 21 or monster == 22 or monster == 23:
+                    if dice == 1 or dice == 3 or dice == 5:
+    #             textAlign(CENTER)
+    #             text("Fire Essence", width /2, height - 200)
+                        inventory.Fire_Essence = inventory.Fire_Essence + 1
+                    elif dice == 2 or dice == 4:
+        #             textAlign(CENTER)
+    #             text("Fire Essence x2", width /2, height - 200) 
+                        inventory.Fire_Essence = inventory.Fire_Essence + 2
+                    else:
+    #             textAlign(CENTER)
+    #             text("Fire Essence x3", width /2, height - 200)
+                        inventory.Fire_Essence = inventory.Fire_Essence + 3
+            if isMouseWithinSpace(250, 350, 172, 238):
+                monster = 22
+                if monster == 21 or monster == 22 or monster == 23:
+                    if dice == 1 or dice == 3 or dice == 5:
+    #             textAlign(CENTER)
+    #             text("Fire Essence", width /2, height - 200)
+                        inventory.Fire_Essence = inventory.Fire_Essence + 1
+                    elif dice == 2 or dice == 4:
+        #             textAlign(CENTER)
+    #             text("Fire Essence x2", width /2, height - 200) 
+                        inventory.Fire_Essence = inventory.Fire_Essence + 2
+                    else:
+    #             textAlign(CENTER)
+    #             text("Fire Essence x3", width /2, height - 200)
+                        inventory.Fire_Essence = inventory.Fire_Essence + 3
+            if isMouseWithinSpace(450, 350, 172, 238):
+                monster = 23
+                if monster == 21 or monster == 22 or monster == 23:
+                    if dice == 1 or dice == 3 or dice == 5:
+    #             textAlign(CENTER)
+    #             text("Fire Essence", width /2, height - 200)
+                        inventory.Fire_Essence = inventory.Fire_Essence + 1
+                    elif dice == 2 or dice == 4:
+        #             textAlign(CENTER)
+    #             text("Fire Essence x2", width /2, height - 200) 
+                        inventory.Fire_Essence = inventory.Fire_Essence + 2
+                    else:
+    #             textAlign(CENTER)
+    #             text("Fire Essence x3", width /2, height - 200)
+                        inventory.Fire_Essence = inventory.Fire_Essence + 3
+            if isMouseWithinSpace(650, 350, 172, 238):
+                monster = 24
+            if isMouseWithinSpace(50, 650, 172, 238):
+                monster = 25
+                if monster == 25 or monster == 26 or monster == 27:
+                    if dice == 1 or dice == 3 or dice == 5:
+    #             textAlign(CENTER)
+    #             text("Void Essence", width /2, height - 200)
+                        inventory.Void_Essence = inventory.Void_Essence + 1
+                    elif dice == 2 or dice == 4:
+        #             textAlign(CENTER)
+    #             text("Void Essence x2", width /2, height - 200)
+                        inventory.Void_Essence = inventory.Void_Essence + 2
+                    else:
+    #             textAlign(CENTER)
+    #             text("Void Essence x3", width /2, height - 200)
+                        inventory.Void_Essence = inventory.Void_Essence + 3
+            if isMouseWithinSpace(250, 650, 172, 238):
+                monster = 26
+                if monster == 25 or monster == 26 or monster == 27:
+                    if dice == 1 or dice == 3 or dice == 5:
+    #             textAlign(CENTER)
+    #             text("Void Essence", width /2, height - 200)
+                        inventory.Void_Essence = inventory.Void_Essence + 1
+                    elif dice == 2 or dice == 4:
+        #             textAlign(CENTER)
+    #             text("Void Essence x2", width /2, height - 200)
+                        inventory.Void_Essence = inventory.Void_Essence + 2
+                    else:
+    #             textAlign(CENTER)
+    #             text("Void Essence x3", width /2, height - 200)
+                        inventory.Void_Essence = inventory.Void_Essence + 3
+            if isMouseWithinSpace(450, 650, 172, 238):
+                monster = 27
+                if monster == 25 or monster == 26 or monster == 27:
+                    if dice == 1 or dice == 3 or dice == 5:
+    #             textAlign(CENTER)
+    #             text("Void Essence", width /2, height - 200)
+                        inventory.Void_Essence = inventory.Void_Essence + 1
+                    elif dice == 2 or dice == 4:
+        #             textAlign(CENTER)
+    #             text("Void Essence x2", width /2, height - 200)
+                        inventory.Void_Essence = inventory.Void_Essence + 2
+                    else:
+    #             textAlign(CENTER)
+    #             text("Void Essence x3", width /2, height - 200)
+                        inventory.Void_Essence = inventory.Void_Essence + 3
+            if isMouseWithinSpace(650, 650, 172, 238):
+                monster = 28
             
         
             if monster == 16: #SPECIAL - double damage on all cards (READY)
@@ -1142,6 +1404,7 @@ def mousePressed():
                 M_charge = 25
                 M_gain = 20
                 M_name = "DeathGazer"
+                
                 
 def endOfCombat():
     if (M_health == 0):
