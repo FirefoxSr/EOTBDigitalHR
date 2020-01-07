@@ -1,4 +1,7 @@
 import inventory
+import Map
+import playerTurns
+import inventory2
 
 screen = 0
 tekst = ""
@@ -281,15 +284,27 @@ def draw():
         image(enchanted_dagger, 400, 250)
         image(daggerA, 700, 250)
         
-    if screen == "inventory":
-        background(0,0,0)
-        font = createFont("Georgia", 54)
-        textFont(font)
-        textAlign(CENTER, TOP)
-        text("Inventory", 980, 100)
-        stroke(240)
-        line(0, 210, 2000, 210)        
-        inventory.draw()
+    if Map.currentPlayer == 1:    
+        if screen == "inventory":
+            background(0,0,0)
+            font = createFont("Georgia", 54)
+            textFont(font)
+            textAlign(CENTER, TOP)
+            text("Inventory", 980, 100)
+            stroke(240)
+            line(0, 210, 2000, 210)        
+            inventory.draw()
+            
+    if Map.currentPlayer == 2:    
+        if screen == "inventory":
+            background(0,0,0)
+            font = createFont("Georgia", 54)
+            textFont(font)
+            textAlign(CENTER, TOP)
+            text("Inventory2", 980, 100)
+            stroke(240)
+            line(0, 210, 2000, 210)        
+            inventory2.draw()
 
     
 def isMouseWithinSpace(x,y,w,h):
