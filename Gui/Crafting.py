@@ -160,13 +160,13 @@ def draw():
         text(crafted_item, 800, 900)
 
         #(90, 240, 280, 380)
-        image(basic_Spear, 100, 250)
+        image(basic_Spear, 200, 425)
         #(390, 240, 280, 380)
-        image(comet_Spear, 400, 250)
+        image(comet_Spear, 500, 425)
         #(690, 240, 280, 380)
-        image(doom_Spear, 700, 250)
+        image(doom_Spear, 800, 425)
         #(990, 240, 280, 380)
-        image(halberd, 1000, 250)
+        image(halberd, 1100, 425)
         
     if screen == 1:
         background(0,0,0)
@@ -195,12 +195,12 @@ def draw():
         fill(240)
         text("Dagger", 1675, 140)
         
-        image(basic_sword, 100, 250)
-        image(arcade_sword, 400, 250)
-        image(obsidian_sword, 700, 250)
-        image(dead_sword, 1000, 250)
-        image(phoenix_sword, 1300, 250)
-        image(heaven, 1600, 250)
+        image(basic_sword, 200, 425)
+        image(arcade_sword, 500, 425)
+        image(obsidian_sword, 800, 425)
+        image(dead_sword, 1100, 425)
+        image(phoenix_sword, 1400, 425)
+        image(heaven, 1700, 425)
 
     if screen == 2:
         background(0,0,0)
@@ -223,11 +223,11 @@ def draw():
         textAlign(LEFT)
         text(crafted_item3, 800, 900)
         
-        image(leather, 100, 250)
-        image(chain, 400, 250)
-        image(black_armour, 700, 250)
-        image(molten_armour, 1000, 250)
-        image(platinum_armour, 1300, 250)
+        image(leather, 200, 425)
+        image(chain, 500, 425)
+        image(black_armour, 800, 425)
+        image(molten_armour, 1100, 425)
+        image(platinum_armour, 1400, 425)
         
     if screen == 3:
         background(0,0,0)
@@ -250,11 +250,11 @@ def draw():
         textAlign(LEFT)
         text(crafted_item2, 800, 900)
         
-        image(wooden_shield, 100, 250)
-        image(iron_shield, 400, 250)
-        image(null_shield, 700, 250)
-        image(gold_shield, 1000, 250)
-        image(war_god, 1300, 250)
+        image(wooden_shield, 200, 425)
+        image(iron_shield, 500, 425)
+        image(null_shield, 800, 425)
+        image(gold_shield, 1100, 425)
+        image(war_god, 1400, 425)
         
     if screen == 5:
         background(0,0,0)
@@ -277,9 +277,9 @@ def draw():
         textAlign(LEFT)
         text(crafted_item5, 800, 900)
         
-        image(basic_dagger, 100, 250)
-        image(enchanted_dagger, 400, 250)
-        image(daggerA, 700, 250)
+        image(basic_dagger, 200, 425)
+        image(enchanted_dagger, 500, 425)
+        image(daggerA, 800, 425)
         
     if screen == "inventory":
         background(0,0,0)
