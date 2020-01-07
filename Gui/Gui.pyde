@@ -28,11 +28,11 @@ def draw():
     if (screen == "combat"):
         background(0)
         Combat.draw()
+        Combat.endOfCombat
     if (screen == "Map"):
         background(0)
         Map.draw()
         textAlign(LEFT)
-        
         noTint()
     if (screen == "Crafting"):
         background(0)
@@ -48,10 +48,13 @@ def mousePressed():
     global screen, x, y, w, h
     if (screen == "titleScreen"):
         if isMouseWithinSpace(1000, 660, 608, 150):
-            screen = "playerScreen"
-            
+            screen = "playerScreen"        
     if (screen == "playerScreen"):
-        if isMouseWithinSpace(1550,844,315,200):
+        if isMouseWithinSpace(527,801,233,88):
+            amountOfPlayers = 1
+            screen = "Map"
+        if isMouseWithinSpace(1151,799,233,88):
+            amountOfPlayers = 2
             screen = "Map"
     if (screen == "combat"):
         Combat.isMouseWithinSpace
@@ -64,10 +67,12 @@ def mousePressed():
         if (screen == "Map"):
             if isMouseWithinSpace(800,925,366,78):
                 screen = "Crafting"
-        if (screen == "Crafting"):
-            if isMouseWithinSpace(250,100,155,60):
-                screen = "Map"
-                
+    if (screen == "Crafting"):
+        Crafting.isMouseWithinSpace
+        Crafting.mousePressed()
+        if isMouseWithinSpace(250,100,155,60):
+            screen = "Map"
+            
     
         
         

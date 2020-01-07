@@ -2,7 +2,7 @@ def setup():
     fullScreen()
     textAlign(CENTER)
 def draw():
-    text("Do you want to play with 1 or 2 players?",width // 4, 200)
+    text("Do you want to play with 1 or 2 players?",width // 3, 200)
     
     
     text("1 player",640, height - 270)

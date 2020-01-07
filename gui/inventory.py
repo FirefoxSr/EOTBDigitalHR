@@ -41,6 +41,7 @@ def setup():
     textFont(font)
     textAlign(CENTER, TOP)
     text("Inventory", 980, 100)
+    text("Go back", 280, 100)
     stroke(240)
     line(0, 210, 2000, 210)
     currentNumber = 0
