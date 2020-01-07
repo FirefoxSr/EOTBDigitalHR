@@ -16,7 +16,6 @@ endTurn = False
 def setup():
     global mapImage, enemy, currentPlayer, p1Image, p2Image, debugImg, endTurn, currentPlayer, img
     fullScreen()
-    size(1920, 1080)
     mapImage = loadImage("map.png")
     p1Image = loadImage("p1.png")
     p2Image = loadImage("p2.png")
