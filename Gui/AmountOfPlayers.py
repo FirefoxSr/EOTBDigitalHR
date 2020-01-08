@@ -7,7 +7,6 @@ def draw():
     
     text("1 player",640, height - 270)
     text("2 players",1280, height - 270)
-#screen = "PlayerScreen"
     
 def isMouseWithinSpace(x,y,w,h):
         if (x < mouseX < x + w and y < mouseY < y + h):
