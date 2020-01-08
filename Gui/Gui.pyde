@@ -24,7 +24,7 @@ def setup():
     backgroundScroll.setup()
         
 def draw():
-    global screen, backGround
+    global screen, backGround, amountOfPlayers
     if (screen == "titleScreen"):
         backgroundScroll.draw()
         ScreenTitle.draw()
@@ -51,6 +51,8 @@ def draw():
     if (screen == "Map"):
         background(0)
         backgroundScroll.draw()
+        if (amountOfPlayers == 2):
+            text("Switch to next player",200,1050) 
         imageMode(CENTER)
         Map.draw()
         textAlign(LEFT)
@@ -69,7 +71,7 @@ def isMouseWithinSpace(x,y,w,h):
         else:
             return False
 def mousePressed():
-    global screen, x, y, w, h
+    global screen, x, y, w, h, amountOfPlayers
     if (screen == "titleScreen"):
         if isMouseWithinSpace(750, 660, 858, 150):
             screen = "playerScreen"        
@@ -92,7 +94,11 @@ def mousePressed():
             screen = "Map"
     if (screen == "Map"):
         Map.isMouseWithinSpace
-        Map.mouseClicked()
+        Map.mousePressed()
+        if (amountOfPlayers == 2):
+            if (isMouseWithinSpace,200,1050,518,63):
+                Map.endTurn = True
+                Map.currentPlayer = Map.playerTurn(Map.currentPlayer)
         if Map.currentPlayer == 2:
             if isMouseWithinSpace(1488,931,186,58):
                 screen = "combat"

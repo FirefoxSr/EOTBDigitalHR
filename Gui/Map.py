@@ -33,7 +33,7 @@ def draw():
     text("Go to combat",1500, 976)
     text("Open Crafting",800, 976)
     text("Current Player: " + str(currentPlayer),805,240)
-    text("Switch to next player",200,1050)
+    
 
     
 def isMouseWithinSpace(x,y,w,h):
@@ -43,12 +43,8 @@ def isMouseWithinSpace(x,y,w,h):
             return False
 
 
-def mouseClicked():
-    global enemy, currentPlayer, p1Image, p2Image, playerImage, endTurn, currentPlayer
-    #this calls the function to move on to the next player
-    if (isMouseWithinSpace,518,63,518,63):
-        endTurn = True
-        currentPlayer = playerTurn(currentPlayer)
+def mousePressed():
+    global enemy
     
     #here we execute a function if the user clicks on squares on the map, this is gona be a long one. Just bear with me ^^
     #area 1
