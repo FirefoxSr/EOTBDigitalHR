@@ -744,7 +744,7 @@ def mousePressed():
                         inventory.Scorpion_Poison = inventory.Scorpion_Poison - 3
                         Combat.poison = Combat.poison + 15
                 else:
-                    crafted_item5 = ""
+                        crafted_item5 = ""
     #Player 2 Turn                
     if Map.currentPlayer == 2:
         if screen == 0:
@@ -759,7 +759,7 @@ def mousePressed():
             if isMouseWithinSpace(1600, 100, 150, 60):
                 screen = "inventory"
         
-        #This will select an item in the spear page    
+        #This will select an item in the spear page
         if screen == 4:
             if isMouseWithinSpace(150, 100, 150, 60):
                 screen = 0
@@ -775,9 +775,9 @@ def mousePressed():
             elif isMouseWithinSpace(990, 240, 280, 380):
                 tekst = "Craft"
                 spear_item = 4
-        
+
 # if the selected item is selected it will look in the inventory to see if you have enough materials to craft the item
-# if you have enough material it will craft the item and take the materials from the inventory        
+# if you have enough material it will craft the item and take the materials from the inventory
         if spear_item == 1:    
             if tekst == "Craft":
                 if isMouseWithinSpace(150, 850, 150, 60):
@@ -787,6 +787,7 @@ def mousePressed():
                         crafted_item = "You have crafted basic spear"
                         inventory2.Iron_Chunk = inventory2.Iron_Chunk - 2
                         inventory2.Wooden_Stick = inventory2.Wooden_Stick - 5
+                        Combat2.piercing = Combat2.piercing + 4
                 else:
                     crafted_item = ""  
                     
@@ -799,6 +800,7 @@ def mousePressed():
                         crafted_item = "You have crafted comet spear"
                         inventory2.Basic_Spear = inventory2.Basic_Spear - 1
                         inventory2.Mana_Essence = inventory2.Mana_Essence - 10
+                        Combat2.piercing = Combat2.piercing + 10
                 else:
                     crafted_item = ""   
                     
@@ -812,9 +814,10 @@ def mousePressed():
                         inventory2.Comet_Spear = inventory2.Comet_Spear - 1
                         inventory2.Soul_Dead = inventory2.Soul_Dead - 3
                         inventory2.Wooden_Stick = inventory2.Wooden_Stick - 3 
+                        Combat2.piercing = Combat2.piercing + 18
                 else:
-                    crafted_item = "" 
-                         
+                    crafted_item = ""   
+                       
         if spear_item == 4:    
             if tekst == "Craft":
                 if isMouseWithinSpace(150, 850, 150, 60):
@@ -824,10 +827,11 @@ def mousePressed():
                         crafted_item = "You have crafted halberd of the fire god"
                         inventory2.Spear_Doom = inventory2.Spear_Doom - 1
                         inventory2.Fire_Essence = inventory2.Fire_Essence
+                        Combat2.fire = Combat2.fire + 100
                 else:
                     crafted_item = ""
-            
-        #This will select an item in the sword page    
+                  
+        #This will select an item in the sword page                      
         if screen == 1:
             if isMouseWithinSpace(150, 100, 150, 60):
                 screen = 0
@@ -851,9 +855,9 @@ def mousePressed():
             elif isMouseWithinSpace(1590, 240, 280, 380):
                 tekst = "Craft"
                 sword_item = 6
-
+                
 # if the selected item is selected it will look in the inventory to see if you have enough materials to craft the item
-# if you have enough material it will craft the item and take the materials from the inventory                
+# if you have enough material it will craft the item and take the materials from the inventory            
         if sword_item == 1:    
             if tekst == "Craft":
                 if isMouseWithinSpace(150, 850, 150, 60):
@@ -863,6 +867,7 @@ def mousePressed():
                         crafted_item4 = "You have crafted basic sword"   
                         inventory2.Iron_Chunk = inventory2.Iron_Chunk - 2
                         inventory2.Wooden_Stick = inventory2.Wooden_Stick - 1
+                        Combat2.damage = Combat2.damage + 3
                 else:
                     crafted_item4 = ""
                     
@@ -873,11 +878,12 @@ def mousePressed():
                         crafted_item4 = "you don't have enough materials"
                     else:
                         crafted_item4 = "You have crafted arcane sword"
-                        inventory2.Basic_Sword = inventory2.Basic_Sword - 1
-                        inventory2.Mana_Essence = inventory2.Mana_Essence - 10     
+                        inventory.Basic_Sword = inventory2.Basic_Sword - 1
+                        inventory.Mana_Essence = inventory2.Mana_Essence - 10 
+                        Combat2.damage = Combat2.damage + 8  
                 else:
-                    crafted_item4 = ""   
-                    
+                    crafted_item4 = "" 
+                      
         if sword_item == 3:    
             if tekst == "Craft":
                 if isMouseWithinSpace(150, 850, 150, 60):
@@ -887,9 +893,10 @@ def mousePressed():
                         crafted_item4 = "You have crafted obsidian sword"
                         inventory2.Basic_Sword = inventory2.Basic_Sword - 1
                         inventory2.Obsidian = inventory2.Obsidian - 2
+                        Combat2.damage = Combat2.damage + 10
                 else:
-                    crafted_item4 = ""     
-                      
+                    crafted_item4 = ""   
+                        
         if sword_item == 4:    
             if tekst == "Craft":
                 if isMouseWithinSpace(150, 850, 150, 60):
@@ -899,6 +906,7 @@ def mousePressed():
                         crafted_item4 = "You have crafted sword of the dead"
                         inventory2.Arcane_Sword = inventory2.Arcane_Sword - 1
                         inventory2.Soul_Dead = inventory2.Soul_Dead - 5
+                        Combat2.damage = Combat2.damage + 10
                 else:
                     crafted_item4 = ""
                     
@@ -911,6 +919,7 @@ def mousePressed():
                         crafted_item4 = "You have crafted sword of phoenix"
                         inventory2.Lost_Blade = inventory2.Lost_Blade -1
                         inventory2.Fire_Essence = inventory2.Fire_Essence - 5
+                        Combat2.damage = Combat2.damage + 70
                 else:
                     crafted_item4 = ""
                     
@@ -923,10 +932,11 @@ def mousePressed():
                         crafted_item4 = "You have crafted heaven's wrath'"
                         inventory2.Sword_Phoenix = inventory2.Sword_Phoenix - 1
                         inventory2.Void_Essence = inventory2.Void_Essence - 5
+                        Combat2.damage = Combat2.damage + 140
                 else:
                     crafted_item4 = ""
-        
-        #This will select an item in the armour page        
+                    
+        #This will select an item in the armour page
         if screen == 2:
             if isMouseWithinSpace(150, 100, 150, 60):
                 screen = 0
@@ -947,7 +957,7 @@ def mousePressed():
                 armour_item = 5
 
 # if the selected item is selected it will look in the inventory to see if you have enough materials to craft the item
-# if you have enough material it will craft the item and take the materials from the inventory                
+# if you have enough material it will craft the item and take the materials from the inventory            
         if armour_item == 1:    
             if tekst == "Craft":
                 if isMouseWithinSpace(150, 850, 150, 60):
@@ -957,6 +967,7 @@ def mousePressed():
                         crafted_item3 = "You have crafted leather armour"
                         inventory2.Wolf_Skin = inventory2.Wolf_Skin - 5
                         inventory2.Bear_Skin = inventory2.Bear_Skin - 5
+                        Combat2.P_health = Combat2.P_health + 15
                 else:
                     crafted_item3 = ""   
                           
@@ -968,9 +979,10 @@ def mousePressed():
                     else:
                         crafted_item3 = "You have crafted chain armour"
                         inventory2.Iron_Chunk = inventory2.Iron_Chunk - 10   
+                        Combat2.P_health = Combat2.P_health + 15
                 else:
-                    crafted_item3 = "" 
-                        
+                    crafted_item3 = ""     
+                    
         if armour_item == 3:    
             if tekst == "Craft":
                 if isMouseWithinSpace(150, 850, 150, 60):
@@ -981,9 +993,10 @@ def mousePressed():
                         inventory2.Chain_Armour = inventory2.Chain_Armour - 1
                         inventory2.Soul_Dead = inventory2.Soul_Dead - 5
                         inventory2.Obsidian = inventory2.Obsidian - 2
+                        Combat2.P_health = Combat2.P_health + 50
                 else:
-                    crafted_item3 = "" 
-                        
+                    crafted_item3 = ""    
+                     
         if armour_item == 4:    
             if tekst == "Craft":
                 if isMouseWithinSpace(150, 850, 150, 60):
@@ -993,6 +1006,8 @@ def mousePressed():
                         crafted_item3 = "You have crafted molten armour"
                         inventory2.Black_Armour = inventory2.Black_Armour - 1
                         inventory2.Fire_Essence = inventory2.Fire_Essence - 5
+                        Combat2.P_health = Combat2.P_Health + 120
+                        Combat2.P_block = Combat2.P_block +20
                 else:
                     crafted_item3 = ""
                     
@@ -1005,10 +1020,11 @@ def mousePressed():
                         crafted_item3 = "You have crafted amadantium plate"
                         inventory2.Molten_Armour = inventory2.Molten_Armour - 1
                         inventory2.Mana_Essence = inventory2.Mana_Essence - 10
+                        Combat2.P_health = Combat2.P_health + 250
                 else:
                     crafted_item3 = ""
-        
-        #This will select an item in the shield page        
+      
+        #This will select an item in the shield page
         if screen == 3:
             if isMouseWithinSpace(150, 100, 150, 60):
                 screen = 0
@@ -1039,9 +1055,10 @@ def mousePressed():
                         crafted_item2 = "You have crafted wooden shield"
                         inventory2.Wooden_Chunk = inventory2.Wooden_Chunk - 5
                         inventory2.Wooden_Stick = inventory2.Wooden_Stick - 2    
+                        Combat2.P_block = Combat2.P_block + 3
                 else:
-                    crafted_item2 = ""     
-                       
+                    crafted_item2 = "" 
+                           
         if shield_item == 2:    
             if tekst == "Craft":
                 if isMouseWithinSpace(150, 850, 150, 60):
@@ -1051,9 +1068,10 @@ def mousePressed():
                         crafted_item2 = "You have crafted iron shield" 
                         inventory2.Wooden_Shield = inventory2.Wooden_Shield - 1
                         inventory2.Iron_Chunk = inventory2.IronChunk - 5
+                        Combat2.P_block = Combat2.P_block + 5
                 else:
-                    crafted_item2 = ""  
-                         
+                    crafted_item2 = "" 
+                          
         if shield_item == 3:    
             if tekst == "Craft":
                 if isMouseWithinSpace(150, 850, 150, 60):
@@ -1063,9 +1081,10 @@ def mousePressed():
                         crafted_item2 = "You have crafted null shield" 
                         inventory2.Iron_Shield = inventory2.Iron_Shield - 1
                         inventory2.Mana_Essence = inventory2.Mana_Essence - 10
+                        Combat2.P_block = Combat2.P_block + 7
                 else:
-                    crafted_item2 = ""   
-                         
+                    crafted_item2 = ""
+                            
         if shield_item == 4:    
             if tekst == "Craft":
                 if isMouseWithinSpace(150, 850, 150, 60):
@@ -1076,6 +1095,7 @@ def mousePressed():
                         inventory2.Iron_Shield = inventory2.Iron_Shield - 1
                         inventory2.Null_Shield = inventory2.Null_Shield - 1
                         inventory2.Gold_Ingot = inventory2.Gold_Ingot - 3
+                        Combat2.P_block = Combat2.P_block + 30
                 else:
                     crafted_item2 = ""
                     
@@ -1088,9 +1108,10 @@ def mousePressed():
                         crafted_item2 = "You have crafted war god's aegis"
                         inventory2.Gold_Shield = inventory2.Gold_Shield - 1
                         inventory2.Void_Essence = inventory2.Void_Essence - 10
+                        Combat2.P_block = Combat2.P_block + 80
                 else:
                     crafted_item2 = ""
-        
+
         #This will select an item in the dagger page
         if screen == 5:
             if isMouseWithinSpace(150, 100, 150, 60):
@@ -1105,8 +1126,6 @@ def mousePressed():
                 tekst = "Craft"
                 dagger_item = 3
 
-# if the selected item is selected it will look in the inventory to see if you have enough materials to craft the item
-# if you have enough material it will craft the item and take the materials from the inventory            
         if dagger_item == 1:    
             if tekst == "Craft":
                 if isMouseWithinSpace(150, 850, 150, 60):
@@ -1115,10 +1134,11 @@ def mousePressed():
                     else:
                         crafted_item5 = "You have crafted basic dagger"
                         inventory2.Iron_Chunk = inventory2.Iron_Chunk - 1
-                        inventory2.Wooden_Stick = inventory2.Wooden_Stick  - 1  
+                        inventory2.Wooden_Stick = inventory2.Wooden_Stick  - 1 
+                        Combat2.P_damage = Combat2.P_damage + 2 
                 else:
-                    crafted_item5 = ""     
-                        
+                    crafted_item5 = ""  
+                           
         if dagger_item == 2:    
             if tekst == "Craft":
                 if isMouseWithinSpace(150, 850, 150, 60):
@@ -1127,7 +1147,8 @@ def mousePressed():
                     else:
                         crafted_item5 = "You have crafted enchanted dagger"
                         inventory2.Basic_Dagger = inventory2.Basic_Dagger - 1
-                        inventory2.Mana_Essence = inventory2.Mana_Essence - 3    
+                        inventory2.Mana_Essence = inventory2.Mana_Essence - 3  
+                        Combat2.piercing = Combat2.piercing + 8
                 else:
                     crafted_item5 = "" 
                        
@@ -1140,5 +1161,6 @@ def mousePressed():
                         crafted_item5 = "You have crafted dagger of affliction"
                         inventory2.Enchanted_Dagger = inventory2.Enchanted_Dagger - 1
                         inventory2.Scorpion_Poison = inventory2.Scorpion_Poison - 3
+                        Combat2.poison = Combat2.poison + 15
                 else:
                     crafted_item5 = ""
