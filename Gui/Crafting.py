@@ -345,7 +345,8 @@ def mousePressed():
                 screen = 3
             if isMouseWithinSpace(1600, 100, 150, 60):
                 screen = "inventory"
-            
+        
+        #This will select an item in the spear page
         if screen == 4:
             if isMouseWithinSpace(150, 100, 150, 60):
                 screen = 0
@@ -361,7 +362,7 @@ def mousePressed():
             elif isMouseWithinSpace(990, 240, 280, 380):
                 tekst = "Craft"
                 spear_item = 4
-                
+
         if spear_item == 1:    
             if tekst == "Craft":
                 if isMouseWithinSpace(150, 850, 150, 60):
@@ -410,7 +411,8 @@ def mousePressed():
                         inventory.Fire_Essence = inventory.Fire_Essence
                 else:
                     crafted_item = ""
-                    
+                  
+        #This will select an item in the sword page                      
         if screen == 1:
             if isMouseWithinSpace(150, 100, 150, 60):
                 screen = 0
@@ -507,7 +509,7 @@ def mousePressed():
                 else:
                     crafted_item4 = ""
                     
-                
+        #This will select an item in the armour page
         if screen == 2:
             if isMouseWithinSpace(150, 100, 150, 60):
                 screen = 0
@@ -586,7 +588,8 @@ def mousePressed():
                         inventory.Mana_Essence = inventory.Mana_Essence - 10
                 else:
                     crafted_item3 = ""
-                
+      
+        #This will select an item in the shield page
         if screen == 3:
             if isMouseWithinSpace(150, 100, 150, 60):
                 screen = 0
@@ -666,7 +669,8 @@ def mousePressed():
                         inventory.Void_Essence = inventory.Void_Essence - 10
                 else:
                     crafted_item2 = ""
-            
+
+        #This will select an item in the dagger page
         if screen == 5:
             if isMouseWithinSpace(150, 100, 150, 60):
                 screen = 1
