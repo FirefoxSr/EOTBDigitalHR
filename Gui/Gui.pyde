@@ -8,7 +8,7 @@ import ScreenTitle
 import Crafting
 
 def setup():
-    global screen, x, y, w, h
+    global screen, x, y, w, h,backGround
     fullScreen()
     screen = "titleScreen"
     Combat.setup()
@@ -16,30 +16,38 @@ def setup():
     AmountOfPlayers.setup()
     ScreenTitle.setup()
     Crafting.setup()
+    backGround = loadImage("Background.jpg")
 
 def draw():
-    global screen
+    global screen, backGround
+    image(backGround,1920,1080)
     if (screen == "titleScreen"):
         background(0)
+        image(backGround, width // 2, height // 2)
         ScreenTitle.draw()
     if (screen == "playerScreen"):
         background(0)
+        image(backGround, width // 2, height // 2)
         AmountOfPlayers.draw()
     if (screen == "combat"):
         background(0)
+        image(backGround, width // 2, height // 2)
         textAlign(CENTER)
         imageMode(CORNER)
         Combat.draw()
         Combat.endOfCombat
     if (screen == "Map"):
         background(0)
+        imageMode(CORNER)
+        image(backGround, width // 2, height // 2)
         imageMode(CENTER)
         Map.draw()
         textAlign(LEFT)
         noTint()
     if (screen == "Crafting"):
         background(0)
-        imageMode(CORNER)
+        imageMode(CORNER )
+        image(backGround, width // 2, height // 2)
         Crafting.draw()
     print(screen)
         

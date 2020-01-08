@@ -52,7 +52,6 @@ def draw():
    
      #If screen == 0 it will draw the Crafting page
     if screen == 0:
-        background(0,0,0)
         textSize(52)
         textAlign(CENTER)
         fill(240)
@@ -145,7 +144,6 @@ def draw():
             
     #if the screen == 4 it will draw the Crafting for the spear page
     if screen == 4:
-        background(0,0,0)
         textSize(52)
         textAlign(CENTER)
         fill(240)
@@ -174,7 +172,7 @@ def draw():
      
     #If screen == 1 it will draw the Crafting for the sword page
     if screen == 1:
-        background(0,0,0)
+        
         textSize(52)
         textAlign(CENTER)
         fill(240)
@@ -210,7 +208,7 @@ def draw():
 
     #if screen == 0 it will draw the Crafting for the armour page
     if screen == 2:
-        background(0,0,0)
+        
         textSize(52)
         textAlign(CENTER)
         fill(240)
@@ -239,7 +237,7 @@ def draw():
         
     #if screen == 3 it will draw the Crafting for the shield page
     if screen == 3:
-        background(0,0,0)
+        
         textSize(52)
         textAlign(CENTER)
         fill(240)
@@ -268,7 +266,7 @@ def draw():
         
     #if screen == 5 it will draw the Crating for the Dagger page
     if screen == 5:
-        background(0,0,0)
+        
         textSize(52)
         textAlign(CENTER)
         fill(240)
@@ -296,7 +294,7 @@ def draw():
     #When it's player 1 turn it will draw the inventory for player 1 and only player 1
     if Map.currentPlayer == 1:    
         if screen == "inventory":
-            background(0,0,0)
+            
             font = createFont("Georgia", 54)
             textFont(font)
             textAlign(CENTER, TOP)
@@ -308,7 +306,7 @@ def draw():
     #When it's player 2 turn it will draw the inventory for player 2 and only player 2
     if Map.currentPlayer == 2:    
         if screen == "inventory":
-            background(0,0,0)
+            
             font = createFont("Georgia", 54)
             textFont(font)
             textAlign(CENTER, TOP)

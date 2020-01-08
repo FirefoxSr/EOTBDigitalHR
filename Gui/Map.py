@@ -26,7 +26,6 @@ def setup():
     currentPlayer = 1
 def draw():
     global mapImage, enemy, playerImage, endTurn, currentPlayer, p1Image, p2Image
-    background(0)
     image(mapImage, 400, height // 2)
     message = 'Please click on the square you landed.'
     text(message, 800, 200)
