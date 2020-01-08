@@ -22,10 +22,6 @@ def setup():
     Crafting.setup()
     Combat2.setup()
     backgroundScroll.setup()
-
-
-
-
         
 def draw():
     global screen, backGround

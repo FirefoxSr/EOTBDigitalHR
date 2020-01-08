@@ -89,6 +89,7 @@ def draw():
         textFont(font)
         fill(256,256,256)
         textSize(50)
+        text("Back to map")
         textAlign(CENTER)
     if turn == 0:
         P_turn = 0
