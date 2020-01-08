@@ -203,10 +203,10 @@ def draw():
         textSize(50)
         textAlign(CENTER)
         
-        text('Drop page test', 600, 100)
+        text('Drop page ', 600, 100)
         text('Back', 550, 1000)
         
-        text('Drop page test', 600, 100)    
+        text('Drop page ', 600, 100)    
 
 #When the player defeat a monster a random dice will be rolled and this will show what kind of material the player got in the drop page
         if monster == 6:
