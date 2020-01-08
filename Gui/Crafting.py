@@ -20,6 +20,7 @@ def setup():
     fullScreen()
     inventory.setup()
     global basic_Spear, comet_Spear, doom_Spear, halberd, leather, chain, black_armour, molten_armour, platinum_armour, basic_sword, arcade_sword,obsidian_sword, dead_sword, phoenix_sword, heaven, wooden_shield, iron_shield, null_shield, gold_shield, war_god, basic_dagger, enchanted_dagger, daggerA, Iron_Chunk, Wooden_Stick
+    #Load items images
     basic_Spear = loadImage("basicSpear1.png")
     comet_Spear = loadImage("comet.png")
     doom_Spear = loadImage("doom.png")
@@ -48,8 +49,9 @@ def setup():
         
 def draw():
     global screen, basic_Spear, comet_Spear, doom_Spear, halberd, leather, chain, black_armour, molten_armour, platinum_armour, basic_sword, arcade_sword,obsidian_sword, dead_sword, phoenix_sword, heaven, wooden_shield, iron_shield, null_shield, gold_shield, war_god, basic_dagger, enchanted_dagger, daggerA, tekst, crafted_item, crafted_item2, crafted_item3, crafted_item4, crafted_item5
-    #Als screen 0 is wordt de crafting pagina getekent
-    if screen == 0:
+   
+     #If screen == 0 it will draw the Crafting page
+        if screen == 0:
         background(0,0,0)
         textSize(52)
         textAlign(CENTER)
@@ -84,6 +86,7 @@ def draw():
         text("inventory", 1675, 140)
         text("Go back",245,140)
         
+        #This will fill the rectangle with a colour to let the player know which button he/she has selected
         if isMouseWithinSpace(1300, 700, 400, 200):
             noFill()
             rect( 200,  350, 400, 200)
@@ -139,7 +142,8 @@ def draw():
             rect( 1300, 700, 400, 200)
             noFill()
             rect(1600, 100, 150, 60)
-    
+            
+    #if the screen == 4 it will draw the Crafting for the spear page
     if screen == 4:
         background(0,0,0)
         textSize(52)
@@ -162,15 +166,13 @@ def draw():
         textAlign(LEFT)
         text(crafted_item, 800, 900)
 
-        #(90, 240, 280, 380)
+        #This draws the images of the spear items
         image(basic_Spear, 100, 250)
-        #(390, 240, 280, 380)
         image(comet_Spear, 400, 250)
-        #(690, 240, 280, 380)
         image(doom_Spear, 700, 250)
-        #(990, 240, 280, 380)
         image(halberd, 1000, 250)
-        
+     
+    #If screen == 1 it will draw the Crafting for the sword page
     if screen == 1:
         background(0,0,0)
         textSize(52)
@@ -198,6 +200,7 @@ def draw():
         fill(240)
         text("Dagger", 1675, 140)
         
+        #This draws the images of sword items
         image(basic_sword, 100, 250)
         image(arcade_sword, 400, 250)
         image(obsidian_sword, 700, 250)
@@ -205,6 +208,7 @@ def draw():
         image(phoenix_sword, 1300, 250)
         image(heaven, 1600, 250)
 
+    #if screen == 0 it will draw the Crafting for the armour page
     if screen == 2:
         background(0,0,0)
         textSize(52)
@@ -226,12 +230,14 @@ def draw():
         textAlign(LEFT)
         text(crafted_item3, 800, 900)
         
+        #This will draw the images of armour items 
         image(leather, 100, 250)
         image(chain, 400, 250)
         image(black_armour, 700, 250)
         image(molten_armour, 1000, 250)
         image(platinum_armour, 1300, 250)
         
+    #if screen == 3 it will draw the Crafting for the shield page
     if screen == 3:
         background(0,0,0)
         textSize(52)
@@ -253,12 +259,14 @@ def draw():
         textAlign(LEFT)
         text(crafted_item2, 800, 900)
         
+        #This will draw the images of shield items
         image(wooden_shield, 100, 250)
         image(iron_shield, 400, 250)
         image(null_shield, 700, 250)
         image(gold_shield, 1000, 250)
         image(war_god, 1300, 250)
         
+    #if screen == 5 it will draw the Crating for the Dagger page
     if screen == 5:
         background(0,0,0)
         textSize(52)
@@ -280,10 +288,12 @@ def draw():
         textAlign(LEFT)
         text(crafted_item5, 800, 900)
         
+        #This will draw the images dagger items
         image(basic_dagger, 100, 250)
         image(enchanted_dagger, 400, 250)
         image(daggerA, 700, 250)
         
+    #When it's player 1 turn it will draw the inventory for player 1 and only player 1
     if Map.currentPlayer == 1:    
         if screen == "inventory":
             background(0,0,0)
@@ -294,7 +304,8 @@ def draw():
             stroke(240)
             line(0, 210, 2000, 210)        
             inventory.draw()
-            
+    
+    #When it's player 2 turn it will draw the inventory for player 2 and only player 2
     if Map.currentPlayer == 2:    
         if screen == "inventory":
             background(0,0,0)
@@ -321,7 +332,7 @@ def isMouseWithinSpace(x,y,w,h):
 def mousePressed():
     global screen, tekst, crafted_item, spear_item, shield_item, crafted_item2, armour_item, crafted_item3, crafted_item4, sword_item, crafted_item5, dagger_item
     
-    
+    #Player 1 turn
     if Map.currentPlayer == 1:
         if screen == 0:
             if isMouseWithinSpace(1300, 700, 400, 200):
@@ -362,6 +373,7 @@ def mousePressed():
                         inventory.Wooden_Stick = inventory.Wooden_Stick - 5
                 else:
                     crafted_item = ""  
+                    
         if spear_item == 2:    
             if tekst == "Craft":
                 if isMouseWithinSpace(150, 850, 150, 60):
@@ -373,6 +385,7 @@ def mousePressed():
                         inventory.Mana_Essence = inventory.Mana_Essence - 10
                 else:
                     crafted_item = ""   
+                    
         if spear_item == 3:    
             if tekst == "Craft":
                 if isMouseWithinSpace(150, 850, 150, 60):
@@ -384,7 +397,8 @@ def mousePressed():
                         inventory.Soul_Dead = inventory.Soul_Dead - 3
                         inventory.Wooden_Stick = inventory.Wooden_Stick - 3 
                 else:
-                    crafted_item = ""      
+                    crafted_item = ""   
+                       
         if spear_item == 4:    
             if tekst == "Craft":
                 if isMouseWithinSpace(150, 850, 150, 60):
@@ -420,6 +434,7 @@ def mousePressed():
             elif isMouseWithinSpace(1590, 240, 280, 380):
                 tekst = "Craft"
                 sword_item = 6
+                
         if sword_item == 1:    
             if tekst == "Craft":
                 if isMouseWithinSpace(150, 850, 150, 60):
@@ -431,6 +446,7 @@ def mousePressed():
                         inventory.Wooden_Stick = inventory.Wooden_Stick - 1
                 else:
                     crafted_item4 = ""
+                    
         if sword_item == 2:    
             if tekst == "Craft":
                 if isMouseWithinSpace(150, 850, 150, 60):
@@ -441,7 +457,8 @@ def mousePressed():
                         inventory.Basic_Sword = inventory.Basic_Sword - 1
                         inventory.Mana_Essence = inventory.Mana_Essence - 10     
                 else:
-                    crafted_item4 = ""   
+                    crafted_item4 = "" 
+                      
         if sword_item == 3:    
             if tekst == "Craft":
                 if isMouseWithinSpace(150, 850, 150, 60):
@@ -452,7 +469,8 @@ def mousePressed():
                         inventory.Basic_Sword = inventory.Basic_Sword - 1
                         inventory.Obsidian = inventory.Obsidian - 2
                 else:
-                    crafted_item4 = ""       
+                    crafted_item4 = ""   
+                        
         if sword_item == 4:    
             if tekst == "Craft":
                 if isMouseWithinSpace(150, 850, 150, 60):
@@ -464,6 +482,7 @@ def mousePressed():
                         inventory.Soul_Dead = inventory.Soul_Dead - 5
                 else:
                     crafted_item4 = ""
+                    
         if sword_item == 5:
             if tekst == "Craft":
                 if isMouseWithinSpace(150, 850, 150, 60):
@@ -475,6 +494,7 @@ def mousePressed():
                         inventory.Fire_Essence = inventory.Fire_Essence - 5
                 else:
                     crafted_item4 = ""
+                    
         if sword_item == 6:
             if tekst == "Craft":
                 if isMouseWithinSpace(150, 850, 150, 60):
@@ -486,6 +506,7 @@ def mousePressed():
                         inventory.Void_Essence = inventory.Void_Essence - 5
                 else:
                     crafted_item4 = ""
+                    
                 
         if screen == 2:
             if isMouseWithinSpace(150, 100, 150, 60):
@@ -516,7 +537,8 @@ def mousePressed():
                         inventory.Wolf_Skin = inventory.Wolf_Skin - 5
                         inventory.Bear_Skin = inventory.Bear_Skin - 5
                 else:
-                    crafted_item3 = ""         
+                    crafted_item3 = ""   
+                          
         if armour_item == 2:    
             if tekst == "Craft":
                 if isMouseWithinSpace(150, 850, 150, 60):
@@ -527,6 +549,7 @@ def mousePressed():
                         inventory.Iron_Chunk = inventory.Iron_Chunk - 10   
                 else:
                     crafted_item3 = ""     
+                    
         if armour_item == 3:    
             if tekst == "Craft":
                 if isMouseWithinSpace(150, 850, 150, 60):
@@ -538,7 +561,8 @@ def mousePressed():
                         inventory.Soul_Dead = inventory.Soul_Dead - 5
                         inventory.Obsidian = inventory.Obsidian - 2
                 else:
-                    crafted_item3 = ""     
+                    crafted_item3 = ""    
+                     
         if armour_item == 4:    
             if tekst == "Craft":
                 if isMouseWithinSpace(150, 850, 150, 60):
@@ -550,6 +574,7 @@ def mousePressed():
                         inventory.Fire_Essence = inventory.Fire_Essence - 5
                 else:
                     crafted_item3 = ""
+                    
         if armour_item == 5:
             if tekst == "Craft":
                 if isMouseWithinSpace(150, 850, 150, 60):
@@ -580,6 +605,7 @@ def mousePressed():
             elif isMouseWithinSpace(1290, 240, 280, 380):
                 tekst = "Craft"
                 shield_item = 5
+                
         if shield_item == 1:    
             if tekst == "Craft":
                 if isMouseWithinSpace(150, 850, 150, 60):
@@ -590,7 +616,8 @@ def mousePressed():
                         inventory.Wooden_Chunk = inventory.Wooden_Chunk - 5
                         inventory.Wooden_Stick = inventory.Wooden_Stick - 2    
                 else:
-                    crafted_item2 = ""        
+                    crafted_item2 = "" 
+                           
         if shield_item == 2:    
             if tekst == "Craft":
                 if isMouseWithinSpace(150, 850, 150, 60):
@@ -601,7 +628,8 @@ def mousePressed():
                         inventory.Wooden_Shield = inventory.Wooden_Shield - 1
                         inventory.Iron_Chunk = inventory.IronChunk - 5
                 else:
-                    crafted_item2 = ""       
+                    crafted_item2 = "" 
+                          
         if shield_item == 3:    
             if tekst == "Craft":
                 if isMouseWithinSpace(150, 850, 150, 60):
@@ -612,7 +640,8 @@ def mousePressed():
                         inventory.Iron_Shield = inventory.Iron_Shield - 1
                         inventory.Mana_Essence = inventory.Mana_Essence - 10
                 else:
-                    crafted_item2 = ""        
+                    crafted_item2 = ""
+                            
         if shield_item == 4:    
             if tekst == "Craft":
                 if isMouseWithinSpace(150, 850, 150, 60):
@@ -625,6 +654,7 @@ def mousePressed():
                         inventory.Gold_Ingot = inventory.Gold_Ingot - 3
                 else:
                     crafted_item2 = ""
+                    
         if shield_item == 5:
             if tekst == "Craft":
                 if isMouseWithinSpace(150, 850, 150, 60):
@@ -649,6 +679,7 @@ def mousePressed():
             elif isMouseWithinSpace(690, 240, 280, 380):
                 tekst = "Craft"
                 dagger_item = 3
+                
         if dagger_item == 1:    
             if tekst == "Craft":
                 if isMouseWithinSpace(150, 850, 150, 60):
@@ -659,7 +690,8 @@ def mousePressed():
                         inventory.Iron_Chunk = inventory.Iron_Chunk - 1
                         inventory.Wooden_Stick = inventory.Wooden_Stick  - 1  
                 else:
-                    crafted_item5 = ""         
+                    crafted_item5 = ""  
+                           
         if dagger_item == 2:    
             if tekst == "Craft":
                 if isMouseWithinSpace(150, 850, 150, 60):
@@ -670,7 +702,8 @@ def mousePressed():
                         inventory.Basic_Dagger = inventory.Basic_Dagger - 1
                         inventory.Mana_Essence = inventory.Mana_Essence - 3    
                 else:
-                    crafted_item5 = ""    
+                    crafted_item5 = "" 
+                       
         if dagger_item == 3:    
             if tekst == "Craft":
                 if isMouseWithinSpace(150, 850, 150, 60):
@@ -723,6 +756,7 @@ def mousePressed():
                         inventory2.Wooden_Stick = inventory2.Wooden_Stick - 5
                 else:
                     crafted_item = ""  
+                    
         if spear_item == 2:    
             if tekst == "Craft":
                 if isMouseWithinSpace(150, 850, 150, 60):
@@ -734,6 +768,7 @@ def mousePressed():
                         inventory2.Mana_Essence = inventory2.Mana_Essence - 10
                 else:
                     crafted_item = ""   
+                    
         if spear_item == 3:    
             if tekst == "Craft":
                 if isMouseWithinSpace(150, 850, 150, 60):
@@ -745,7 +780,8 @@ def mousePressed():
                         inventory2.Soul_Dead = inventory2.Soul_Dead - 3
                         inventory2.Wooden_Stick = inventory2.Wooden_Stick - 3 
                 else:
-                    crafted_item = ""      
+                    crafted_item = "" 
+                         
         if spear_item == 4:    
             if tekst == "Craft":
                 if isMouseWithinSpace(150, 850, 150, 60):
@@ -781,6 +817,7 @@ def mousePressed():
             elif isMouseWithinSpace(1590, 240, 280, 380):
                 tekst = "Craft"
                 sword_item = 6
+                
         if sword_item == 1:    
             if tekst == "Craft":
                 if isMouseWithinSpace(150, 850, 150, 60):
@@ -792,6 +829,7 @@ def mousePressed():
                         inventory2.Wooden_Stick = inventory2.Wooden_Stick - 1
                 else:
                     crafted_item4 = ""
+                    
         if sword_item == 2:    
             if tekst == "Craft":
                 if isMouseWithinSpace(150, 850, 150, 60):
@@ -803,6 +841,7 @@ def mousePressed():
                         inventory2.Mana_Essence = inventory2.Mana_Essence - 10     
                 else:
                     crafted_item4 = ""   
+                    
         if sword_item == 3:    
             if tekst == "Craft":
                 if isMouseWithinSpace(150, 850, 150, 60):
@@ -813,7 +852,8 @@ def mousePressed():
                         inventory2.Basic_Sword = inventory2.Basic_Sword - 1
                         inventory2.Obsidian = inventory2.Obsidian - 2
                 else:
-                    crafted_item4 = ""       
+                    crafted_item4 = ""     
+                      
         if sword_item == 4:    
             if tekst == "Craft":
                 if isMouseWithinSpace(150, 850, 150, 60):
@@ -825,6 +865,7 @@ def mousePressed():
                         inventory2.Soul_Dead = inventory2.Soul_Dead - 5
                 else:
                     crafted_item4 = ""
+                    
         if sword_item == 5:
             if tekst == "Craft":
                 if isMouseWithinSpace(150, 850, 150, 60):
@@ -836,6 +877,7 @@ def mousePressed():
                         inventory2.Fire_Essence = inventory2.Fire_Essence - 5
                 else:
                     crafted_item4 = ""
+                    
         if sword_item == 6:
             if tekst == "Craft":
                 if isMouseWithinSpace(150, 850, 150, 60):
@@ -877,7 +919,8 @@ def mousePressed():
                         inventory2.Wolf_Skin = inventory2.Wolf_Skin - 5
                         inventory2.Bear_Skin = inventory2.Bear_Skin - 5
                 else:
-                    crafted_item3 = ""         
+                    crafted_item3 = ""   
+                          
         if armour_item == 2:    
             if tekst == "Craft":
                 if isMouseWithinSpace(150, 850, 150, 60):
@@ -887,7 +930,8 @@ def mousePressed():
                         crafted_item3 = "You have crafted chain armour"
                         inventory2.Iron_Chunk = inventory2.Iron_Chunk - 10   
                 else:
-                    crafted_item3 = ""     
+                    crafted_item3 = "" 
+                        
         if armour_item == 3:    
             if tekst == "Craft":
                 if isMouseWithinSpace(150, 850, 150, 60):
@@ -899,7 +943,8 @@ def mousePressed():
                         inventory2.Soul_Dead = inventory2.Soul_Dead - 5
                         inventory2.Obsidian = inventory2.Obsidian - 2
                 else:
-                    crafted_item3 = ""     
+                    crafted_item3 = "" 
+                        
         if armour_item == 4:    
             if tekst == "Craft":
                 if isMouseWithinSpace(150, 850, 150, 60):
@@ -911,6 +956,7 @@ def mousePressed():
                         inventory2.Fire_Essence = inventory2.Fire_Essence - 5
                 else:
                     crafted_item3 = ""
+                    
         if armour_item == 5:
             if tekst == "Craft":
                 if isMouseWithinSpace(150, 850, 150, 60):
@@ -941,6 +987,7 @@ def mousePressed():
             elif isMouseWithinSpace(1290, 240, 280, 380):
                 tekst = "Craft"
                 shield_item = 5
+                
         if shield_item == 1:    
             if tekst == "Craft":
                 if isMouseWithinSpace(150, 850, 150, 60):
@@ -951,7 +998,8 @@ def mousePressed():
                         inventory2.Wooden_Chunk = inventory2.Wooden_Chunk - 5
                         inventory2.Wooden_Stick = inventory2.Wooden_Stick - 2    
                 else:
-                    crafted_item2 = ""        
+                    crafted_item2 = ""     
+                       
         if shield_item == 2:    
             if tekst == "Craft":
                 if isMouseWithinSpace(150, 850, 150, 60):
@@ -962,7 +1010,8 @@ def mousePressed():
                         inventory2.Wooden_Shield = inventory2.Wooden_Shield - 1
                         inventory2.Iron_Chunk = inventory2.IronChunk - 5
                 else:
-                    crafted_item2 = ""       
+                    crafted_item2 = ""  
+                         
         if shield_item == 3:    
             if tekst == "Craft":
                 if isMouseWithinSpace(150, 850, 150, 60):
@@ -973,7 +1022,8 @@ def mousePressed():
                         inventory2.Iron_Shield = inventory2.Iron_Shield - 1
                         inventory2.Mana_Essence = inventory2.Mana_Essence - 10
                 else:
-                    crafted_item2 = ""        
+                    crafted_item2 = ""   
+                         
         if shield_item == 4:    
             if tekst == "Craft":
                 if isMouseWithinSpace(150, 850, 150, 60):
@@ -986,6 +1036,7 @@ def mousePressed():
                         inventory2.Gold_Ingot = inventory2.Gold_Ingot - 3
                 else:
                     crafted_item2 = ""
+                    
         if shield_item == 5:
             if tekst == "Craft":
                 if isMouseWithinSpace(150, 850, 150, 60):
@@ -1010,6 +1061,7 @@ def mousePressed():
             elif isMouseWithinSpace(690, 240, 280, 380):
                 tekst = "Craft"
                 dagger_item = 3
+                
         if dagger_item == 1:    
             if tekst == "Craft":
                 if isMouseWithinSpace(150, 850, 150, 60):
@@ -1020,7 +1072,8 @@ def mousePressed():
                         inventory2.Iron_Chunk = inventory2.Iron_Chunk - 1
                         inventory2.Wooden_Stick = inventory2.Wooden_Stick  - 1  
                 else:
-                    crafted_item5 = ""         
+                    crafted_item5 = ""     
+                        
         if dagger_item == 2:    
             if tekst == "Craft":
                 if isMouseWithinSpace(150, 850, 150, 60):
@@ -1031,7 +1084,8 @@ def mousePressed():
                         inventory2.Basic_Dagger = inventory2.Basic_Dagger - 1
                         inventory2.Mana_Essence = inventory2.Mana_Essence - 3    
                 else:
-                    crafted_item5 = ""    
+                    crafted_item5 = "" 
+                       
         if dagger_item == 3:    
             if tekst == "Craft":
                 if isMouseWithinSpace(150, 850, 150, 60):
