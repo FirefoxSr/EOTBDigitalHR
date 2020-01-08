@@ -7,54 +7,62 @@ import AmountOfPlayers
 import ScreenTitle
 import Crafting
 import Combat2
+import backgroundScroll
 
 def setup():
-    global screen, x, y, w, h,backGround
+    global screen, x, y, w, h, backGround
     fullScreen()
+    frameRate(60)
+    backGround = loadImage("Background.jpg")
     screen = "titleScreen"
     Combat.setup()
     Map.setup()
     AmountOfPlayers.setup()
     ScreenTitle.setup()
     Crafting.setup()
-    backGround = loadImage("Background.jpg")
+    Combat2.setup()
+    backgroundScroll.setup()
 
+
+
+
+        
 def draw():
     global screen, backGround
-    image(backGround,1920,1080)
     if (screen == "titleScreen"):
-        background(0)
-        image(backGround, width // 2, height // 2)
+        backgroundScroll.draw()
         ScreenTitle.draw()
     if (screen == "playerScreen"):
         background(0)
-        image(backGround, width // 2, height // 2)
+        backgroundScroll.draw()
         AmountOfPlayers.draw()
     if (screen == "combat"):
         background(0)
-        image(backGround, width // 2, height // 2)
+        imageMode(CENTER)
+        backgroundScroll.draw()
         textAlign(CENTER)
         imageMode(CORNER)
         Combat.draw()
         Combat.endOfCombat
     if (screen == "combat2"):
         background(0)
+        imageMode(CENTER)
+        backgroundScroll.draw()
         textAlign(CENTER)
         imageMode(CORNER)
         Combat2.draw()
         Combat.endOfCombat
     if (screen == "Map"):
         background(0)
-        imageMode(CORNER)
-        image(backGround, width // 2, height // 2)
+        backgroundScroll.draw()
         imageMode(CENTER)
         Map.draw()
         textAlign(LEFT)
         noTint()
     if (screen == "Crafting"):
         background(0)
-        imageMode(CORNER )
-        image(backGround, width // 2, height // 2)
+        backgroundScroll.draw()
+        imageMode(CORNER)
         Crafting.draw()
     print(screen)
         
