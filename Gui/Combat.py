@@ -10,9 +10,9 @@ def setup():
     turn = 0
     dice = 1
     P_turn = 0
-    P_energy = 100
-    P_health = 1000
-    P_block = 100
+    P_energy = 10
+    P_health = 45
+    P_block = 10
     P_corruption = 0
     P_poison = 0
     P_fire = 0

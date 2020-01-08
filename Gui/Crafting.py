@@ -2,6 +2,7 @@ import inventory
 import Map
 import playerTurns
 import inventory2
+import Combat
 
 screen = 0
 tekst = ""
@@ -369,6 +370,7 @@ def mousePressed():
                         crafted_item = "You have crafted basic spear"
                         inventory.Iron_Chunk = inventory.Iron_Chunk - 2
                         inventory.Wooden_Stick = inventory.Wooden_Stick - 5
+                        Combat.piercing = Combat.piercing + 4
                 else:
                     crafted_item = ""  
                     
@@ -381,6 +383,7 @@ def mousePressed():
                         crafted_item = "You have crafted comet spear"
                         inventory.Basic_Spear = inventory.Basic_Spear - 1
                         inventory.Mana_Essence = inventory.Mana_Essence - 10
+                        Combat.piercing = Combat.piercing + 10
                 else:
                     crafted_item = ""   
                     
@@ -394,6 +397,7 @@ def mousePressed():
                         inventory.Comet_Spear = inventory.Comet_Spear - 1
                         inventory.Soul_Dead = inventory.Soul_Dead - 3
                         inventory.Wooden_Stick = inventory.Wooden_Stick - 3 
+                        Combat.piercing = Combat.piercing + 18
                 else:
                     crafted_item = ""   
                        
@@ -406,6 +410,7 @@ def mousePressed():
                         crafted_item = "You have crafted halberd of the fire god"
                         inventory.Spear_Doom = inventory.Spear_Doom - 1
                         inventory.Fire_Essence = inventory.Fire_Essence
+                        Combat.fire = Combat.fire + 100
                 else:
                     crafted_item = ""
                   
@@ -445,6 +450,7 @@ def mousePressed():
                         crafted_item4 = "You have crafted basic sword"   
                         inventory.Iron_Chunk = inventory.Iron_Chunk - 2
                         inventory.Wooden_Stick = inventory.Wooden_Stick - 1
+                        Combat.damage = Combat.damage + 3
                 else:
                     crafted_item4 = ""
                     
@@ -456,7 +462,8 @@ def mousePressed():
                     else:
                         crafted_item4 = "You have crafted arcane sword"
                         inventory.Basic_Sword = inventory.Basic_Sword - 1
-                        inventory.Mana_Essence = inventory.Mana_Essence - 10     
+                        inventory.Mana_Essence = inventory.Mana_Essence - 10 
+                        Combat.damage = Combat.damage + 8  
                 else:
                     crafted_item4 = "" 
                       
@@ -469,6 +476,7 @@ def mousePressed():
                         crafted_item4 = "You have crafted obsidian sword"
                         inventory.Basic_Sword = inventory.Basic_Sword - 1
                         inventory.Obsidian = inventory.Obsidian - 2
+                        Combat.damage = Combat.damage + 10
                 else:
                     crafted_item4 = ""   
                         
@@ -481,6 +489,7 @@ def mousePressed():
                         crafted_item4 = "You have crafted sword of the dead"
                         inventory.Arcane_Sword = inventory.Arcane_Sword - 1
                         inventory.Soul_Dead = inventory.Soul_Dead - 5
+                        Combat.damage = Combat.damage + 10
                 else:
                     crafted_item4 = ""
                     
@@ -493,6 +502,7 @@ def mousePressed():
                         crafted_item4 = "You have crafted sword of phoenix"
                         inventory.Lost_Blade = inventory.Lost_Blade -1
                         inventory.Fire_Essence = inventory.Fire_Essence - 5
+                        Combat.damage = Combat.damage + 70
                 else:
                     crafted_item4 = ""
                     
@@ -505,6 +515,7 @@ def mousePressed():
                         crafted_item4 = "You have crafted heaven's wrath'"
                         inventory.Sword_Phoenix = inventory.Sword_Phoenix - 1
                         inventory.Void_Essence = inventory.Void_Essence - 5
+                        Combat.damage = Combat.damage + 140
                 else:
                     crafted_item4 = ""
                     
@@ -539,6 +550,7 @@ def mousePressed():
                         crafted_item3 = "You have crafted leather armour"
                         inventory.Wolf_Skin = inventory.Wolf_Skin - 5
                         inventory.Bear_Skin = inventory.Bear_Skin - 5
+                        Combat.P_health = Combat.P_health + 15
                 else:
                     crafted_item3 = ""   
                           
@@ -550,6 +562,7 @@ def mousePressed():
                     else:
                         crafted_item3 = "You have crafted chain armour"
                         inventory.Iron_Chunk = inventory.Iron_Chunk - 10   
+                        Combat.P_health = Combat.P_health + 15
                 else:
                     crafted_item3 = ""     
                     
@@ -563,6 +576,7 @@ def mousePressed():
                         inventory.Chain_Armour = inventory.Chain_Armour - 1
                         inventory.Soul_Dead = inventory.Soul_Dead - 5
                         inventory.Obsidian = inventory.Obsidian - 2
+                        Combat.P_health = Combat.P_health + 50
                 else:
                     crafted_item3 = ""    
                      
@@ -575,6 +589,8 @@ def mousePressed():
                         crafted_item3 = "You have crafted molten armour"
                         inventory.Black_Armour = inventory.Black_Armour - 1
                         inventory.Fire_Essence = inventory.Fire_Essence - 5
+                        Combat.P_health = Combat.P_Health + 120
+                        Combat.P_block = Combat.P_block +20
                 else:
                     crafted_item3 = ""
                     
@@ -587,6 +603,7 @@ def mousePressed():
                         crafted_item3 = "You have crafted amadantium plate"
                         inventory.Molten_Armour = inventory.Molten_Armour - 1
                         inventory.Mana_Essence = inventory.Mana_Essence - 10
+                        Combat.P_health = Combat.P_health + 250
                 else:
                     crafted_item3 = ""
       
