@@ -738,7 +738,8 @@ def mousePressed():
                 screen = 3
             if isMouseWithinSpace(1600, 100, 150, 60):
                 screen = "inventory"
-            
+        
+        #This will select an item in the spear page
         if screen == 4:
             if isMouseWithinSpace(150, 100, 150, 60):
                 screen = 0
@@ -805,7 +806,8 @@ def mousePressed():
                         inventory2.Fire_Essence = inventory2.Fire_Essence
                 else:
                     crafted_item = ""
-                    
+                   
+       #This will select an item in the sword page 
         if screen == 1:
             if isMouseWithinSpace(150, 100, 150, 60):
                 screen = 0
@@ -904,6 +906,7 @@ def mousePressed():
                 else:
                     crafted_item4 = ""
                 
+        #This will select an item in the armour page
         if screen == 2:
             if isMouseWithinSpace(150, 100, 150, 60):
                 screen = 0
@@ -985,6 +988,7 @@ def mousePressed():
                 else:
                     crafted_item3 = ""
                 
+        #This will select an item in the shield page
         if screen == 3:
             if isMouseWithinSpace(150, 100, 150, 60):
                 screen = 0
@@ -1066,7 +1070,8 @@ def mousePressed():
                         inventory2.Void_Essence = inventory2.Void_Essence - 10
                 else:
                     crafted_item2 = ""
-            
+        
+        #This will select an item in the dagger page    
         if screen == 5:
             if isMouseWithinSpace(150, 100, 150, 60):
                 screen = 1
