@@ -61,6 +61,7 @@ def draw():
         noTint()
     if (screen == "Crafting"):
         background(0)
+        imageMode(CENTER)
         backgroundScroll.draw()
         imageMode(CORNER)
         Crafting.draw()
