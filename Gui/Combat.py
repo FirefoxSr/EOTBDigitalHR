@@ -146,6 +146,7 @@ def draw():
     image(img_poison, 850, 600)
     
     if Scene == 1: #monster select page.
+        background(0,0,0)
         textFont(font)
         fill(256,256,256)
         textSize(50)
@@ -172,6 +173,7 @@ def draw():
         image(img_GrimReaper, 850, 650)
         
     if Scene == 3: #second page of monster select
+        background(0,0,0)
         textFont(font)
         fill(256,256,256)
         textSize(50)
@@ -196,6 +198,7 @@ def draw():
         image(img_DeathGazer, 650, 650)
         
     if Scene == 2: #drop select page.
+        background(0,0,0)
         textFont(font)
         fill(256,256,256)
         textSize(50)
