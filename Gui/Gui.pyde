@@ -6,6 +6,7 @@ import test
 import AmountOfPlayers
 import ScreenTitle
 import Crafting
+import Combat2
 
 def setup():
     global screen, x, y, w, h
@@ -16,6 +17,7 @@ def setup():
     AmountOfPlayers.setup()
     ScreenTitle.setup()
     Crafting.setup()
+    Combat2.setup()
 
 def draw():
     global screen
@@ -30,6 +32,12 @@ def draw():
         textAlign(CENTER)
         imageMode(CORNER)
         Combat.draw()
+        Combat.endOfCombat
+    if (screen == "combat2"):
+        background(0)
+        textAlign(CENTER)
+        imageMode(CORNER)
+        Combat2.draw()
         Combat.endOfCombat
     if (screen == "Map"):
         background(0)
@@ -65,11 +73,21 @@ def mousePressed():
         Combat.mousePressed()
         if isMouseWithinSpace(0,0,20,30):
             screen = "Map"
+    if (screen == "combat2"):
+        Combat2.isMouseWithinSpace
+        Combat2.mousePressed()
+        if isMouseWithinSpace(0,0,20,30):
+            screen = "Map"
     if (screen == "Map"):
         Map.isMouseWithinSpace
         Map.mouseClicked()
-        if isMouseWithinSpace(1488,931,186,58):
-            screen = "combat"
+        if Map.currentPlayer == 2:
+            if isMouseWithinSpace(1488,931,186,58):
+                screen = "combat"
+        elif Map.currentPlayer == 1:
+            if isMouseWithinSpace(1488,931,186,58):
+                screen = "combat2"
+            
         if (screen == "Map"):
             if isMouseWithinSpace(800,925,366,78):
                 screen = "Crafting"
