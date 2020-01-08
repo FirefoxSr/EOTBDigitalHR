@@ -36,7 +36,6 @@ Enchanted_Dagger = 0
 
 def setup():
     fullScreen()
-    background(0,0,0)
     font = createFont("Georgia", 54)
     textFont(font)
     textAlign(CENTER, TOP)
