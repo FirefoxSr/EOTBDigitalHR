@@ -1,5 +1,3 @@
-
-
 Bear_Skin = 0
 Wolf_Skin = 0
 Soul_Dead = 0
@@ -56,7 +54,6 @@ def draw():
     textAlign(CENTER)
     fill(240)
     text("Back", 225, 140)
-
     
     textSize(52)
     textAlign(LEFT)
@@ -99,8 +96,3 @@ def isMouseWithinSpace(x,y,w,h):
         return True
     else:
         return False
-
-#def mousePressed():
-    #if isMouseWithinSpace(150, 850, 150, 60):
-        #increaseCurrentNumber()
-    

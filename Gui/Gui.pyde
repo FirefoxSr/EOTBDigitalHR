@@ -51,7 +51,7 @@ def isMouseWithinSpace(x,y,w,h):
 def mousePressed():
     global screen, x, y, w, h
     if (screen == "titleScreen"):
-        if isMouseWithinSpace(1000, 660, 608, 150):
+        if isMouseWithinSpace(750, 660, 858, 150):
             screen = "playerScreen"        
     if (screen == "playerScreen"):
         if isMouseWithinSpace(527,801,233,88):
