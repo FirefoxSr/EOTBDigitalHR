@@ -638,6 +638,7 @@ def mousePressed():
                         crafted_item2 = "You have crafted wooden shield"
                         inventory.Wooden_Chunk = inventory.Wooden_Chunk - 5
                         inventory.Wooden_Stick = inventory.Wooden_Stick - 2    
+                        Combat.P_block = Combat.P_block + 3
                 else:
                     crafted_item2 = "" 
                            
@@ -650,6 +651,7 @@ def mousePressed():
                         crafted_item2 = "You have crafted iron shield" 
                         inventory.Wooden_Shield = inventory.Wooden_Shield - 1
                         inventory.Iron_Chunk = inventory.IronChunk - 5
+                        Combat.P_block = Combat.P_block + 5
                 else:
                     crafted_item2 = "" 
                           
@@ -662,6 +664,7 @@ def mousePressed():
                         crafted_item2 = "You have crafted null shield" 
                         inventory.Iron_Shield = inventory.Iron_Shield - 1
                         inventory.Mana_Essence = inventory.Mana_Essence - 10
+                        Combat.P_block = Combat.P_block + 7
                 else:
                     crafted_item2 = ""
                             
@@ -675,6 +678,7 @@ def mousePressed():
                         inventory.Iron_Shield = inventory.Iron_Shield - 1
                         inventory.Null_Shield = inventory.Null_Shield - 1
                         inventory.Gold_Ingot = inventory.Gold_Ingot - 3
+                        Combat.P_block = Combat.P_block + 30
                 else:
                     crafted_item2 = ""
                     
@@ -687,6 +691,7 @@ def mousePressed():
                         crafted_item2 = "You have crafted war god's aegis"
                         inventory.Gold_Shield = inventory.Gold_Shield - 1
                         inventory.Void_Essence = inventory.Void_Essence - 10
+                        Combat.P_block = Combat.P_block + 80
                 else:
                     crafted_item2 = ""
 
@@ -712,7 +717,8 @@ def mousePressed():
                     else:
                         crafted_item5 = "You have crafted basic dagger"
                         inventory.Iron_Chunk = inventory.Iron_Chunk - 1
-                        inventory.Wooden_Stick = inventory.Wooden_Stick  - 1  
+                        inventory.Wooden_Stick = inventory.Wooden_Stick  - 1 
+                        Combat.P_damage = Combat.P_damage + 2 
                 else:
                     crafted_item5 = ""  
                            
@@ -724,7 +730,8 @@ def mousePressed():
                     else:
                         crafted_item5 = "You have crafted enchanted dagger"
                         inventory.Basic_Dagger = inventory.Basic_Dagger - 1
-                        inventory.Mana_Essence = inventory.Mana_Essence - 3    
+                        inventory.Mana_Essence = inventory.Mana_Essence - 3  
+                        Combat.piercing = Combat.piercing + 8
                 else:
                     crafted_item5 = "" 
                        
@@ -737,6 +744,7 @@ def mousePressed():
                         crafted_item5 = "You have crafted dagger of affliction"
                         inventory.Enchanted_Dagger = inventory.Enchanted_Dagger - 1
                         inventory.Scorpion_Poison = inventory.Scorpion_Poison - 3
+                        Combat.poison = Combat.poison + 15
                 else:
                     crafted_item5 = ""
     #Player 2 Turn                
