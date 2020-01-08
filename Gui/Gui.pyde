@@ -51,8 +51,6 @@ def draw():
     if (screen == "Map"):
         background(0)
         backgroundScroll.draw()
-        if (amountOfPlayers == 2):
-            text("Switch to next player",200,1050) 
         imageMode(CENTER)
         Map.draw()
         textAlign(LEFT)
@@ -95,10 +93,6 @@ def mousePressed():
     if (screen == "Map"):
         Map.isMouseWithinSpace
         Map.mousePressed()
-        if (amountOfPlayers == 2):
-            if (isMouseWithinSpace,200,1050,518,63):
-                Map.endTurn = True
-                Map.currentPlayer = Map.playerTurn(Map.currentPlayer)
         if Map.currentPlayer == 2:
             if isMouseWithinSpace(1488,931,186,58):
                 screen = "combat"

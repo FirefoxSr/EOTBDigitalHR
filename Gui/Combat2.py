@@ -99,7 +99,7 @@ def draw():
     #texts for all the stats in the game.
     text('Player ' + str(P_turn), 1650, 100)
     text('Monster ' + str(M_turn), 1650, 200)
-    text('Hoi', 1650, 1050)
+    text('end turn', 1650, 1050)
     text('Player energy: ' + str(P_energy), 250, 100)
     text('Player health: ' + str(P_health), 750, 100)
     text('Player block: ' + str(P_block), 1250, 100)
