@@ -12,7 +12,7 @@ def setup():
     P_turn = 0
     P_energy = 10
     P_health = 45
-    P_block = 10
+    P_block = 0
     P_corruption = 0
     P_poison = 0
     P_fire = 0
@@ -86,6 +86,7 @@ def setup():
 def draw():
     global message, font, Scene, turn, drop, P_turn, M_turn, P_energy, P_health, P_block, M_energy, M_health, M_block, M_name, monster, energy, charging, damage, block, piercing, corruption, poison, fire, cleanse, heal, img_DeathGazer, img_VoidElemental, img_Voidling, img_CrimsonDragon, img_FireDrake, img_LavaGolem, img_LavaSlime, img_GoldenScarab, img_mummy, img_AncientSkeleton, img_GiantScorpion, img_basilisk, img_VoidSpawn, img_ghost, img_zombie, img_haunter, img_HauntedTree, img_GrimReaper, img_ManaGolem, img_SkeletonMage, img_fairy, img_treant, img_skeleton, img_bear, img_wolf, img_slime, img_attack_5, img_attack_8, img_block_5, img_block_10, img_piercing, img_cleanse, img_corruption, img_fireball, img_heal, img_magic_missile, img_poison
     if Scene == 0:  #scene 0 = combat page. Scene 1 = monster select page. Scene 2 = item drop page.
+        background(0,0,0)
         textFont(font)
         fill(256,256,256)
         textSize(50)
@@ -99,7 +100,7 @@ def draw():
     #texts for all the stats in the game.
     text('Player ' + str(P_turn), 1650, 100)
     text('Monster ' + str(M_turn), 1650, 200)
-    text('End Turn', 1650, 1050)
+    text('Hoi', 1650, 1050)
     text('Player energy: ' + str(P_energy), 250, 100)
     text('Player health: ' + str(P_health), 750, 100)
     text('Player block: ' + str(P_block), 1250, 100)
@@ -145,6 +146,7 @@ def draw():
     image(img_poison, 850, 600)
     
     if Scene == 1: #monster select page.
+        background(0,0,0)
         textFont(font)
         fill(256,256,256)
         textSize(50)
@@ -171,7 +173,7 @@ def draw():
         image(img_GrimReaper, 850, 650)
         
     if Scene == 3: #second page of monster select
-        
+        background(0,0,0)
         textFont(font)
         fill(256,256,256)
         textSize(50)
@@ -196,7 +198,7 @@ def draw():
         image(img_DeathGazer, 650, 650)
         
     if Scene == 2: #drop select page.
-        
+        background(0,0,0)
         textFont(font)
         fill(256,256,256)
         textSize(50)
@@ -1467,6 +1469,3 @@ def endOfCombat():
     if (M_health == 0):
         screen = "Map"
         return screen
-                
-            
-            
