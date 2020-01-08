@@ -13,7 +13,7 @@ Cursed_Wood = 0
 Gold_Ingot = 0
 Scorpion_Poison = 0
 Fire_Essence = 0
-Void_Energy = 0
+Void_Essence = 0
 
 Basic_Spear = 0
 Comet_Spear = 0
@@ -47,7 +47,7 @@ def setup():
     
     
 def draw():
-    global Bear_Skin, Wolf_Skin, Soul_Dead, Wooden_Stick, Wooden_Chunk, Iron_Chunk, Enchanted_Wolf, Mana_Essence, Obsidian, Void_Energy, Haunted_Spirit, Cursed_Wood, Gold_Ingot, Scorpion_Poison, Fire_Essense
+    global Bear_Skin, Wolf_Skin, Soul_Dead, Wooden_Stick, Wooden_Chunk, Iron_Chunk, Enchanted_Wolf, Mana_Essence, Obsidian, Void_Energy, Haunted_Spirit, Cursed_Wood, Gold_Ingot, Scorpion_Poison, Fire_Essense, Void_Essence
     fill(0)
     rect(150, 100, 150, 60)
     textSize(30)
@@ -88,7 +88,7 @@ def draw():
     text("Fire Essence", 1000, 880)
     text(Fire_Essence, 1600, 880)
     text("Void Energy", 1000, 940)
-    text(Void_Energy, 1600, 940)
+    text(Void_Essence, 1600, 940)
     
         
 def isMouseWithinSpace(x,y,w,h):
