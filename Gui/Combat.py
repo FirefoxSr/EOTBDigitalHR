@@ -12,7 +12,7 @@ def setup():
     P_turn = 0
     P_energy = 10
     P_health = 45
-    P_block = 10
+    P_block = 0
     P_corruption = 0
     P_poison = 0
     P_fire = 0
