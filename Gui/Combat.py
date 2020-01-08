@@ -233,164 +233,164 @@ def draw():
                     textAlign(CENTER)
                     text("Wolf Skin x2", width /2, height - 200)
                     
-#         if monster == 3:
-#                 if dice == 1:
-#                     textAlign(CENTER)
-#                     text("Bear Skin", width /2, height - 200)
-#                 elif dice == 2 or dice == 5:
-#                     textAlign(CENTER)
-#                     text("Nothing", width /2, height - 200)
-#                 else:
-#                     textAlign(CENTER)
-#                     text("Bear Skin x2", width /2, height - 200)
+        if monster == 3:
+                if dice == 1:
+                    textAlign(CENTER)
+                    text("Bear Skin", width /2, height - 200)
+                elif dice == 2 or dice == 5:
+                    textAlign(CENTER)
+                    text("Nothing", width /2, height - 200)
+                else:
+                    textAlign(CENTER)
+                    text("Bear Skin x2", width /2, height - 200)
                     
-#         if monster == 4:
-#                 if dice == 1 or dice == 6:
-#                     textAlign(CENTER)
-#                     text("Iron Chunk", width /2, height - 200)
-#                 elif dice == 2 or dice == 3:
-#                     textAlign(CENTER)
-#                     text("Wooden Stick", width /2, height - 200)
-#                 elif dice == 4:
-#                     textAlign(CENTER)
-#                     text("Iron Chunk x2", width /2, height - 200)
-#                 else:
-#                     textAlign(CENTER)
-#                     text("Soul of the Dead", width /2, height - 200)
+        if monster == 4:
+                if dice == 1 or dice == 6:
+                    textAlign(CENTER)
+                    text("Iron Chunk", width /2, height - 200)
+                elif dice == 2 or dice == 3:
+                    textAlign(CENTER)
+                    text("Wooden Stick", width /2, height - 200)
+                elif dice == 4:
+                    textAlign(CENTER)
+                    text("Iron Chunk x2", width /2, height - 200)
+                else:
+                    textAlign(CENTER)
+                    text("Soul of the Dead", width /2, height - 200)
                     
-#         if monster == 5:
-#                 if dice == 3 or dice == 5:
-#                     textAlign(CENTER)
-#                     text("Wooden Chunk x3", width /2, height - 200)
-#                 elif dice == 4 or dice == 6:
-#                     textAlign(CENTER)
-#                     text("Wooden Stick x3", width /2, height - 200)
-#                 else:
-#                     textAlign(CENTER)
-#                     text("Wooden Stick", width /2, height - 200)
+        if monster == 5:
+                if dice == 3 or dice == 5:
+                    textAlign(CENTER)
+                    text("Wooden Chunk x3", width /2, height - 200)
+                elif dice == 4 or dice == 6:
+                    textAlign(CENTER)
+                    text("Wooden Stick x3", width /2, height - 200)
+                else:
+                    textAlign(CENTER)
+                    text("Wooden Stick", width /2, height - 200)
                     
-#         if monster == 7:
-#                 if dice == 1 or dice == 3 or dice == 4:
-#                     textAlign(CENTER)
-#                     text("Enchanted Wolf Skin", width /2, height - 200)
-#                 elif dice == 2 or dice == 5:
-#                     textAlign(CENTER)
-#                     text("Mana Essence", width /2, height - 200)
-#                 else:
-#                     textAlign(CENTER)
-#                     text("Enchanted Wolf Skin x2", width /2, height - 200)
+        if monster == 7:
+                if dice == 1 or dice == 3 or dice == 4:
+                    textAlign(CENTER)
+                    text("Enchanted Wolf Skin", width /2, height - 200)
+                elif dice == 2 or dice == 5:
+                    textAlign(CENTER)
+                    text("Mana Essence", width /2, height - 200)
+                else:
+                    textAlign(CENTER)
+                    text("Enchanted Wolf Skin x2", width /2, height - 200)
                     
-#         if monster == 8:
-#                 if dice == 3 or dice == 4:
-#                     textAlign(CENTER)
-#                     text("Soulf od the Dead", width /2, height - 200)
-#                 elif dice == 2:
-#                     textAlign(CENTER)
-#                     text("Mana Essence", width /2, height - 200)
-#                 elif dice == 5 or dice == 6:
-#                     textAlign(CENTER)
-#                     text("Soul of the Dead x2", width /2, height - 200)
-#                 else:
-#                     textAlign(CENTER)
-#                     text("Mana Essence x2", width /2, height - 200)
+        if monster == 8:
+                if dice == 3 or dice == 4:
+                    textAlign(CENTER)
+                    text("Soulf od the Dead", width /2, height - 200)
+                elif dice == 2:
+                    textAlign(CENTER)
+                    text("Mana Essence", width /2, height - 200)
+                elif dice == 5 or dice == 6:
+                    textAlign(CENTER)
+                    text("Soul of the Dead x2", width /2, height - 200)
+                else:
+                    textAlign(CENTER)
+                    text("Mana Essence x2", width /2, height - 200)
                     
-#         if monster == 9:
-#                 if dice == 1 or dice == 2:
-#                     textAlign(CENTER)
-#                     text("Mana Essence x2", width /2, height - 200)
-#                 else:
-#                     textAlign(CENTER)
-#                     text("Obsidian", width /2, height - 200)
-#         if monster == 10:
-#                 if dice == 2 or dice == 4:
-#                     textAlign(CENTER)
-#                     text("Void Energy x2", width /2, height - 200)
-# -                else:
-#                     textAlign(CENTER)
-#                     text("Void Energy", width /2, height - 200)
+        if monster == 9:
+                if dice == 1 or dice == 2:
+                    textAlign(CENTER)
+                    text("Mana Essence x2", width /2, height - 200)
+                else:
+                    textAlign(CENTER)
+                    text("Obsidian", width /2, height - 200)
+        if monster == 10:
+                if dice == 2 or dice == 4:
+                    textAlign(CENTER)
+                    text("Void Energy x2", width /2, height - 200)
+                else:
+                    textAlign(CENTER)
+                    text("Void Energy", width /2, height - 200)            
+        
+        if monster == 11:
+                if dice == 1 or dice == 3 or dice == 6:
+                    textAlign(CENTER)
+                    text("Soul of the Dead", width /2, height - 200)
+                elif dice == 2 or dice == 4:
+                    textAlign(CENTER)
+                    text("Soul of the Dead x3", width /2, height - 200)
+                else:
+                    textAlign(CENTER)
+                    text("Wolf Skin x2", width /2, height - 200)
                     
-#         if monster == 11:
-#                 if dice == 1 or dice == 3 or dice == 6:
-#                     textAlign(CENTER)
-#                     text("Soul of the Dead", width /2, height - 200)
-#                 elif dice == 2 or dice == 4:
-#                     textAlign(CENTER)
-#                     text("Soul of the Dead x3", width /2, height - 200)
-#                 else:
-#                     textAlign(CENTER)
-#                     text("Wolf Skin x2", width /2, height - 200)
+        if monster == 12:
+                if dice in range(1,6 +1):
+                    textAlign(CENTER)
+                    text("Soul of the Dead x2", width /2, height - 200)
                     
-#         if monster == 12:
-#                 if dice in range(1,6 +1):
-#                     textAlign(CENTER)
-#                     text("Soul of the Dead x2", width /2, height - 200)
+        if monster == 13:
+                if dice == 3 or dice == 6 or dice == 1:
+                    textAlign(CENTER)
+                    text("Soul of the Dead", width /2, height - 200)
+                else:
+                    textAlign(CENTER)
+                    text("Haunted Spirit", width /2, height - 200)
+        if monster == 14:
+                if dice == 1 or dice == 6:
+                    textAlign(CENTER)
+                    text("Haunted Spirit", width /2, height - 200)
+                elif dice == 3:
+                    textAlign(CENTER)
+                    text("Cursed Wood x2", width /2, height - 200)
+                else:
+                    textAlign(CENTER)
+                    text("Cursed Wood", width /2, height - 200)
                     
-#         if monster == 13:
-#                 if dice == 3 or dice == 6 or dice == 1:
-#                     textAlign(CENTER)
-#                     text("Soul of the Dead", width /2, height - 200)
-#                 else:
-#                     textAlign(CENTER)
-#                     text("Haunted Spirit", width /2, height - 200)
-#         if monster == 14:
-#                 if dice == 1 or dice == 6:
-#                     textAlign(CENTER)
-#                     text("Haunted Spirit", width /2, height - 200)
-#                 elif dice == 3:
-#                     textAlign(CENTER)
-#                     text("Cursed Wood x2", width /2, height - 200)
-#                 else:
-#                     textAlign(CENTER)
-#                     text("Cursed Wood", width /2, height - 200)
+        if monster == 16:
+                if dice == 3 or dice == 5:
+                    textAlign(CENTER)
+                    text("Gold Ingot x2", width /2, height - 200)
+                else:
+                    textAlign(CENTER)
+                    text("Gold Ingot", width /2, height - 200)
                     
-#         if monster == 16:
-#                 if dice == 3 or dice == 5:
-#                     textAlign(CENTER)
-#                     text("Gold Ingot x2", width /2, height - 200)
-#                 else:
-#                     textAlign(CENTER)
-#                     text("Gold Ingot", width /2, height - 200)
+        if monster == 18:
+                if dice == 2 or dice == 4:
+                    textAlign(CENTER)
+                    text("Soul of the Dead x5", width /2, height - 200)
+                else:
+                    textAlign(CENTER)
+                    text("Gold Ingot", width /2, height - 200)
                     
-#         if monster == 18:
-#                 if dice == 2 or dice == 4:
-#                     textAlign(CENTER)
-#                     text("Soul of the Dead x5", width /2, height - 200)
-#                 else:
-#                     textAlign(CENTER)
-#                     text("Gold Ingot", width /2, height - 200)
+        if monster == 19:
+                if dice in range(1, 6+1):
+                    textAlign(CENTER)
+                    text("Scorpion Poison", width /2, height - 200)
+        #             inventory.Scorpion_Poison = inventory.Scorpion_Poison + 1
                     
-#         if monster == 19:
-#                 if dice in range(1, 6+1):
-#                     textAlign(CENTER)
-#                     text("Scorpion Poison", width /2, height - 200)
-#         #             inventory.Scorpion_Poison = inventory.Scorpion_Poison + 1
+        if monster == 17:
+                if dice in range(1,6 +1):
+                    textAlign(CENTER)
+                    text("Soul of the Dead x2", width /2, height - 200)
                     
-#         if monster == 17:
-#                 if dice in range(1,6 +1):
-#                     textAlign(CENTER)
-#                     text("Soul of the Dead x2", width /2, height - 200)
-                    
-#         if monster == 21 or monster == 22 or monster == 23:
-#                 if dice == 1 or dice == 3 or dice == 5:
-#                     textAlign(CENTER)
-#                     text("Fire Essence", width /2, height - 200)
-#                 elif dice == 2 or dice == 4:
-#                     textAlign(CENTER)
-#                     text("Fire Essence x2", width /2, height - 200) 
-#                 else:
-#                     textAlign(CENTER)
-#                     text("Fire Essence x3", width /2, height - 200)
+        if monster == 21 or monster == 22 or monster == 23:
+                if dice == 1 or dice == 3 or dice == 5:
+                    textAlign(CENTER)
+                    text("Fire Essence", width /2, height - 200)
+                elif dice == 2 or dice == 4:
+                    textAlign(CENTER)
+                    text("Fire Essence x2", width /2, height - 200) 
+                else:
+                    textAlign(CENTER)
+                    text("Fire Essence x3", width /2, height - 200)
                 
-#         if monster == 25 or monster == 26 or monster == 27:
-#                 if dice == 1 or dice == 3 or dice == 5:
-#                     textAlign(CENTER)
-#                     text("Void Essence", width /2, height - 200)
-#                 elif dice == 2 or dice == 4:
-#                     textAlign(CENTER)
-#                     text("Void Essence x2", width /2, height - 200)
-#                 else:
-#                     textAlign(CENTER)
-#                     text("Void Essence x3", width /2, height - 200)
+        if monster == 25 or monster == 26 or monster == 27:
+                if dice == 1 or dice == 3 or dice == 5:
+                    textAlign(CENTER)
+                    text("Void Essence", width /2, height - 200)
+                elif dice == 2 or dice == 4:
+                    textAlign(CENTER)
+                    text("Void Essence x2", width /2, height - 200)
+                else:
+                    textAlign(CENTER)
+                    text("Void Essence x3", width /2, height - 200)
         
 
 #function to enable mouse clicking in specific locations.        
