@@ -51,7 +51,7 @@ def draw():
     global screen, basic_Spear, comet_Spear, doom_Spear, halberd, leather, chain, black_armour, molten_armour, platinum_armour, basic_sword, arcade_sword,obsidian_sword, dead_sword, phoenix_sword, heaven, wooden_shield, iron_shield, null_shield, gold_shield, war_god, basic_dagger, enchanted_dagger, daggerA, tekst, crafted_item, crafted_item2, crafted_item3, crafted_item4, crafted_item5
    
      #If screen == 0 it will draw the Crafting page
-        if screen == 0:
+    if screen == 0:
         background(0,0,0)
         textSize(52)
         textAlign(CENTER)
@@ -85,63 +85,63 @@ def draw():
         fill(240)
         text("inventory", 1675, 140)
         text("Go back",245,140)
+    
+    #This will fill the rectangle with a colour to let the player know which button he/she has selected
+    if isMouseWithinSpace(1300, 700, 400, 200):
+        noFill()
+        rect( 200,  350, 400, 200)
+        noFill()
+        rect( 200,  700, 400, 200)
+        noFill()
+        rect( 1300, 350, 400, 200)
+        fill(200)
+        rect( 1300, 700, 400, 200)
+        fill(240)
+        text("Spear", 1500, 810)
+        noFill()
+        rect(1600, 100, 150, 60)
         
-        #This will fill the rectangle with a colour to let the player know which button he/she has selected
-        if isMouseWithinSpace(1300, 700, 400, 200):
-            noFill()
-            rect( 200,  350, 400, 200)
-            noFill()
-            rect( 200,  700, 400, 200)
-            noFill()
-            rect( 1300, 350, 400, 200)
-            fill(200)
-            rect( 1300, 700, 400, 200)
-            fill(240)
-            text("Spear", 1500, 810)
-            noFill()
-            rect(1600, 100, 150, 60)
-            
-        if isMouseWithinSpace(200,  350, 400, 200):
-            fill(200)
-            rect( 200,  350, 400, 200)
-            fill(240)
-            text("Sword",400, 460)
-            noFill()
-            rect(200,  700, 400, 200)
-            noFill()
-            rect( 1300, 350, 400, 200)
-            noFill()
-            rect( 1300, 700, 400, 200)
-            noFill()
-            rect(1600, 100, 150, 60)
-            
-        if isMouseWithinSpace(200,  700, 400, 200):
-            noFill()
-            rect( 200,  350, 400, 200)
-            fill(200)
-            rect( 200,  700, 400, 200)
-            fill(240)
-            text("Armour", 400, 810)
-            noFill()
-            rect( 1300, 350, 400, 200)
-            noFill()
-            rect( 1300, 700, 400, 200)
-            noFill()
-            rect(1600, 100, 150, 60)
-            
-        if isMouseWithinSpace(1300, 350, 400, 200):
-            noFill()
-            rect( 200,  350, 400, 200)
-            noFill()
-            rect( 200,  700, 400, 200)
-            fill(200)
-            rect( 1300, 350, 400, 200)
-            fill(240)
-            text("Shield", 1500, 460)
-            noFill()
-            rect( 1300, 700, 400, 200)
-            noFill()
-            rect(1600, 100, 150, 60)
+    if isMouseWithinSpace(200,  350, 400, 200):
+        fill(200)
+        rect( 200,  350, 400, 200)
+        fill(240)
+        text("Sword",400, 460)
+        noFill()
+        rect(200,  700, 400, 200)
+        noFill()
+        rect( 1300, 350, 400, 200)
+        noFill()
+        rect( 1300, 700, 400, 200)
+        noFill()
+        rect(1600, 100, 150, 60)
+        
+    if isMouseWithinSpace(200,  700, 400, 200):
+        noFill()
+        rect( 200,  350, 400, 200)
+        fill(200)
+        rect( 200,  700, 400, 200)
+        fill(240)
+        text("Armour", 400, 810)
+        noFill()
+        rect( 1300, 350, 400, 200)
+        noFill()
+        rect( 1300, 700, 400, 200)
+        noFill()
+        rect(1600, 100, 150, 60)
+        
+    if isMouseWithinSpace(1300, 350, 400, 200):
+        noFill()
+        rect( 200,  350, 400, 200)
+        noFill()
+        rect( 200,  700, 400, 200)
+        fill(200)
+        rect( 1300, 350, 400, 200)
+        fill(240)
+        text("Shield", 1500, 460)
+        noFill()
+        rect( 1300, 700, 400, 200)
+        noFill()
+        rect(1600, 100, 150, 60)
             
     #if the screen == 4 it will draw the Crafting for the spear page
     if screen == 4:
@@ -686,9 +686,7 @@ def mousePressed():
             elif isMouseWithinSpace(690, 240, 280, 380):
                 tekst = "Craft"
                 dagger_item = 3
-                
-# if the selected item is selected it will look in the inventory to see if you have enough materials to craft the item
-# if you have enough material it will craft the item and take the materials from the inventory        
+
         if dagger_item == 1:    
             if tekst == "Craft":
                 if isMouseWithinSpace(150, 850, 150, 60):
@@ -724,8 +722,7 @@ def mousePressed():
                         inventory.Scorpion_Poison = inventory.Scorpion_Poison - 3
                 else:
                     crafted_item5 = ""
-                    
-    #Player 2 Turn
+    #Player 2 Turn                
     if Map.currentPlayer == 2:
         if screen == 0:
             if isMouseWithinSpace(1300, 700, 400, 200):
@@ -739,7 +736,7 @@ def mousePressed():
             if isMouseWithinSpace(1600, 100, 150, 60):
                 screen = "inventory"
         
-        #This will select an item in the spear page
+        #This will select an item in the spear page    
         if screen == 4:
             if isMouseWithinSpace(150, 100, 150, 60):
                 screen = 0
@@ -755,9 +752,7 @@ def mousePressed():
             elif isMouseWithinSpace(990, 240, 280, 380):
                 tekst = "Craft"
                 spear_item = 4
- 
-# if the selected item is selected it will look in the inventory to see if you have enough materials to craft the item
-# if you have enough material it will craft the item and take the materials from the inventory    
+                
         if spear_item == 1:    
             if tekst == "Craft":
                 if isMouseWithinSpace(150, 850, 150, 60):
@@ -806,8 +801,8 @@ def mousePressed():
                         inventory2.Fire_Essence = inventory2.Fire_Essence
                 else:
                     crafted_item = ""
-                   
-       #This will select an item in the sword page 
+            
+        #This will select an item in the sword page    
         if screen == 1:
             if isMouseWithinSpace(150, 100, 150, 60):
                 screen = 0
@@ -831,9 +826,7 @@ def mousePressed():
             elif isMouseWithinSpace(1590, 240, 280, 380):
                 tekst = "Craft"
                 sword_item = 6
-              
-# if the selected item is selected it will look in the inventory to see if you have enough materials to craft the item
-# if you have enough material it will craft the item and take the materials from the inventory
+                
         if sword_item == 1:    
             if tekst == "Craft":
                 if isMouseWithinSpace(150, 850, 150, 60):
@@ -905,8 +898,8 @@ def mousePressed():
                         inventory2.Void_Essence = inventory2.Void_Essence - 5
                 else:
                     crafted_item4 = ""
-                
-        #This will select an item in the armour page
+        
+        #This will select an item in the armour page        
         if screen == 2:
             if isMouseWithinSpace(150, 100, 150, 60):
                 screen = 0
@@ -925,9 +918,7 @@ def mousePressed():
             elif isMouseWithinSpace(1290, 240, 280, 380):
                 tekst = "Craft"
                 armour_item = 5
- 
-# if the selected item is selected it will look in the inventory to see if you have enough materials to craft the item
-# if you have enough material it will craft the item and take the materials from the inventory
+                
         if armour_item == 1:    
             if tekst == "Craft":
                 if isMouseWithinSpace(150, 850, 150, 60):
@@ -987,8 +978,8 @@ def mousePressed():
                         inventory2.Mana_Essence = inventory2.Mana_Essence - 10
                 else:
                     crafted_item3 = ""
-                
-        #This will select an item in the shield page
+        
+        #This will select an item in the shield page        
         if screen == 3:
             if isMouseWithinSpace(150, 100, 150, 60):
                 screen = 0
@@ -1007,9 +998,7 @@ def mousePressed():
             elif isMouseWithinSpace(1290, 240, 280, 380):
                 tekst = "Craft"
                 shield_item = 5
-            
-# if the selected item is selected it will look in the inventory to see if you have enough materials to craft the item
-# if you have enough material it will craft the item and take the materials from the inventory    
+                
         if shield_item == 1:    
             if tekst == "Craft":
                 if isMouseWithinSpace(150, 850, 150, 60):
@@ -1071,7 +1060,7 @@ def mousePressed():
                 else:
                     crafted_item2 = ""
         
-        #This will select an item in the dagger page    
+        #This will select an item in the dagger page
         if screen == 5:
             if isMouseWithinSpace(150, 100, 150, 60):
                 screen = 1
@@ -1084,9 +1073,7 @@ def mousePressed():
             elif isMouseWithinSpace(690, 240, 280, 380):
                 tekst = "Craft"
                 dagger_item = 3
-          
-# if the selected item is selected it will look in the inventory to see if you have enough materials to craft the item
-# if you have enough material it will craft the item and take the materials from the inventory    
+                
         if dagger_item == 1:    
             if tekst == "Craft":
                 if isMouseWithinSpace(150, 850, 150, 60):
