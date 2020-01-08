@@ -89,13 +89,12 @@ def draw():
         textFont(font)
         fill(256,256,256)
         textSize(50)
-        text("Back to map")
+        text("Back to map",150,50)
         textAlign(CENTER)
     if turn == 0:
         P_turn = 0
         M_turn = 0
         
-    rect(0,0,20,30)
 
     #texts for all the stats in the game.
     text('Player ' + str(P_turn), 1650, 100)
