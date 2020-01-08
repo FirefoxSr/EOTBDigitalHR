@@ -323,11 +323,6 @@ def isMouseWithinSpace(x,y,w,h):
         return True
     else:
         return False
-    
-#def increaseCurrentNumber():
-    #global currentNumber
-    #if currentNumber < 1000:
-       #currentNumber = currentNumber + 1
 
 def mousePressed():
     global screen, tekst, crafted_item, spear_item, shield_item, crafted_item2, armour_item, crafted_item3, crafted_item4, sword_item, crafted_item5, dagger_item
@@ -363,6 +358,8 @@ def mousePressed():
                 tekst = "Craft"
                 spear_item = 4
 
+# if the selected item is selected it will look in the inventory to see if you have enough materials to craft the item
+# if you have enough material it will craft the item and take the materials from the inventory
         if spear_item == 1:    
             if tekst == "Craft":
                 if isMouseWithinSpace(150, 850, 150, 60):
@@ -437,6 +434,8 @@ def mousePressed():
                 tekst = "Craft"
                 sword_item = 6
                 
+# if the selected item is selected it will look in the inventory to see if you have enough materials to craft the item
+# if you have enough material it will craft the item and take the materials from the inventory            
         if sword_item == 1:    
             if tekst == "Craft":
                 if isMouseWithinSpace(150, 850, 150, 60):
@@ -528,7 +527,9 @@ def mousePressed():
             elif isMouseWithinSpace(1290, 240, 280, 380):
                 tekst = "Craft"
                 armour_item = 5
-                
+
+# if the selected item is selected it will look in the inventory to see if you have enough materials to craft the item
+# if you have enough material it will craft the item and take the materials from the inventory            
         if armour_item == 1:    
             if tekst == "Craft":
                 if isMouseWithinSpace(150, 850, 150, 60):
@@ -608,7 +609,9 @@ def mousePressed():
             elif isMouseWithinSpace(1290, 240, 280, 380):
                 tekst = "Craft"
                 shield_item = 5
-                
+
+# if the selected item is selected it will look in the inventory to see if you have enough materials to craft the item
+# if you have enough material it will craft the item and take the materials from the inventory                
         if shield_item == 1:    
             if tekst == "Craft":
                 if isMouseWithinSpace(150, 850, 150, 60):
@@ -684,6 +687,8 @@ def mousePressed():
                 tekst = "Craft"
                 dagger_item = 3
                 
+# if the selected item is selected it will look in the inventory to see if you have enough materials to craft the item
+# if you have enough material it will craft the item and take the materials from the inventory        
         if dagger_item == 1:    
             if tekst == "Craft":
                 if isMouseWithinSpace(150, 850, 150, 60):
@@ -720,6 +725,7 @@ def mousePressed():
                 else:
                     crafted_item5 = ""
                     
+    #Player 2 Turn
     if Map.currentPlayer == 2:
         if screen == 0:
             if isMouseWithinSpace(1300, 700, 400, 200):
@@ -748,7 +754,9 @@ def mousePressed():
             elif isMouseWithinSpace(990, 240, 280, 380):
                 tekst = "Craft"
                 spear_item = 4
-                
+ 
+# if the selected item is selected it will look in the inventory to see if you have enough materials to craft the item
+# if you have enough material it will craft the item and take the materials from the inventory    
         if spear_item == 1:    
             if tekst == "Craft":
                 if isMouseWithinSpace(150, 850, 150, 60):
@@ -821,7 +829,9 @@ def mousePressed():
             elif isMouseWithinSpace(1590, 240, 280, 380):
                 tekst = "Craft"
                 sword_item = 6
-                
+              
+# if the selected item is selected it will look in the inventory to see if you have enough materials to craft the item
+# if you have enough material it will craft the item and take the materials from the inventory
         if sword_item == 1:    
             if tekst == "Craft":
                 if isMouseWithinSpace(150, 850, 150, 60):
@@ -912,7 +922,9 @@ def mousePressed():
             elif isMouseWithinSpace(1290, 240, 280, 380):
                 tekst = "Craft"
                 armour_item = 5
-                
+ 
+# if the selected item is selected it will look in the inventory to see if you have enough materials to craft the item
+# if you have enough material it will craft the item and take the materials from the inventory
         if armour_item == 1:    
             if tekst == "Craft":
                 if isMouseWithinSpace(150, 850, 150, 60):
@@ -991,7 +1003,9 @@ def mousePressed():
             elif isMouseWithinSpace(1290, 240, 280, 380):
                 tekst = "Craft"
                 shield_item = 5
-                
+            
+# if the selected item is selected it will look in the inventory to see if you have enough materials to craft the item
+# if you have enough material it will craft the item and take the materials from the inventory    
         if shield_item == 1:    
             if tekst == "Craft":
                 if isMouseWithinSpace(150, 850, 150, 60):
@@ -1065,7 +1079,9 @@ def mousePressed():
             elif isMouseWithinSpace(690, 240, 280, 380):
                 tekst = "Craft"
                 dagger_item = 3
-                
+          
+# if the selected item is selected it will look in the inventory to see if you have enough materials to craft the item
+# if you have enough material it will craft the item and take the materials from the inventory    
         if dagger_item == 1:    
             if tekst == "Craft":
                 if isMouseWithinSpace(150, 850, 150, 60):
