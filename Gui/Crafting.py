@@ -715,46 +715,46 @@ def mousePressed():
         if spear_item == 1:    
             if tekst == "Craft":
                 if isMouseWithinSpace(150, 850, 150, 60):
-                    if inventory.Iron_Chunk < 2 and inventory.Wooden_Stick < 5:
+                    if inventory2.Iron_Chunk < 2 and inventory2.Wooden_Stick < 5:
                         crafted_item = "you don't have enough materials" 
                     else:
                         crafted_item = "You have crafted basic spear"
-                        inventory.Iron_Chunk = inventory.Iron_Chunk - 2
-                        inventory.Wooden_Stick = inventory.Wooden_Stick - 5
+                        inventory2.Iron_Chunk = inventory2.Iron_Chunk - 2
+                        inventory2.Wooden_Stick = inventory2.Wooden_Stick - 5
                 else:
                     crafted_item = ""  
         if spear_item == 2:    
             if tekst == "Craft":
                 if isMouseWithinSpace(150, 850, 150, 60):
-                    if inventory.Basic_Spear < 1 and inventory.Mana_Essence < 10:
+                    if inventory2.Basic_Spear < 1 and inventory2.Mana_Essence < 10:
                         crafted_item = "you don't have enough materials"
                     else:
                         crafted_item = "You have crafted comet spear"
-                        inventory.Basic_Spear = inventory.Basic_Spear - 1
-                        inventory.Mana_Essence = inventory.Mana_Essence - 10
+                        inventory2.Basic_Spear = inventory2.Basic_Spear - 1
+                        inventory2.Mana_Essence = inventory2.Mana_Essence - 10
                 else:
                     crafted_item = ""   
         if spear_item == 3:    
             if tekst == "Craft":
                 if isMouseWithinSpace(150, 850, 150, 60):
-                    if inventory.Comet_Spear < 1 and inventory.Soul_Dead < 3 and inventory.Wooden_Stick < 3:
+                    if inventory2.Comet_Spear < 1 and inventory2.Soul_Dead < 3 and inventory2.Wooden_Stick < 3:
                         crafted_item = "you don't have enough materials"
                     else: 
                         crafted_item = "You have crafted necrotic spear of doom" 
-                        inventory.Comet_Spear = inventory.Comet_Spear - 1
-                        inventory.Soul_Dead = inventory.Soul_Dead - 3
-                        inventory.Wooden_Stick = inventory.Wooden_Stick - 3 
+                        inventory2.Comet_Spear = inventory2.Comet_Spear - 1
+                        inventory2.Soul_Dead = inventory2.Soul_Dead - 3
+                        inventory2.Wooden_Stick = inventory2.Wooden_Stick - 3 
                 else:
                     crafted_item = ""      
         if spear_item == 4:    
             if tekst == "Craft":
                 if isMouseWithinSpace(150, 850, 150, 60):
-                    if inventory.Spear_Doom < 1 and inventory.Fire_Essence < 5:
+                    if inventory2.Spear_Doom < 1 and inventory2.Fire_Essence < 5:
                         crafted_item = "you don't have enough materials"
                     else:
                         crafted_item = "You have crafted halberd of the fire god"
-                        inventory.Spear_Doom = inventory.Spear_Doom - 1
-                        inventory.Fire_Essence = inventory.Fire_Essence
+                        inventory2.Spear_Doom = inventory2.Spear_Doom - 1
+                        inventory2.Fire_Essence = inventory2.Fire_Essence
                 else:
                     crafted_item = ""
                     
@@ -784,67 +784,67 @@ def mousePressed():
         if sword_item == 1:    
             if tekst == "Craft":
                 if isMouseWithinSpace(150, 850, 150, 60):
-                    if inventory.Iron_Chunk < 2 and inventory.Wooden_Stick < 1:
+                    if inventory2.Iron_Chunk < 2 and inventory2.Wooden_Stick < 1:
                         crafted_item4 = "you don't have enough materials"
                     else:
                         crafted_item4 = "You have crafted basic sword"   
-                        inventory.Iron_Chunk = inventory.Iron_Chunk - 2
-                        inventory.Wooden_Stick = inventory.Wooden_Stick - 1
+                        inventory2.Iron_Chunk = inventory2.Iron_Chunk - 2
+                        inventory2.Wooden_Stick = inventory2.Wooden_Stick - 1
                 else:
                     crafted_item4 = ""
         if sword_item == 2:    
             if tekst == "Craft":
                 if isMouseWithinSpace(150, 850, 150, 60):
-                    if inventory.Basic_Sword < 1 and inventory.Mana_Essence < 10:
+                    if inventory2.Basic_Sword < 1 and inventory2.Mana_Essence < 10:
                         crafted_item4 = "you don't have enough materials"
                     else:
                         crafted_item4 = "You have crafted arcane sword"
-                        inventory.Basic_Sword = inventory.Basic_Sword - 1
-                        inventory.Mana_Essence = inventory.Mana_Essence - 10     
+                        inventory2.Basic_Sword = inventory2.Basic_Sword - 1
+                        inventory2.Mana_Essence = inventory2.Mana_Essence - 10     
                 else:
                     crafted_item4 = ""   
         if sword_item == 3:    
             if tekst == "Craft":
                 if isMouseWithinSpace(150, 850, 150, 60):
-                    if inventory.Basic_Sword < 1 and inventory.Obsidian < 2:
+                    if inventory2.Basic_Sword < 1 and inventory2.Obsidian < 2:
                         crafted_item4 = "you don't have enough materials"
                     else:
                         crafted_item4 = "You have crafted obsidian sword"
-                        inventory.Basic_Sword = inventory.Basic_Sword - 1
-                        inventory.Obsidian = inventory.Obsidian - 2
+                        inventory2.Basic_Sword = inventory2.Basic_Sword - 1
+                        inventory2.Obsidian = inventory2.Obsidian - 2
                 else:
                     crafted_item4 = ""       
         if sword_item == 4:    
             if tekst == "Craft":
                 if isMouseWithinSpace(150, 850, 150, 60):
-                    if inventory.Arcane_Sword < 1 and inventory.Soul_Dead < 5:
+                    if inventory2.Arcane_Sword < 1 and inventory2.Soul_Dead < 5:
                         crafted_item4 = "you don't have enough materials"
                     else:
                         crafted_item4 = "You have crafted sword of the dead"
-                        inventory.Arcane_Sword = inventory.Arcane_Sword - 1
-                        inventory.Soul_Dead = inventory.Soul_Dead - 5
+                        inventory2.Arcane_Sword = inventory2.Arcane_Sword - 1
+                        inventory2.Soul_Dead = inventory2.Soul_Dead - 5
                 else:
                     crafted_item4 = ""
         if sword_item == 5:
             if tekst == "Craft":
                 if isMouseWithinSpace(150, 850, 150, 60):
-                    if inventory.Lost_Blade < 1 and inventory.Fire_Essence < 5:
+                    if inventory2.Lost_Blade < 1 and inventory2.Fire_Essence < 5:
                         crafted_item4 = "you don't have enough materials"
                     else:
                         crafted_item4 = "You have crafted sword of phoenix"
-                        inventory.Lost_Blade = inventory.Lost_Blade -1
-                        inventory.Fire_Essence = inventory.Fire_Essence - 5
+                        inventory2.Lost_Blade = inventory2.Lost_Blade -1
+                        inventory2.Fire_Essence = inventory2.Fire_Essence - 5
                 else:
                     crafted_item4 = ""
         if sword_item == 6:
             if tekst == "Craft":
                 if isMouseWithinSpace(150, 850, 150, 60):
-                    if inventory.Sword_Phoenix < 1 and inventory.Void_Essence < 5:
+                    if inventory2.Sword_Phoenix < 1 and inventory2.Void_Essence < 5:
                         crafted_item4 = "you don't have enough materials"
                     else:
                         crafted_item4 = "You have crafted heaven's wrath'"
-                        inventory.Sword_Phoenix = inventory.Sword_Phoenix - 1
-                        inventory.Void_Essence = inventory.Void_Essence - 5
+                        inventory2.Sword_Phoenix = inventory2.Sword_Phoenix - 1
+                        inventory2.Void_Essence = inventory2.Void_Essence - 5
                 else:
                     crafted_item4 = ""
                 
@@ -870,56 +870,56 @@ def mousePressed():
         if armour_item == 1:    
             if tekst == "Craft":
                 if isMouseWithinSpace(150, 850, 150, 60):
-                    if inventory.Wolf_Skin < 5 or inventory.Bear_Skin < 5:
+                    if inventory2.Wolf_Skin < 5 or inventory2.Bear_Skin < 5:
                         crafted_item3 = "you don't have enough materials"
                     else:
                         crafted_item3 = "You have crafted leather armour"
-                        inventory.Wolf_Skin = inventory.Wolf_Skin - 5
-                        inventory.Bear_Skin = inventory.Bear_Skin - 5
+                        inventory2.Wolf_Skin = inventory2.Wolf_Skin - 5
+                        inventory2.Bear_Skin = inventory2.Bear_Skin - 5
                 else:
                     crafted_item3 = ""         
         if armour_item == 2:    
             if tekst == "Craft":
                 if isMouseWithinSpace(150, 850, 150, 60):
-                    if inventory.Iron_Chunk < 10:
+                    if inventory2.Iron_Chunk < 10:
                         crafted_item3 = "you don't have enough materials"
                     else:
                         crafted_item3 = "You have crafted chain armour"
-                        inventory.Iron_Chunk = inventory.Iron_Chunk - 10   
+                        inventory2.Iron_Chunk = inventory2.Iron_Chunk - 10   
                 else:
                     crafted_item3 = ""     
         if armour_item == 3:    
             if tekst == "Craft":
                 if isMouseWithinSpace(150, 850, 150, 60):
-                    if inventory.Chain_Armour < 1 and inventory.Soul_Dead < 5 and inventory.Obsidian < 2:
+                    if inventory2.Chain_Armour < 1 and inventory2.Soul_Dead < 5 and inventory2.Obsidian < 2:
                         crafted_item3 = "you don't have enough materials"
                     else:
                         crafted_item3 = "You have crafted black armour"  
-                        inventory.Chain_Armour = inventory.Chain_Armour - 1
-                        inventory.Soul_Dead = inventory.Soul_Dead - 5
-                        inventory.Obsidian = inventory.Obsidian - 2
+                        inventory2.Chain_Armour = inventory2.Chain_Armour - 1
+                        inventory2.Soul_Dead = inventory2.Soul_Dead - 5
+                        inventory2.Obsidian = inventory2.Obsidian - 2
                 else:
                     crafted_item3 = ""     
         if armour_item == 4:    
             if tekst == "Craft":
                 if isMouseWithinSpace(150, 850, 150, 60):
-                    if inventory.Black_Armour < 1 and inventory.Fire_Essence < 5:
+                    if inventory2.Black_Armour < 1 and inventory2.Fire_Essence < 5:
                         crafted_item3 = "you don't have enough materials"
                     else:
                         crafted_item3 = "You have crafted molten armour"
-                        inventory.Black_Armour = inventory.Black_Armour - 1
-                        inventory.Fire_Essence = inventory.Fire_Essence - 5
+                        inventory2.Black_Armour = inventory2.Black_Armour - 1
+                        inventory2.Fire_Essence = inventory2.Fire_Essence - 5
                 else:
                     crafted_item3 = ""
         if armour_item == 5:
             if tekst == "Craft":
                 if isMouseWithinSpace(150, 850, 150, 60):
-                    if inventory.Molten_Armour < 1 and inventory.Void_Essence < 10:
+                    if inventory2.Molten_Armour < 1 and inventory2.Void_Essence < 10:
                         crafted_item3 = "you don't have enough materials"
                     else:
                         crafted_item3 = "You have crafted amadantium plate"
-                        inventory.Molten_Armour = inventory.Molten_Armour - 1
-                        inventory.Mana_Essence = inventory.Mana_Essence - 10
+                        inventory2.Molten_Armour = inventory2.Molten_Armour - 1
+                        inventory2.Mana_Essence = inventory2.Mana_Essence - 10
                 else:
                     crafted_item3 = ""
                 
@@ -944,57 +944,57 @@ def mousePressed():
         if shield_item == 1:    
             if tekst == "Craft":
                 if isMouseWithinSpace(150, 850, 150, 60):
-                    if inventory.Wooden_Chunk < 5 and inventory.Wooden_Stick < 2:
+                    if inventory2.Wooden_Chunk < 5 and inventory2.Wooden_Stick < 2:
                         crafted_item2 = "you don't have enough materials"
                     else:
                         crafted_item2 = "You have crafted wooden shield"
-                        inventory.Wooden_Chunk = inventory.Wooden_Chunk - 5
-                        inventory.Wooden_Stick = inventory.Wooden_Stick - 2    
+                        inventory2.Wooden_Chunk = inventory2.Wooden_Chunk - 5
+                        inventory2.Wooden_Stick = inventory2.Wooden_Stick - 2    
                 else:
                     crafted_item2 = ""        
         if shield_item == 2:    
             if tekst == "Craft":
                 if isMouseWithinSpace(150, 850, 150, 60):
-                    if inventory.Wooden_Shield < 1 and inventory.Iron_Chunk < 5:
+                    if inventory2.Wooden_Shield < 1 and inventory2.Iron_Chunk < 5:
                         crafted_item2 = "you don't have enough materials"
                     else:
                         crafted_item2 = "You have crafted iron shield" 
-                        inventory.Wooden_Shield = inventory.Wooden_Shield - 1
-                        inventory.Iron_Chunk = inventory.IronChunk - 5
+                        inventory2.Wooden_Shield = inventory2.Wooden_Shield - 1
+                        inventory2.Iron_Chunk = inventory2.IronChunk - 5
                 else:
                     crafted_item2 = ""       
         if shield_item == 3:    
             if tekst == "Craft":
                 if isMouseWithinSpace(150, 850, 150, 60):
-                    if inventory.Iron_Shield < 1 and inventory.Mana_Essence < 10:
+                    if inventory2.Iron_Shield < 1 and inventory2.Mana_Essence < 10:
                         crafted_item2= "you don't have enough materials"
                     else:
                         crafted_item2 = "You have crafted null shield" 
-                        inventory.Iron_Shield = inventory.Iron_Shield - 1
-                        inventory.Mana_Essence = inventory.Mana_Essence - 10
+                        inventory2.Iron_Shield = inventory2.Iron_Shield - 1
+                        inventory2.Mana_Essence = inventory2.Mana_Essence - 10
                 else:
                     crafted_item2 = ""        
         if shield_item == 4:    
             if tekst == "Craft":
                 if isMouseWithinSpace(150, 850, 150, 60):
-                    if inventory.Iron_Shield < 1 and inventory.Null_Shield < 1 and inventory.Gold_Ingot < 3:
+                    if inventory2.Iron_Shield < 1 and inventory2.Null_Shield < 1 and inventory2.Gold_Ingot < 3:
                         crafted_item2 = "you don't have enough materials"
                     else:
                         crafted_item2 = "You have crafted gold shield"
-                        inventory.Iron_Shield = inventory.Iron_Shield - 1
-                        inventory.Null_Shield = inventory.Null_Shield - 1
-                        inventory.Gold_Ingot = inventory.Gold_Ingot - 3
+                        inventory2.Iron_Shield = inventory2.Iron_Shield - 1
+                        inventory2.Null_Shield = inventory2.Null_Shield - 1
+                        inventory2.Gold_Ingot = inventory2.Gold_Ingot - 3
                 else:
                     crafted_item2 = ""
         if shield_item == 5:
             if tekst == "Craft":
                 if isMouseWithinSpace(150, 850, 150, 60):
-                    if inventory.Gold_Shield < 1 and inventory.Void_Essence < 10:
+                    if inventory2.Gold_Shield < 1 and inventory2.Void_Essence < 10:
                         crafted_item2 = "you don't have enough materials"
                     else:
                         crafted_item2 = "You have crafted war god's aegis"
-                        inventory.Gold_Shield = inventory.Gold_Shield - 1
-                        inventory.Void_Essence = inventory.Void_Essence - 10
+                        inventory2.Gold_Shield = inventory2.Gold_Shield - 1
+                        inventory2.Void_Essence = inventory2.Void_Essence - 10
                 else:
                     crafted_item2 = ""
             
@@ -1013,33 +1013,33 @@ def mousePressed():
         if dagger_item == 1:    
             if tekst == "Craft":
                 if isMouseWithinSpace(150, 850, 150, 60):
-                    if inventory.Iron_Chunk < 1 and inventory.Wooden_Stick < 1:
+                    if inventory2.Iron_Chunk < 1 and inventory2.Wooden_Stick < 1:
                         crafted_item5 = "you don't have enough materials"
                     else:
                         crafted_item5 = "You have crafted basic dagger"
-                        inventory.Iron_Chunk = inventory.Iron_Chunk - 1
-                        inventory.Wooden_Stick = inventory.Wooden_Stick  - 1  
+                        inventory2.Iron_Chunk = inventory2.Iron_Chunk - 1
+                        inventory2.Wooden_Stick = inventory2.Wooden_Stick  - 1  
                 else:
                     crafted_item5 = ""         
         if dagger_item == 2:    
             if tekst == "Craft":
                 if isMouseWithinSpace(150, 850, 150, 60):
-                    if inventory.Basic_Dagger < 1 and inventory.Mana_Essence < 3:
+                    if inventory2.Basic_Dagger < 1 and inventory2.Mana_Essence < 3:
                         crafted_item5 = "you don't have enough materials"
                     else:
                         crafted_item5 = "You have crafted enchanted dagger"
-                        inventory.Basic_Dagger = inventory.Basic_Dagger - 1
-                        inventory.Mana_Essence = inventory.Mana_Essence - 3    
+                        inventory2.Basic_Dagger = inventory2.Basic_Dagger - 1
+                        inventory2.Mana_Essence = inventory2.Mana_Essence - 3    
                 else:
                     crafted_item5 = ""    
         if dagger_item == 3:    
             if tekst == "Craft":
                 if isMouseWithinSpace(150, 850, 150, 60):
-                    if inventory.Enchanted_Dagger < 1 and inventory.Scorpion_Poison < 3:
+                    if inventory2.Enchanted_Dagger < 1 and inventory2.Scorpion_Poison < 3:
                         crafted_item5 = "you don't have enough materials"
                     else:
                         crafted_item5 = "You have crafted dagger of affliction"
-                        inventory.Enchanted_Dagger = inventory.Enchanted_Dagger - 1
-                        inventory.Scorpion_Poison = inventory.Scorpion_Poison - 3
+                        inventory2.Enchanted_Dagger = inventory2.Enchanted_Dagger - 1
+                        inventory2.Scorpion_Poison = inventory2.Scorpion_Poison - 3
                 else:
                     crafted_item5 = ""
