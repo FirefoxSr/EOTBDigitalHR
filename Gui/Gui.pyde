@@ -92,7 +92,7 @@ def mousePressed():
             screen = "Map"
     if (screen == "Map"):
         Map.isMouseWithinSpace
-        Map.mousePressed()
+        Map.mouseClicked()
         if Map.currentPlayer == 2:
             if isMouseWithinSpace(1488,931,186,58):
                 screen = "combat"
