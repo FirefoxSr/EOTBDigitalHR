@@ -1,13 +1,16 @@
+import cards
+
+
 def setup():
-    global Lillie, monsterTest, psn
+    global Lillie, monsterTest, psn, screen
     fullScreen()
     background(0)
     Lillie = loadImage('Lillie of the Valley.png')
     monsterTest = loadImage('fairy.png')
     psn = loadImage('psn.png')
-    
+    screen = 'combat'
 def draw():
-    global Lillie, monsterTest, psn
+    global Lillie, monsterTest, psn, screen
     image(Lillie, 150, 600, width // 6, height // 3)
     textSize(50)
     text('HP: 100', 500, 650)
@@ -25,3 +28,19 @@ def draw():
     noFill()
     stroke(255)
     rect(495, 950, 350, 60)
+    
+    if screen == 'cards':
+        cards.setup()
+        cards.draw()
+    
+def isMouseWithinSpace(x,y,w,h):
+    if (x < mouseX < x + w and y < mouseY < y + h):
+        return True
+    else:
+        return False
+
+def mouseClicked():
+    global screen
+    if isMouseWithinSpace(495, 950, 650, 60):
+        screen = 'cards'
+        
