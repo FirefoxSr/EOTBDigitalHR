@@ -16,12 +16,14 @@ def draw():
     text('HP: 100', 500, 650)
     text('Block: 20', 500, 750)
     text('Status:', 750, 650)
+    text('energy:', 500, 850)
     image(psn, 920, 620)
     
     image(monsterTest, 1500, 100, width // 6, height // 3)
     text('HP: 100', 900, 150)
     text('Block: 20', 900, 250)
     text('status:', 1150, 150)
+    text('energy:', 900, 350)
     
     
     text('Choose attack', 500, 1000)
