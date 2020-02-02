@@ -8,6 +8,7 @@ import ScreenTitle
 import Crafting
 import Combat2
 import backgroundScroll
+import Combat_screen
 
 def setup():
     global screen, x, y, w, h, backGround
@@ -15,13 +16,11 @@ def setup():
     frameRate(60)
     backGround = loadImage("Background.jpg")
     screen = "titleScreen"
-    Combat.setup()
-    Map.setup()
-    AmountOfPlayers.setup()
-    ScreenTitle.setup()
-    Crafting.setup()
-    Combat2.setup()
     backgroundScroll.setup()
+    Combat_screen.setup()
+    Map.setup()
+
+
         
 def draw():
     global screen, backGround, amountOfPlayers
@@ -34,12 +33,9 @@ def draw():
         AmountOfPlayers.draw()
     if (screen == "combat"):
         background(0)
-        imageMode(CENTER)
         backgroundScroll.draw()
-        textAlign(CENTER)
         imageMode(CORNER)
-        Combat.draw()
-        Combat.endOfCombat
+        Combat_screen.draw()
     if (screen == "combat2"):
         background(0)
         imageMode(CENTER)
@@ -71,30 +67,38 @@ def isMouseWithinSpace(x,y,w,h):
 def mousePressed():
     global screen, x, y, w, h, amountOfPlayers
     if (screen == "titleScreen"):
+        ScreenTitle.setup()
         if isMouseWithinSpace(750, 660, 858, 150):
             screen = "playerScreen"        
     if (screen == "playerScreen"):
+        AmountOfPlayers.setup()
         if isMouseWithinSpace(527,801,233,88):
             amountOfPlayers = 1
             screen = "Map"
         if isMouseWithinSpace(1151,799,233,88):
             amountOfPlayers = 2
+            Map.setup()
             screen = "Map"
     if (screen == "combat"):
-        Combat.isMouseWithinSpace
-        Combat.mousePressed()
+  
+        Combat_screen.mouseClicked()
+        imageMode(CORNER)
+        textMode(CORNER)
+        rectMode(CORNER)
         if isMouseWithinSpace(0,0,300,66):
             screen = "Map"
     if (screen == "combat2"):
         Combat2.isMouseWithinSpace
         Combat2.mousePressed()
         if isMouseWithinSpace(0,0,300,66):
+            Map.setup()
             screen = "Map"
     if (screen == "Map"):
         Map.isMouseWithinSpace
         Map.mouseClicked()
         if Map.currentPlayer == 2:
             if isMouseWithinSpace(1488,931,186,58):
+                Combat_screen.setup()
                 screen = "combat"
         elif Map.currentPlayer == 1:
             if isMouseWithinSpace(1488,931,186,58):
@@ -102,6 +106,7 @@ def mousePressed():
             
         if (screen == "Map"):
             if isMouseWithinSpace(800,925,366,78):
+                Crafting.setup()
                 screen = "Crafting"
                 Crafting.draw()
                 Crafting.screen = 0
