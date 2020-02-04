@@ -15,7 +15,7 @@ def attack_10():
     if turn == 'player':
         hpMonster = hpMonster - 10
     if turn == 'monster':
-        hpPlayr = hpPlayer - 19
+        hpPlayer = hpPlayer - 19
 def block_5():
     block = 5
     if turn == 'player':

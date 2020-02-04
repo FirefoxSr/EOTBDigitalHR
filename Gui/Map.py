@@ -9,9 +9,6 @@ def playerTurn(n):
         elif (n == 2):
             n = 1
         return n
-    
-    
-endTurn = False
 
 def setup():
     global mapImage, enemy, currentPlayer, p1Image, p2Image, debugImg, endTurn, currentPlayer, img
@@ -33,6 +30,7 @@ def draw():
     text("Go to combat",1500, 976)
     text("Open Crafting",800, 976)
     text("Current Player: " + str(currentPlayer),805,240)
+    print(enemy)
 
     
 def isMouseWithinSpace(x,y,w,h):
@@ -41,7 +39,7 @@ def isMouseWithinSpace(x,y,w,h):
         else:
             return False
 
-
+enemy = ''
 def mouseClicked():
     global enemy, currentPlayer, p1Image, p2Image, playerImage, endTurn, currentPlayer
     #this calls the function to move on to the next player
@@ -53,7 +51,6 @@ def mouseClicked():
     #area 1
     if isMouseWithinSpace(132,933,32,228):
         enemy = Encounters.encounter(1)
-        playerImage(currentPlayer)
     if isMouseWithinSpace(167,951,31,28):
         enemy = Encounters.encounter(1)
     if isMouseWithinSpace(184,912,31,30):
@@ -271,3 +268,8 @@ def mouseClicked():
     #area 22 (final boss)
     if isMouseWithinSpace(597,107,77,65):
         enemy = Encounters.encounter(22)
+        
+def enemyRet():
+    global enemy
+    print(enemy)
+    return enemy

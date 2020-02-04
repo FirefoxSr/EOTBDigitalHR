@@ -1,4 +1,5 @@
 import Combat_screen
+import backgroundScroll
 selectedCard = ''
 def setup():
     global img_attack_5, img_attack_10, img_block_5, img_block_10, img_piercing, img_cleanse, img_corruption, img_fireball, img_heal, img_magic_missile, img_poison, selectedCard
@@ -18,6 +19,8 @@ def setup():
     
 def draw():
     global img_attack_5, img_attack_10, img_block_5, img_block_10, img_piercing, img_cleanse, img_corruption, img_fireball, img_heal, img_magic_missile, img_poison, selectedCard
+    backgroundScroll.draw()
+    imageMode(CORNER)
     image(img_attack_5,150,130)
     image(img_attack_10, 390, 130)
     image(img_block_5,640, 130)
@@ -100,4 +103,6 @@ def isMouseWithinSpace(x,y,w,h):
 def selectedCardFunc():
     global selectedCard
     return selectedCard
+
+
     
