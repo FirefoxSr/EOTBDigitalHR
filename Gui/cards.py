@@ -39,23 +39,23 @@ def mouseClicked():
     if mouseClicked:
         if mouseButton == LEFT:
             if isMouseWithinSpace(150, 130, 172, 238):
-                selectedCard = 'attack_5'
+                selectedCard = 'attack 5'
                 screen = 'combat'
                 Combat_screen.setup()
                 Combat_screen.draw()
             if isMouseWithinSpace(390, 130, 172, 238):
                 text('Attack 10', 900, 900)
-                selectedCard = 'attack_10'
+                selectedCard = 'attack 10'
                 Combat_screen.setup()
                 Combat_screen.draw()
             if isMouseWithinSpace(640, 130, 172, 238):
                 text('Block 5', 900, 900)
-                selectedCard = 'block_5'
+                selectedCard = 'block 5'
                 Combat_screen.setup()
                 Combat_screen.draw()
             if isMouseWithinSpace(890, 130, 172, 238):
                 text('Block 10', 900, 900)
-                selectedCard = 'block_10'
+                selectedCard = 'block 10'
                 Combat_screen.setup()
                 Combat_screen.draw()
             if isMouseWithinSpace(150, 430, 172, 238):
@@ -103,6 +103,41 @@ def isMouseWithinSpace(x,y,w,h):
 def selectedCardFunc():
     global selectedCard
     return selectedCard
+
+def dmgCalc(selectedCard):
+    if selectedCard == 'attack 5':
+        damage = 5
+        return damage
+    if selectedCard == 'attack 10':
+        damage = 10
+        return damage
+    if selectedCard == 'block 5':
+        block = 5
+        return block
+    if selectedCard == 'block 10':
+        block = 10
+        return block
+    if selectedCard == 'piercing':
+        piercDamage = 5
+        return piercDamage
+    if selectedCard == 'cleanse':
+        cleanseIsPlayed == True
+        return cleanseIsPlayed
+    if selectedCard == 'corruption':
+        corruptionIsPlayed == True
+        return corruptionIsPlayed
+    if selectedCard == 'fireball':
+        fireballIsPlayed == True
+        return fireBallIsPlayed
+    if selectedCard == 'heal':
+        heal = 15
+        return heal
+    if selectedCard == 'magic missile':
+        magicDamage = 5
+        return magicDamage
+    if selectedCard == 'Poison':
+        poisonIsPlayed == True
+        return poisonIsPlayed
 
 
     

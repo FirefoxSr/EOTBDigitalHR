@@ -1,0 +1,212 @@
+{ 
+    "EncounterTable" :
+    { 
+        
+        "playerSquare1" : {
+            "Dice1" : "Slime",
+            "Dice2" : "No_Encounter",
+            "Dice3" : "Wolf",
+            "Dice4" : "No_Encounter",
+            "Dice5" : "Bear",
+            "Dice6" : "Skeleton"
+
+                             },
+        "playerSquare2" : {
+            "Dice1" : "Skeleton",
+            "Dice2" : "Skeleton",
+            "Dice3" : "Slime",
+            "Dice4" : "Wolf",
+            "Dice5" : "Bear",
+            "Dice6" : "Bear"
+            
+                             },
+        "playerSquare3" : {
+            "Dice1" : "Treant",
+            "Dice2" : "No_Encounter",
+            "Dice3" : "Treant",
+            "Dice4" : "Treant",
+            "Dice5" : "Wolf",
+            "Dice6" : "Wolf"
+                
+                              },
+        "playerSquare4" : {
+            "Dice1" : "Skeleton",
+            "Dice2" : "Skeleton",
+            "Dice3" : "Skeleton",
+            "Dice4" : "Treant",
+            "Dice5" : "Skeleton",
+            "Dice6" : "Treant"
+                                            
+                              },
+        "playerSquare5" : {
+            "Dice1" : "Treant",
+            "Dice2" : "ArcaneWolf",
+            "Dice3" : "ArcaneWolf",
+            "Dice4" : "Treant",
+            "Dice5" : "Fairy",
+            "Dice6" : "Fairy"
+                                            
+                              },
+        "playerSquare6" : {
+            "Dice1" : "ArcaneWolf",
+            "Dice2" : "Fairy",
+            "Dice3" : "ArcaneWolf",
+            "Dice4" : "Fairy",
+            "Dice5" : "ManaGolem",
+            "Dice6" : "No_Encounter"
+                                                                
+                              },
+        "playerSquare7" : {
+            "Dice1" : "No_Encounter",
+            "Dice2" : "ManaGolem",
+            "Dice3" : "ManaGolem",
+            "Dice4" : "No_Encounter",
+            "Dice5" : "Fairy",
+            "Dice6" : "ManaGolem"
+                                                                
+                              },
+        "playerSquare8" : {
+            "Dice1" : "No_Encounter",
+            "Dice2" : "No_Encounter",
+            "Dice3" : "VoidSpawn",
+            "Dice4" : "VoidSpawn",
+            "Dice5" : "VoidSpawn",
+            "Dice6" : "VoidSpawn"
+                                                                
+                              },
+        "playerSquare9" : {
+            "Dice1" : "Ghost",
+            "Dice2" : "Ghost",
+            "Dice3" : "No_Encounter",
+            "Dice4" : "Zombie",
+            "Dice5" : "Zombie",
+            "Dice6" : "Ghost"
+                                                                
+                              },
+        "playerSquare10" : {
+            "Dice1" : "Haunter",
+            "Dice2" : "Haunter",
+            "Dice3" : "HauntedTree",
+            "Dice4" : "Zombie",
+            "Dice5" : "No_Encounter",
+            "Dice6" : "Haunter"
+                                                                
+                              },
+        "playerSquare11" : {
+            "Dice1" : "Zombie",
+            "Dice2" : "HauntedTree",
+            "Dice3" : "HauntedTree",
+            "Dice4" : "Zombie",
+            "Dice5" : "No_Encounter",
+            "Dice6" : "Haunter"
+                                                                
+                              },
+        "playerSquare12" : {
+            "Dice1" : "GrimReaper",
+            "Dice2" : "GrimReaper",
+            "Dice3" : "GrimReaper",
+            "Dice4" : "GrimReaper",
+            "Dice5" : "GrimReaper",
+            "Dice6" : "GrimReaper"
+                                                                
+                              },
+        "playerSquare13" : {
+            "Dice1" : "AncientSkeleton",
+            "Dice2" : "No_Encounter",
+            "Dice3" : "GoldenScarab",
+            "Dice4" : "Mummy",
+            "Dice5" : "GiantScorpion",
+            "Dice6" : "GiantScorpion"
+                                                                
+                              },
+        "playerSquare14" : {
+            "Dice1" : "GiantScorpion",
+            "Dice2" : "Mummy",
+            "Dice3" : "AncientSkeleton",
+            "Dice4" : "AncientSkeleton",
+            "Dice5" : "Mummy",
+            "Dice6" : "GiantScorpion"
+                                                                
+                              },
+        "playerSquare15" : {
+            "Dice1" : "Basilisk",
+            "Dice2" : "Basilisk",
+            "Dice3" : "Basilisk",
+            "Dice4" : "Basilisk",
+            "Dice5" : "Basilisk",
+            "Dice6" : "Basilisk"
+                                                                
+                              },
+        "playerSquare16" : {
+            "Dice1" : "LavaSlime",
+            "Dice2" : "LavaSlime",
+            "Dice3" : "LavaSlime",
+            "Dice4" : "No_Encounter",
+            "Dice5" : "No_Encounter",
+            "Dice6" : "No_Encounter"
+                                                                
+                              },
+        "playerSquare17" : {
+            "Dice1" : "LavaGolem",
+            "Dice2" : "FireDrake",
+            "Dice3" : "LavaGolem",
+            "Dice4" : "FireDrake",
+            "Dice5" : "No_Encounter",
+            "Dice6" : "LavaGolem"
+                                                                
+                              },
+        "playerSquare18" : {
+            "Dice1" : "FireDrake",
+            "Dice2" : "FireDrake",
+            "Dice3" : "FireDrake",
+            "Dice4" : "No_Encounter",
+            "Dice5" : "LavaGolem",
+            "Dice6" : "LavaGolem"
+                                                                
+                              },
+        "playerSquare19" : {
+            "Dice1" : "CrimsonDragon",
+            "Dice2" : "CrimsonDragon",
+            "Dice3" : "CrimsonDragon",
+            "Dice4" : "CrimsonDragon",
+            "Dice5" : "CrimsonDragon",
+            "Dice6" : "CrimsonDragon"
+                                                                
+                              },
+        "playerSquare20" : {
+            "Dice1" : "VoidTentacle",
+            "Dice2" : "VoidTentacle",
+            "Dice3" : "VoidTentacle",
+            "Dice4" : "Voidling",
+            "Dice5" : "Voidling",
+            "Dice6" : "VoidElemental"
+                                                                
+                              },
+        "playerSquare21" : {
+            "Dice1" : "VoidElemental",
+            "Dice2" : "VoidElemental",
+            "Dice3" : "VoidElemental",
+            "Dice4" : "VoidElemental",
+            "Dice5" : "Voidling",
+            "Dice6" : "Voidling"
+                                                                
+                              },
+        "playerSquare22" : {
+            "Dice1" : "DeathGazer",
+            "Dice2" : "DeathGazer",
+            "Dice3" : "DeathGazer",
+            "Dice4" : "DeathGazer",
+            "Dice5" : "DeathGazer",
+            "Dice6" : "DeathGazer"
+                                                                
+                              }
+                
+            
+                
+            
+            
+
+        
+    }
+}
+
